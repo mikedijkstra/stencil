@@ -1,0 +1,97 @@
+/**
+ * Border
+ *
+ * b = border
+ * a/t/r/b/l = all/top/right/bottom/left
+ * t/s/m/l/h = tiny/small/medium/large/huge
+ *
+ */
+.bat, .btt { border-top: $border-tiny solid; }
+.bas, .bts { border-top: $border-small solid; }
+.bam, .btm { border-top: $border-medium solid; }
+.bal, .btl { border-top: $border-large solid; }
+.bah, .bth { border-top: $border-huge solid; }
+.bat, .brt { border-right: $border-tiny solid; }
+.bas, .brs { border-right: $border-small solid; }
+.bam, .brm { border-right: $border-medium solid; }
+.bal, .brl { border-right: $border-large solid; }
+.bah, .brh { border-right: $border-huge solid; }
+.bat, .bbt { border-bottom: $border-tiny solid; }
+.bas, .bbs { border-bottom: $border-small solid; }
+.bam, .bbm { border-bottom: $border-medium solid; }
+.bal, .bbl { border-bottom: $border-large solid; }
+.bah, .bbh { border-bottom: $border-huge solid; }
+.bat, .blt { border-left: $border-tiny solid; }
+.bas, .bls { border-left: $border-small solid; }
+.bam, .blm { border-left: $border-medium solid; }
+.bal, .bll { border-left: $border-large solid; }
+.bah, .blh { border-left: $border-huge solid; }
+
+/**
+ * Border Radius
+ *
+ * br = border radius
+ * a/tl/tr/bl/br = all/top-left/top-right/bottom-left/bottom-right
+ * s/m/l = small/medium/large
+ *
+ */
+.bras, .brtls {
+    -moz-border-radius-topleft: $border-small !important;
+    -webkit-border-top-left-radius: $border-small !important;
+    border-top-left-radius: $border-small !important;
+}
+.bram, .brtlm {
+    -moz-border-radius-topleft: $border-medium !important;
+    -webkit-border-top-left-radius: $border-medium !important;
+    border-top-left-radius: $border-medium !important;
+}
+.bral, .brtll {
+    -moz-border-radius-topleft: $border-large !important;
+    -webkit-border-top-left-radius: $border-large !important;
+    border-top-left-radius: $border-large !important;
+}
+.bras, .brtrs {
+    -moz-border-radius-topright: $border-small !important;
+    -webkit-border-top-right-radius: $border-small !important;
+    border-top-right-radius: $border-small !important;
+}
+.bram, .brtrm {
+    -moz-border-radius-topright: $border-medium !important;
+    -webkit-border-top-right-radius: $border-medium !important;
+    border-top-right-radius: $border-medium !important;
+}
+.bral, .brtrl {
+    -moz-border-radius-topright: $border-large !important;
+    -webkit-border-top-right-radius: $border-large !important;
+    border-top-right-radius: $border-large !important;
+}
+.bras, .brbls {
+    -moz-border-radius-bottomleft: $border-small !important;
+    -webkit-border-bottom-left-radius: $border-small !important;
+    border-bottom-left-radius: $border-small !important;
+}
+.bram, .brblm {
+    -moz-border-radius-bottomleft: $border-medium !important;
+    -webkit-border-bottom-left-radius: $border-medium !important;
+    border-bottom-left-radius: $border-medium !important;
+}
+.bral, .brbll {
+    -moz-border-radius-bottomleft: $border-large !important;
+    -webkit-border-bottom-left-radius: $border-large !important;
+    border-bottom-left-radius: $border-large !important;
+}
+.bras, .brbrs {
+    -moz-border-radius-bottomright: $border-small !important;
+    -webkit-border-bottom-right-radius: $border-small !important;
+    border-bottom-right-radius: $border-small !important;
+}
+.bram, .brbrm {
+    -moz-border-radius-bottomright: $border-medium !important;
+    -webkit-border-bottom-right-radius: $border-medium !important;
+    border-bottom-right-radius: $border-medium !important;
+}
+.bral, .brbrl {
+    -moz-border-radius-bottomright: $border-large !important;
+    -webkit-border-bottom-right-radius: $border-large !important;
+    border-bottom-right-radius: $border-large !important;
+}

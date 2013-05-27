@@ -1,0 +1,39 @@
+/**
+ * Media
+ */
+
+.media {
+    overflow: hidden;
+    *overflow: visible;
+    zoom: 1;
+}
+
+.media .img {
+    float: left;
+    margin-right: $base-spacing-width;
+}
+
+.media .img img { display:block; }
+
+.media .imgExt {
+    float: right;
+    margin-left: $base-spacing-width;
+}
+
+/**
+ * Fluid Media
+ */
+.figure {
+    border: 0;
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.figure .img {
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+}

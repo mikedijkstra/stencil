@@ -1,0 +1,22 @@
+/**
+ * Button
+ */
+
+.btn {
+    line-height: 1.1;
+    padding: 10px 12px;
+}
+
+.btnSmall {
+  padding: 6px 8px;
+  font-size: 14px;
+}
+
+.btnLarge {
+    padding: 14px 20px;
+    font-size: 20px;
+}
+
+@include button-setup("");
+@include button-setup("Positive", #51A351, #418241, #ffffff);
+@include button-setup("Negative", #2F96B4, #267890, #ffffff);

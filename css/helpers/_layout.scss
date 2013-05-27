@@ -1,0 +1,36 @@
+/**
+ * Layout
+ */
+
+body { _text-align: center; }
+
+.main {
+    display: table-cell;
+    *display: block;
+    width: auto;
+}
+
+.body, .main { *zoom: 1; }
+
+.body:after, .main:after {
+    clear: both;
+    display: block;
+    visibility: hidden;
+    overflow: hidden;
+    height: 0 !important;
+    line-height: 0;
+    font-size: xx-large;
+    content: " x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ";
+}
+
+.page {
+    margin: 0 auto;
+    max-width: $max-page-width;
+    _text-align: left;
+}
+
+.ie .page {
+  /* Fixes for IE6-8 http://jonikorpi.com/leaving-old-IE-behind */
+  width: $ie-max-page-width;
+  margin: 0 auto;
+}

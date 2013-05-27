@@ -1,0 +1,68 @@
+/**
+ * Space
+ *
+ * p/m = padding/margin
+ * a/t/r/b/l/h/v = all/top/right/bottom/left/horizontal/vertical
+ * n/t/s/m/l/h = none/tiny/small/medium/large/huge
+ *
+ */
+@mixin space-setup($namespace: "") {
+  .#{$namespace}ptn, .#{$namespace}pvn, .#{$namespace}pan { padding-top: 0px !important; }
+  .#{$namespace}ptt, .#{$namespace}pvt, .#{$namespace}pat { padding-top: $tiny-spacing-width !important; }
+  .#{$namespace}pts, .#{$namespace}pvs, .#{$namespace}pas { padding-top: $small-spacing-width !important; }
+  .#{$namespace}ptm, .#{$namespace}pvm, .#{$namespace}pam { padding-top: $medium-spacing-width !important; }
+  .#{$namespace}ptl, .#{$namespace}pvl, .#{$namespace}pal { padding-top: $large-spacing-width !important; }
+  .#{$namespace}pth, .#{$namespace}pvh, .#{$namespace}pah { padding-top: $huge-spacing-width !important; }
+  .#{$namespace}prn, .#{$namespace}phn, .#{$namespace}pan { padding-right: 0px !important; }
+  .#{$namespace}prt, .#{$namespace}pht, .#{$namespace}pat { padding-right: $tiny-spacing-width !important; }
+  .#{$namespace}prs, .#{$namespace}phs, .#{$namespace}pas { padding-right: $small-spacing-width !important; }
+  .#{$namespace}prm, .#{$namespace}phm, .#{$namespace}pam { padding-right: $medium-spacing-width !important; }
+  .#{$namespace}prl, .#{$namespace}phl, .#{$namespace}pal { padding-right: $large-spacing-width !important; }
+  .#{$namespace}prh, .#{$namespace}phh, .#{$namespace}pah { padding-right: $huge-spacing-width !important; }
+  .#{$namespace}pbn, .#{$namespace}pvn, .#{$namespace}pan { padding-bottom: 0px !important; }
+  .#{$namespace}pbt, .#{$namespace}pvt, .#{$namespace}pat { padding-bottom: $tiny-spacing-width !important; }
+  .#{$namespace}pbs, .#{$namespace}pvs, .#{$namespace}pas { padding-bottom: $small-spacing-width !important; }
+  .#{$namespace}pbm, .#{$namespace}pvm, #{$namespace}.pam { padding-bottom: $medium-spacing-width !important; }
+  .#{$namespace}pbl, .#{$namespace}pvl, .#{$namespace}pal { padding-bottom: $large-spacing-width !important; }
+  .#{$namespace}pbh, .#{$namespace}pvh, .#{$namespace}pah { padding-bottom: $huge-spacing-width !important; }
+  .#{$namespace}pln, .#{$namespace}phn, .#{$namespace}pan { padding-left: 0px !important; }
+  .#{$namespace}plt, .#{$namespace}pht, .#{$namespace}pat { padding-left: $tiny-spacing-width !important; }
+  .#{$namespace}pls, .#{$namespace}phs, .#{$namespace}pas { padding-left: $small-spacing-width !important; }
+  .#{$namespace}plm, .#{$namespace}phm, .#{$namespace}pam { padding-left: $medium-spacing-width !important; }
+  .#{$namespace}pll, .#{$namespace}phl, .#{$namespace}pal { padding-left: $large-spacing-width !important; }
+  #{$namespace}.plh, .#{$namespace}phh, .#{$namespace}pah { padding-left: $huge-spacing-width !important; }
+  .#{$namespace}mtn, .#{$namespace}mvn, .#{$namespace}man { margin-top: 0px !important; }
+  .#{$namespace}mtt, .#{$namespace}mvt, .#{$namespace}mat { margin-top: $tiny-spacing-width !important; }
+  .#{$namespace}mts, .#{$namespace}mvs, .#{$namespace}mas { margin-top: $small-spacing-width !important; }
+  .#{$namespace}mtm, .#{$namespace}mvm, .#{$namespace}mam { margin-top: $medium-spacing-width !important; }
+  .#{$namespace}mtl, .#{$namespace}mvl, .#{$namespace}mal { margin-top: $large-spacing-width !important; }
+  .#{$namespace}mth, .#{$namespace}mvh, .#{$namespace}mah { margin-top: $huge-spacing-width !important; }
+  .#{$namespace}mrn, .#{$namespace}mhn, .#{$namespace}man { margin-right: 0px !important; }
+  .#{$namespace}mrt, .#{$namespace}mht, .#{$namespace}mat { margin-right: $tiny-spacing-width !important; }
+  .#{$namespace}mrs, .#{$namespace}mhs, .#{$namespace}mas { margin-right: $small-spacing-width !important; }
+  .#{$namespace}mrm, .#{$namespace}mhm, .#{$namespace}mam { margin-right: $medium-spacing-width !important; }
+  .#{$namespace}mrl, .#{$namespace}mhl, .#{$namespace}mal { margin-right: $large-spacing-width !important; }
+  .#{$namespace}mrh, .#{$namespace}mhh, .#{$namespace}mah { margin-right: $huge-spacing-width !important; }
+  .#{$namespace}mbn, .#{$namespace}mvn, .#{$namespace}man { margin-bottom: 0px !important; }
+  .#{$namespace}mbt, .#{$namespace}mvt, .#{$namespace}mat { margin-bottom: $tiny-spacing-width !important; }
+  .#{$namespace}mbs, .#{$namespace}mvs, .#{$namespace}mas { margin-bottom: $small-spacing-width !important; }
+  .#{$namespace}mbm, .#{$namespace}mvm, .#{$namespace}mam { margin-bottom: $medium-spacing-width !important; }
+  .#{$namespace}mbl, .#{$namespace}mvl, .#{$namespace}mal { margin-bottom: $large-spacing-width !important; }
+  .#{$namespace}mbh, .#{$namespace}mvh, .#{$namespace}mah { margin-bottom: $huge-spacing-width !important; }
+  .#{$namespace}mln, .#{$namespace}mhn, .#{$namespace}man { margin-left: 0px !important; }
+  .#{$namespace}mlt, .#{$namespace}mht, .#{$namespace}mat { margin-left: $tiny-spacing-width !important; }
+  .#{$namespace}mls, .#{$namespace}mhs, .#{$namespace}mas { margin-left: $small-spacing-width !important; }
+  .#{$namespace}mlm, .#{$namespace}mhm, .#{$namespace}mam { margin-left: $medium-spacing-width !important; }
+  .#{$namespace}mll, .#{$namespace}mhl, .#{$namespace}mal { margin-left: $large-spacing-width !important; }
+  .#{$namespace}mlh, .#{$namespace}mhh, .#{$namespace}mah { margin-left: $huge-spacing-width !important; }
+}
+
+@include space-setup("");
+
+@include media-query(lap){
+    @include space-setup("lap-");
+}
+
+@include media-query(desk){
+    @include space-setup("desk-");
+}

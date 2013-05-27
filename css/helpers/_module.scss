@@ -1,0 +1,11 @@
+/**
+ * Module
+ */
+
+.mod { margin: $base-spacing-width; }
+
+.bd, .ft, .hd {
+    overflow: hidden;
+    *overflow: visible;
+    zoom: 1;
+}
