@@ -8,7 +8,7 @@ body { font-family: $font-default;}
 
 .body {
     font-size: 14px;
-    line-height: 1.5em;
+    line-height: 1.0em;
 }
 .small {
     font-size: 10px;
@@ -44,7 +44,7 @@ body { font-family: $font-default;}
 @include media-query(lap){
     .body {
         font-size: 14px;
-        line-height: 1.5em;
+        line-height: 1.0em;
     }
     .small {
         font-size: 10px;
@@ -78,10 +78,10 @@ body { font-family: $font-default;}
     }
 }
 
-@include media-query(palm){
+@include media-query(desk){
     .body {
         font-size: 14px;
-        line-height: 1.5em;
+        line-height: 1.0em;
     }
     .small {
         font-size: 10px;

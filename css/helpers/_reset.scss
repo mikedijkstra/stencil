@@ -14,11 +14,11 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
 }
 article, aside, details, figcaption, figure, dialog, footer, header, hgroup, menu, nav, section { display:block; }
 body {
-    font: 14px/1.5em sans-serif;
+    font: 14px/1.0em sans-serif;
     *font-size: small;
     *font: x-small;
 }
-p { margin-bottom: 1.5em; }
+p { margin-bottom: 0; }
 a {
     color: #0088cc;
     text-decoration: none;
