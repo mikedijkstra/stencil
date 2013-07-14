@@ -1,0 +1,23 @@
+/*
+Errno::ENOENT: No such file or directory - style.scss
+
+Backtrace:
+/Users/michaeldijkstra/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/plugin/compiler.rb:360:in `read'
+/Users/michaeldijkstra/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/plugin/compiler.rb:360:in `update_stylesheet'
+/Users/michaeldijkstra/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
+/Users/michaeldijkstra/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/plugin/compiler.rb:201:in `each'
+/Users/michaeldijkstra/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
+/Users/michaeldijkstra/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/plugin/compiler.rb:235:in `watch'
+/Users/michaeldijkstra/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/plugin.rb:107:in `method_missing'
+/Users/michaeldijkstra/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/exec.rb:452:in `watch_or_update'
+/Users/michaeldijkstra/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/exec.rb:315:in `process_result'
+/Users/michaeldijkstra/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/exec.rb:41:in `parse'
+/Users/michaeldijkstra/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/exec.rb:21:in `parse!'
+/Users/michaeldijkstra/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/sass-3.2.9/bin/sass:9:in `<top (required)>'
+/Users/michaeldijkstra/.rbenv/versions/1.9.3-p392/bin/sass:23:in `load'
+/Users/michaeldijkstra/.rbenv/versions/1.9.3-p392/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Errno::ENOENT: No such file or directory - style.scss"; }

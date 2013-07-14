@@ -25,7 +25,7 @@ hr {
 
 body {
   font-size: $base;
-  font-family: $primary;
+  font-family: $body;
   font-weight: $regular;
   line-height: 1.0em;
 }
@@ -73,7 +73,7 @@ body {
 
 p,li {
   font-size: $base;
-  font-family: $primary;
+  font-family: $body;
   line-height: $base-line-height;
   margin-bottom: $base-margin-bottom;
 }

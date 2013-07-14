@@ -106,9 +106,9 @@ $desk-zeta-line-height:       1.4em;
 $desk-zeta-margin-bottom:     1.0em;
 
 /* Families */
-$primary:                     Helmut, Helvetica, Arial, sans-serf;
+$body:                        Helmut, Helvetica, Arial, sans-serf;
 $heading:                     Helmut, Helvetica, Arial, sans-serf;
-$secondary:                   Helmut, Helvetica, Arial, sans-serf;
+$sub-heading:                 Helmut, Helvetica, Arial, sans-serf;
 
 /* Weights */
 $thin:                        100;
@@ -120,15 +120,15 @@ $heavy:                       900;
 /* Headings*/
 $h1-family:                   $heading;
 $h1-weight:                   $bold;
-$h2-family:                   $secondary;
+$h2-family:                   $sub-heading;
 $h2-weight:                   $bold;
-$h3-family:                   $secondary;
+$h3-family:                   $sub-heading;
 $h3-weight:                   $bold;
-$h4-family:                   $secondary;
+$h4-family:                   $sub-heading;
 $h4-weight:                   $bold;
-$h5-family:                   $secondary;
+$h5-family:                   $sub-heading;
 $h5-weight:                   $bold;
-$h6-family:                   $secondary;
+$h6-family:                   $sub-heading;
 $h6-weight:                   $bold;
 
 /* Spacing */
@@ -163,40 +163,47 @@ $error:                       #f2dede;
 $info:                        #d9edf7;
 
 $bright:                      rgb(255,255,255);
-$cool:                        rgb(252,252,252);
 $natural:                     rgb(245,245,245);
 $dim:                         rgb(230,230,230);
 $dull:                        rgb(136,136,136);
 $dark:                        rgb(42,42,42);
 
-/* Background colors */
-$bgBrand:                     blue;
-$bgHighlight:                 orange;
-$bgPrimary:                   #cccccc;
-$bgSecondary:                 #dddddd;
+$brand:                       rgb(80,174,225);
+$highlight:                   rgb(229,139,68);
+$primary:                     rgb(52,127,160);
+$secondary:                   rgb(229,139,68);
 
+/* Background colors */
 $bgAlert:                     lighten($alert, 10%);
 $bgSuccess:                   lighten($success, 10%);
 $bgError:                     lighten($error, 10%);
 $bgInfo:                      lighten($info, 10%);
 $bgBright:                    lighten($bright,0);
-$bgCool:                      lighten($cool,0);
 $bgNatural:                   lighten($natural,0);
 $bgDim:                       lighten($dim,0);
 $bgDull:                      lighten($dull,0);
 $bgDark:                      lighten($dark,0);
 
-$bcAlert:                     lighten($alert, 10%);
-$bcSuccess:                   lighten($success, 10%);
-$bcError:                     lighten($error, 10%);
-$bcInfo:                      lighten($info, 10%);
-$bcBright:                    lighten($bright,0);
-$bcCool:                      lighten($cool,0);
-$bcNatural:                   lighten($natural,0);
-$bcDim:                       lighten($dim,0);
-$bcDull:                      lighten($dull,0);
-$bcDark:                      lighten($dark,0);
+$bgBrand:                     lighten($brand,0);
+$bgHighlight:                 lighten($highlight,0);
+$bgPrimary:                   lighten($primary,0);
+$bgSecondary:                 lighten($secondary,0);
 
+/* Border colors */
+$bcAlert:                     darken($alert, 10%);
+$bcSuccess:                   darken($success, 10%);
+$bcError:                     darken($error, 10%);
+$bcInfo:                      darken($info, 10%);
+$bcBright:                    darken($bright,0);
+$bcNatural:                   darken($natural,0);
+$bcDim:                       darken($dim,0);
+$bcDull:                      darken($dull,0);
+$bcDark:                      darken($dark,0);
+
+$bcBrand:                     darken($brand,10%);
+$bcHighlight:                 darken($highlight,10%);
+$bcPrimary:                   darken($primary,10%);
+$bcSecondary:                 darken($secondary,10%);
 
 /* Button */
 $button-padding:              10px 12px;
