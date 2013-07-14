@@ -9,3 +9,8 @@
 .bgBright { background-color: lighten($bright, $bgLighten); }
 .bgDim { background-color: lighten($dim, $bgLighten); }
 .bgDark { background-color: lighten($dark, $bgLighten); }
+
+.bgBrand { background-color: $bgBrand; }
+.bgHighlight { background-color: $bgHighlight; }
+.bgPrimary { background-color: $bgPrimary; }
+.bgSecondary { background-color: $bgSecondary; }
