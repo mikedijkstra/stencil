@@ -157,16 +157,17 @@ $line-color:                  #eeeeee;
 $line-height:                 1px;
 
 /* Font colors */
-$alert:                       #c09853;
-$success:                     #468847;
-$error:                       #b94a48;
-$info:                        #3a87ad;
-$bright:                      #f0f0f0;
-$dim:                         #ababab;
-$dark:                        #333333;
+$alert:                       #fc4557;
+$success:                     #dff0d8;
+$error:                       #f2dede;
+$info:                        #d9edf7;
 
-/* Border colors */
-$bcDarken:                    5%;
+$bright:                      rgb(255,255,255);
+$cool:                        rgb(252,252,252);
+$natural:                     rgb(245,245,245);
+$dim:                         rgb(230,230,230);
+$dull:                        rgb(136,136,136);
+$dark:                        rgb(42,42,42)
 
 /* Background colors */
 $bgBrand:                     blue;
@@ -174,8 +175,28 @@ $bgHighlight:                 orange;
 $bgPrimary:                   #cccccc;
 $bgSecondary:                 #dddddd;
 
-/* Alert, Success etc. */
-$bgLighten:                   30%;
+$bgAlert:                     lighten($alert, 10%);
+$bgSuccess:                   lighten($success, 10%);
+$bgError:                     lighten($error, 10%);
+$bgInfo:                      lighten($info, 10%);
+$bgBright:                    lighten($bright,0);
+$bgCool:                      lighten($cool,0);
+$bgNatural:                   lighten($natural,0);
+$bgDim:                       lighten($dim,0);
+$bgDull:                      lighten($dull,0);
+$bgDark:                      lighten($dark,0);
+
+$bcAlert:                     lighten($alert, 10%);
+$bcSuccess:                   lighten($success, 10%);
+$bcError:                     lighten($error, 10%);
+$bcInfo:                      lighten($info, 10%);
+$bcBright:                    lighten($bright,0);
+$bcCool:                      lighten($cool,0);
+$bcNatural:                   lighten($natural,0);
+$bcDim:                       lighten($dim,0);
+$bcDull:                      lighten($dull,0);
+$bcDark:                      lighten($dark,0);
+
 
 /* Button */
 $button-padding:              10px 12px;
