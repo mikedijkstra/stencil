@@ -95,3 +95,16 @@
     -webkit-border-bottom-right-radius: $border-large !important;
     border-bottom-right-radius: $border-large !important;
 }
+
+/**
+ * Border Color
+ * bc = border color
+ */
+
+.bcAlert { border-color: darken($alert, $bcDarken); }
+.bcSuccess { border-color: darken($success, $bcDarken); }
+.bcError { border-color: darken($error, $bcDarken); }
+.bcInfo { border-color: darken($info, $bcDarken); }
+.bcBright { border-color: darken($bright, $bcDarken); }
+.bcDim { border-color: darken($dim, $bcDarken); }
+.bcDark { border-color: darken($dark, $bcDarken); }

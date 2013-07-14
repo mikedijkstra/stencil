@@ -1,0 +1,24 @@
+/**
+ * Mixins
+ */
+
+@mixin button($namespace: "", $background: #f8f8f8, $hover-background: #f8f8f8, $border-color: #ccc, $color: #333){
+  .btn#{$namespace} {
+    background-color: $background;
+    color: $color;
+    border: 1px solid $border-color;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    margin: 0;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+
+    &:hover, &.active {
+      background-color: $hover-background;
+      text-decoration: none;
+    }
+  }
+}

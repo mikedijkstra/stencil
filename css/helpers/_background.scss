@@ -1,0 +1,11 @@
+/**
+ * Background Color
+ */
+
+.bgAlert { background-color: lighten($alert, $bgLighten); }
+.bgSuccess { background-color: lighten($success, $bgLighten); }
+.bgError { background-color: lighten($error, $bgLighten); }
+.bgInfo { background-color: lighten($info, $bgLighten); }
+.bgBright { background-color: lighten($bright, $bgLighten); }
+.bgDim { background-color: lighten($dim, $bgLighten); }
+.bgDark { background-color: lighten($dark, $bgLighten); }

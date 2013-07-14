@@ -31,6 +31,16 @@ body { _text-align: center; }
 
 .ie .page {
   /* Fixes for IE6-8 http://jonikorpi.com/leaving-old-IE-behind */
-  width: $ie-max-page-width;
+  width: $lap-break-point;
   margin: 0 auto;
+}
+
+@mixin media-query($media-query){
+  @if $media-query == lap{
+    @media only screen and (min-width:$lap-break-point) { @content; }
+  }
+
+  @if $media-query == desk{
+    @media only screen and (min-width:$desk-break-point) { @content; }
+  }
 }

@@ -1,0 +1,212 @@
+@import "mixins";
+
+/* Page Breaks */
+$lap-break-point:             640px; /* Also IE Max page width */
+$desk-break-point:            980px;
+$max-page-width:              100%;
+$ie-max-page-width:           640px;
+
+/**
+ * Font Settings
+ */
+
+/* Sizes */
+
+/* Base (p, li) */
+$base:                        14px;
+$base-line-height:            1.4em;
+$base-height:                 20px; /* Usually $base * $base-line-height */
+$base-margin-bottom:          1.0em;
+/* Lap */
+$lap-base:                    14px;
+$lap-base-line-height:        1.4em;
+$lap-base-margin-bottom:      1.0em;
+/* Desk */
+$desk-base:                   14px;
+$desk-base-line-height:       1.4em;
+$desk-base-margin-bottom:     1.0em;
+
+/* h1 */
+$alpha:                       60px;
+$alpha-line-height:           1.4em;
+$alpha-margin-bottom:         1.0em;
+/* Lap */
+$lap-alpha:                   60px;
+$lap-alpha-line-height:       1.4em;
+$lap-alpha-margin-bottom:     1.0em;
+/* Desk */
+$desk-alpha:                  60px;
+$desk-alpha-line-height:      1.4em;
+$desk-alpha-margin-bottom:    1.0em;
+
+/* h2 */
+$beta:                        48px;
+$beta-line-height:            1.4em;
+$beta-margin-bottom:          1.0em;
+/* Lap */
+$lap-beta:                    48px;
+$lap-beta-line-height:        1.4em;
+$lap-beta-margin-bottom:      1.0em;
+/* Desk */
+$desk-beta:                   48px;
+$desk-beta-line-height:       1.4em;
+$desk-beta-margin-bottom:     1.0em;
+
+/* h3 */
+$gamma:                       30px;
+$gamma-line-height:           1.4em;
+$gamma-margin-bottom:         1.0em;
+/* Lap */
+$lap-gamma:                   30px;
+$lap-gamma-line-height:       1.4em;
+$lap-gamma-margin-bottom:     1.0em;
+/* Desk */
+$desk-gamma:                  30px;
+$desk-gamma-line-height:      1.4em;
+$desk-gamma-margin-bottom:    1.0em;
+
+/* h4 */
+$delta:                       18px;
+$delta-line-height:           1.4em;
+$delta-margin-bottom:         1.0em;
+/* Lap */
+$lap-delta:                   18px;
+$lap-delta-line-height:       1.4em;
+$lap-delta-margin-bottom:     1.0em;
+/* Desk */
+/* Lap */
+$desk-delta:                  18px;
+$desk-delta-line-height:      1.4em;
+$desk-delta-margin-bottom:    1.0em;
+
+/* h5 */
+$epsilon:                     12px;
+$epsilon-line-height:         1.4em;
+$epsilon-margin-bottom:       1.0em;
+/* Lap */
+$lap-epsilon:                 12px;
+$lap-epsilon-line-height:     1.4em;
+$lap-epsilon-margin-bottom:   1.0em;
+/* Desk */
+$desk-epsilon:                12px;
+$desk-epsilon-line-height:    1.4em;
+$desk-epsilon-margin-bottom:  1.0em;
+
+/* h6 */
+$zeta:                        10px;
+$zeta-line-height:            1.4em;
+$zeta-margin-bottom:          1.0em;
+/* Lap */
+$lap-zeta:                    10px;
+$lap-zeta-line-height:        1.4em;
+$lap-zeta-margin-bottom:      1.0em;
+/* Desk */
+$desk-zeta:                   10px;
+$desk-zeta-line-height:       1.4em;
+$desk-zeta-margin-bottom:     1.0em;
+
+/* Families */
+$primary:                     Helmut, Helvetica, Arial, sans-serf;
+$heading:                     Helmut, Helvetica, Arial, sans-serf;
+$secondary:                   Helmut, Helvetica, Arial, sans-serf;
+
+/* Weights */
+$thin:                        100;
+$light:                       300;
+$regular:                     500; /* body, paragraph, li */
+$bold:                        700;
+$heavy:                       900;
+
+/* Headings*/
+$h1-family:                   $heading;
+$h1-weight:                   $bold;
+$h2-family:                   $secondary;
+$h2-weight:                   $bold;
+$h3-family:                   $secondary;
+$h3-weight:                   $bold;
+$h4-family:                   $secondary;
+$h4-weight:                   $bold;
+$h5-family:                   $secondary;
+$h5-weight:                   $bold;
+$h6-family:                   $secondary;
+$h6-weight:                   $bold;
+
+/* Spacing */
+$tiny-spacing:                2px; /* pat, mat */
+$half-spacing:                5px; /* pas, mas */
+$full-spacing:                10px; /* pam, mam */
+$double-spacing:              20px; /* pal, mal */
+$huge-spacing:                40px; /* pah, mah */
+
+/* Border */
+$border-tiny:                 1px;
+$border-small:                2px;
+$border-medium:               5px;
+$border-large:                8px;
+$border-huge:                 13px;
+
+/* Colors */
+
+/* Base colors */
+$default:                     #555;
+$default-background:          #fff;
+$link:                        #0088cc;
+$link-text-decoration:        none;
+$link-hover-text-decoration:  underline;
+$line-color:                  #eeeeee;
+$line-height:                 1px;
+
+/* Font colors */
+$alert:                       #c09853;
+$success:                     #468847;
+$error:                       #b94a48;
+$info:                        #3a87ad;
+$bright:                      #f0f0f0;
+$dim:                         #ababab;
+$dark:                        #333333;
+
+/* Border colors */
+$bcDarken:                    5%;
+
+/* Background colors */
+$bgLighten:                   30%;
+
+/* Button */
+$button-padding:              10px 12px;
+$button-font-size:            14px;
+$button-line-height:          1.1em;
+/* .btnSmall */
+$button-small-padding:        10px 12px;
+$button-small-font-size:      12px;
+/* .btnLarge */
+$button-large-padding:        10px 12px;
+$button-large-font-size:      12px;
+
+@include button(
+  "" /* Default = Blank */,
+  $bright /* Background Color */,
+  lighten($dim, 10%) /* Hover Background Color */,
+  darken($dim, 10%) /* Border Color */,
+  $dark /* Color */
+);
+@include button(
+  "Positive" /* Namespace */,
+  $success /* Background Color */,
+  lighten($success, 10%) /* Hover Background Color */,
+  darken($success, 10%) /* Border Color */,
+  #ffffff /* Color */
+);
+@include button(
+  "Negative" /* Namespace */,
+  $error /* Background Color */,
+  lighten($error, 10%) /* Hover Background Color */,
+  darken($error, 10%) /* Border Color */,
+  #ffffff /* Color */
+);
+
+/* Forms */
+$form-background-color:       #ffffff;
+$form-focus-background-color: #ffffff;
+$form-border-color:           #ccc;
+$form-focus-border-color:     #ccc;
+$form-border-radius:          3px

@@ -10,14 +10,14 @@
 
 .media .img {
     float: left;
-    margin-right: $base-spacing-width;
+    margin-right: $full-spacing;
 }
 
 .media .img img { display:block; }
 
 .media .imgExt {
     float: right;
-    margin-left: $base-spacing-width;
+    margin-left: $full-spacing;
 }
 
 /**

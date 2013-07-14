@@ -5,8 +5,8 @@
  * @package  Reset
  */
 html {
-    color: $color-default;
-    background: $bg-default;
+    color: $default;
+    background: $default-background;
 }
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, figure, legend, input, textarea, p, blockquote, th, td {
     margin: 0;
@@ -17,19 +17,6 @@ body {
     font: 14px/1.0em sans-serif;
     *font-size: small;
     *font: x-small;
-}
-p { margin-bottom: 0; }
-a {
-    color: #0088cc;
-    text-decoration: none;
-}
-a:hover { text-decoration: underline; }
-a:active, a:focus { outline: 0; }
-hr {
-    color: #eeeeee;
-    background: #eeeeee;
-    border: none;
-    height: 1px;
 }
 table {
     border-collapse: collapse;
@@ -67,4 +54,4 @@ input, textarea, select {
 }
 input, textarea, select { *font-size: 100%; }
 select, input, button, textarea { font: 99% sans-serif; }
-legend { color: $color-default; }
+legend { color: $default; }

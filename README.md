@@ -5,24 +5,19 @@ JoyceCSS is an OOCSS framework with a rock-solid reset, useful layouts, an infin
 ## Getting Started
 
 - Run the watch command to ensure your Sass is compiled correctly
-- Update the default settings file css/\_settings.scss
-- Customise your sites style by updating the files in css/custom
-- Read the code for index.html to learn how to structure your page and get the
-  most out of OOCSS and Joyce.
+- Update css/_joyce.scss with your preferences
+- Customise css/_mixins.scss with your preferred styles
+- Place all custom CSS in css/_custom.scss
 
 ## How it works
 
-Joyce CSS is composed of three main parts.
+The css/helpers folder contains the reset styling, generic styles for things like forms and OOCSS objects like media and module.
 
-The helpers folder contains the reset styling, generic styles for things like
-forms and OOCSS objects like media and module.
+The css/_joyce.scss file contains default variables all 'out of the box' objects and styles.
 
-The \_settings.scss file contains default variables for things like maximum page
-width, adaptive layout break points and default spacing.
+The css/_mixins.scss file contains customisable snippets for objects like buttons.
 
-The custom folder contains the styling for things like background color, font
-color, font sizes and buttons. You should customise the code in this folder and
-add any additional styling to this folder.
+The css/_custom.scss file is an empty file ready for all your custom CSS.
 
 ## Thanks to
 
