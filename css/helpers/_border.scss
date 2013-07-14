@@ -121,10 +121,10 @@
  * bc = border color
  */
 
-.bcAlert { background-color: $bcAlert; }
-.bcSuccess { background-color: $bcSuccess; }
-.bcError { background-color: $bcError; }
-.bcInfo { background-color: $bcInfo; }
-.bcBright { background-color: $bcBright; }
-.bcDim { background-color: $bcDim; }
-.bcDark { background-color: $bcDark; }
+.bcAlert { border-color: $bcAlert; }
+.bcSuccess { border-color: $bcSuccess; }
+.bcError { border-color: $bcError; }
+.bcInfo { border-color: $bcInfo; }
+.bcBright { border-color: $bcBright; }
+.bcDim { border-color: $bcDim; }
+.bcDark { border-color: $bcDark; }
