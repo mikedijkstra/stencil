@@ -21,5 +21,7 @@ The css/_custom.scss file is an empty file ready for all your custom CSS.
 
 ## Thanks to
 
-- [Robert Love](https://github.com/Robert-Love) for coding the first version of [JoyceCSS](http://joycecss.com/)
-- [Harry Roberts](http://hry.rbrts.me) for the work done on the [inuit.css](https://github.com/csswizardry/inuit.css) framework which inspired this Sass version of JoyceCSS
+- [Robert Love](https://github.com/Robert-Love) for coding the first version of [JoyceCSS](http://joycecss.com/).
+- [Harry Roberts](http://hry.rbrts.me) for the work done on the [inuit.css](https://github.com/csswizardry/inuit.css) framework which inspired this Sass version of JoyceCSS.
+- [Hampton Catlin](http://www.hamptoncatlin.com/) and [Nathan Weizenbaum](http://nex-3.com/) for creating [Saas](http://sass-lang.com/).
+- [Nicole Sullian](https://github.com/stubbornella) for her work on [OOCSS](https://github.com/stubbornella/oocss)
