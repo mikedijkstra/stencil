@@ -1,18 +1,27 @@
 /**
  * Color
  */
+.body { color: $color-base; }
+.base { color: $color-base; }
+.highlight { color: $color-highlight; }
+.success { color: $color-success; }
+.error { color: $color-error; }
 
-.body { color: $default; }
-.alert { color: $alert; }
-.success { color: $success; }
-.error { color: $error; }
-.info { color: $info; }
-.bright { color: $bright; }
-.natural { color: $natural; }
-.dim { color: $dim; }
-.dull { color: $dull; }
-.dark { color: $dark; }
-.brand { color: $brand; }
-.highlight { color: $highlight; }
-.primary { color: $primary; }
-.secondary { color: $secondary; }
+/**
+ * Background Color
+ * bg = background color
+ */
+.body { background-color: $bgBase; }
+.bgBase { background-color: $bgBase; }
+.bgHighlight { background-color: $bgHighlight; }
+.bgSuccess { background-color: $bgSuccess; }
+.bgError { background-color: $bgError; }
+
+/**
+ * Border Color
+ * bc = border color
+ */
+.bcBase { border-color: $bcBase; }
+.bcHighlight { border-color: $bcHighlight; }
+.bcSuccess { border-color: $bcSuccess; }
+.bcError { border-color: $bcError; }

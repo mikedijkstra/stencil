@@ -1,6 +1,13 @@
 #  Stencil.css
 
-This is not another CSS framework. It's a set of CSS helpers to give you a head start developing your next web application or site.
+This is not another CSS framework. It's a set of lightweight CSS helpers to give you a head start developing your next web site.
+
+## What you get
++ 3 font sizes
++ 3 font weights
++ OOCSS helpers for layout, modules and media objects
++ Responsive OOCSS styles for palm, lap and desk widths
+
 
 ## Getting Started
 

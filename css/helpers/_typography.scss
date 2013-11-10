@@ -26,7 +26,7 @@ hr {
 body {
   font-size: $base;
   font-family: $body;
-  font-weight: $regular;
+  font-weight: $weight-base;
   line-height: 1.0em;
 }
 
@@ -47,86 +47,35 @@ p,li {
 
 h1, .h1 {
   font-family: $h1-family;
-  font-size: $alpha;
   font-weight: $h1-weight;
-  line-height: $alpha-line-height;
-  margin-bottom: $alpha-margin-bottom;
 }
 
 h2, .h2 {
   font-family: $h2-family;
-  font-size: $beta;
   font-weight: $h2-weight;
-  line-height: $beta-line-height;
-  margin-bottom: $beta-margin-bottom;
 }
 
 h3, .h3 {
   font-family: $h3-family;
-  font-size: $gamma;
   font-weight: $h3-weight;
-  line-height: $gamma-line-height;
-  margin-bottom: $gamma-margin-bottom;
 }
 
-h4, .h4 {
-  font-family: $h4-family;
-  font-size: $delta;
-  font-weight: $h4-weight;
-  line-height: $delta-line-height;
-  margin-bottom: $delta-margin-bottom;
-}
-
-h5, .h5 {
-  font-family: $h5-family;
-  font-size: $epsilon;
-  font-weight: $h5-weight;
-  line-height: $epsilon-line-height;
-  margin-bottom: $epsilon-margin-bottom;
-}
-
-h6, .h6 {
-  font-family: $h6-family;
-  font-size: $zeta;
-  font-weight: $h6-weight;
-  line-height: $zeta-line-height;
-  margin-bottom: $zeta-margin-bottom;
-}
-
-.alpha {
+h1, .h1, .alpha {
   font-size: $alpha;
   line-height: $alpha-line-height;
   margin-bottom: $alpha-margin-bottom;
 }
 
-.beta {
+h2, .h2, .beta {
   font-size: $beta;
   line-height: $beta-line-height;
   margin-bottom: $beta-margin-bottom;
 }
 
-.gamma {
+h3, .h3, .gamma {
   font-size: $gamma;
   line-height: $gamma-line-height;
   margin-bottom: $gamma-margin-bottom;
-}
-
-.delta {
-  font-size: $delta;
-  line-height: $delta-line-height;
-  margin-bottom: $delta-margin-bottom;
-}
-
-.epsilon {
-  font-size: $epsilon;
-  line-height: $epsilon-line-height;
-  margin-bottom: $epsilon-margin-bottom;
-}
-
-.zeta {
-  font-size: $zeta;
-  line-height: $zeta-line-height;
-  margin-bottom: $zeta-margin-bottom;
 }
 
 @include media-query(lap){
@@ -139,91 +88,31 @@ h6, .h6 {
    */
 
   p,li {
-    font-size: $desk-base;
-    line-height: $desk-base-line-height;
-    margin-bottom: $desk-base-margin-bottom;
+    font-size: $lap-base;
+    line-height: $lap-base-line-height;
+    margin-bottom: $lap-base-margin-bottom;
   }
 
   /*
    * Headings
    */
 
-  h1, .h1 {
-    font-size: $desk-alpha;
-    line-height: $desk-alpha-line-height;
-    margin-bottom: $desk-alpha-margin-bottom;
-  }
-
-  h2, .h2 {
-    font-size: $desk-beta;
-    line-height: $desk-beta-line-height;
-    margin-bottom: $desk-beta-margin-bottom;
-  }
-
-  h3, .h3 {
-    font-size: $desk-gamma;
-    line-height: $desk-gamma-line-height;
-    margin-bottom: $desk-gamma-margin-bottom;
-  }
-
-  h4, .h4 {
-    font-size: $desk-delta;
-    line-height: $desk-delta-line-height;
-    margin-bottom: $desk-delta-margin-bottom;
-  }
-
-  h5, .h5 {
-    font-size: $desk-epsilon;
-    line-height: $desk-epsilon-line-height;
-    margin-bottom: $desk-epsilon-margin-bottom;
-  }
-
-  h6, .h6 {
-    font-size: $desk-zeta;
-    line-height: $desk-zeta-line-height;
-    margin-bottom: $desk-zeta-margin-bottom;
-  }
-
-  h6, .h6 {
-    font-size: $lap-zeta;
-    line-height: $lap-zeta-line-height;
-    margin-bottom: $lap-zeta-margin-bottom;
-  }
-
-  .alpha {
+  h1, .h1, .alpha {
     font-size: $lap-alpha;
     line-height: $lap-alpha-line-height;
     margin-bottom: $lap-alpha-margin-bottom;
   }
 
-  .beta {
+  h2, .h2, .beta {
     font-size: $lap-beta;
     line-height: $lap-beta-line-height;
     margin-bottom: $lap-beta-margin-bottom;
   }
 
-  .gamma {
+  h3, .h3, .gamma {
     font-size: $lap-gamma;
     line-height: $lap-gamma-line-height;
     margin-bottom: $lap-gamma-margin-bottom;
-  }
-
-  .delta {
-    font-size: $lap-delta;
-    line-height: $lap-delta-line-height;
-    margin-bottom: $lap-delta-margin-bottom;
-  }
-
-  .epsilon {
-    font-size: $lap-epsilon;
-    line-height: $lap-epsilon-line-height;
-    margin-bottom: $lap-epsilon-margin-bottom;
-  }
-
-  .zeta {
-    font-size: $lap-zeta;
-    line-height: $lap-zeta-line-height;
-    margin-bottom: $lap-zeta-margin-bottom;
   }
 }
 
@@ -246,75 +135,21 @@ h6, .h6 {
    * Headings
    */
 
-  h1, .h1 {
+  h1, .h1, .alpha {
     font-size: $desk-alpha;
     line-height: $desk-alpha-line-height;
     margin-bottom: $desk-alpha-margin-bottom;
   }
 
-  h2, .h2 {
+  h2, .h2, .beta {
     font-size: $desk-beta;
     line-height: $desk-beta-line-height;
     margin-bottom: $desk-beta-margin-bottom;
   }
 
-  h3, .h3 {
+  h3, .h3, .gamma {
     font-size: $desk-gamma;
     line-height: $desk-gamma-line-height;
     margin-bottom: $desk-gamma-margin-bottom;
-  }
-
-  h4, .h4 {
-    font-size: $desk-delta;
-    line-height: $desk-delta-line-height;
-    margin-bottom: $desk-delta-margin-bottom;
-  }
-
-  h5, .h5 {
-    font-size: $desk-epsilon;
-    line-height: $desk-epsilon-line-height;
-    margin-bottom: $desk-epsilon-margin-bottom;
-  }
-
-  h6, .h6 {
-    font-size: $desk-zeta;
-    line-height: $desk-zeta-line-height;
-    margin-bottom: $desk-zeta-margin-bottom;
-  }
-
-  .alpha {
-    font-size: $desk-alpha;
-    line-height: $desk-alpha-line-height;
-    margin-bottom: $desk-alpha-margin-bottom;
-  }
-
-  .beta {
-    font-size: $desk-beta;
-    line-height: $desk-beta-line-height;
-    margin-bottom: $desk-beta-margin-bottom;
-  }
-
-  .gamma {
-    font-size: $desk-gamma;
-    line-height: $desk-gamma-line-height;
-    margin-bottom: $desk-gamma-margin-bottom;
-  }
-
-  .delta {
-    font-size: $desk-delta;
-    line-height: $desk-delta-line-height;
-    margin-bottom: $desk-delta-margin-bottom;
-  }
-
-  .epsilon {
-    font-size: $desk-epsilon;
-    line-height: $desk-epsilon-line-height;
-    margin-bottom: $desk-epsilon-margin-bottom;
-  }
-
-  .zeta {
-    font-size: $desk-zeta;
-    line-height: $desk-zeta-line-height;
-    margin-bottom: $desk-zeta-margin-bottom;
   }
 }

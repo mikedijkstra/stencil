@@ -5,8 +5,8 @@
  * @package  Reset
  */
 html {
-    color: $default;
-    background: $default-background;
+    color: $color-base;
+    background: $bgBase;
 }
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, figure, legend, input, textarea, p, blockquote, th, td {
     margin: 0;
@@ -54,4 +54,4 @@ input, textarea, select {
 }
 input, textarea, select { *font-size: 100%; }
 select, input, button, textarea { font: 99% sans-serif; }
-legend { color: $default; }
+legend { color: $color-base; }

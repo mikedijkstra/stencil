@@ -20,7 +20,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
     margin-bottom: $full-spacing;
     font-size: $base;
     line-height: $base-line-height;
-    color: $default;
+    color: $color-base;
 }
 input, textarea {
   width: 100%;
