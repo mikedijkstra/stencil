@@ -1,11 +1,14 @@
 /**
- * Border
- *
- * b = border
- * a/t/r/b/l = all/top/right/bottom/left
- * t/s/m/l/h = tiny/small/medium/large/huge
- *
- */
+  * Border
+  *
+  * b = border
+  * a/t/r/b/l = all/top/right/bottom/left
+  * t/s/m/l/h = tiny/small/medium/large/huge
+  *
+  * @category   JoyceCSS
+  * @package    Helper
+  * @subpackage Border
+**/
 .bat, .btt { border-top: $border-tiny solid; }
 .bas, .bts { border-top: $border-small solid; }
 .bam, .btm { border-top: $border-medium solid; }
@@ -28,13 +31,16 @@
 .bah, .blh { border-left: $border-huge solid; }
 
 /**
- * Border Radius
- *
- * br = border radius
- * a/tl/tr/bl/br = all/top-left/top-right/bottom-left/bottom-right
- * s/m/l = small/medium/large
- *
- */
+  * Border Radius
+  *
+  * br = border radius
+  * a/tl/tr/bl/br = all/top-left/top-right/bottom-left/bottom-right
+  * s/m/l = small/medium/large
+  *
+  * @category   JoyceCSS
+  * @package    Helper
+  * @subpackage Border.Radius
+ **/
 .bras, .brtls {
     -moz-border-radius-topleft: $border-small !important;
     -webkit-border-top-left-radius: $border-small !important;

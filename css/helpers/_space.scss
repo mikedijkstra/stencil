@@ -1,11 +1,15 @@
 /**
- * Space
- *
- * p/m = padding/margin
- * a/t/r/b/l/h/v = all/top/right/bottom/left/horizontal/vertical
- * n/t/s/m/l/h = none/tiny/half/full/double/huge
- *
- */
+  * Space
+  *
+  * p/m = padding/margin
+  * a/t/r/b/l/h/v = all/top/right/bottom/left/horizontal/vertical
+  * n/t/s/m/l/h = none/tiny/half/full/double/huge
+  *
+  * @category   JoyceCSS
+  * @package    Helper
+  * @subpackage Space
+  *
+**/
 @mixin space-setup($namespace: "") {
   .#{$namespace}ptn, .#{$namespace}pvn, .#{$namespace}pan { padding-top: 0px !important; }
   .#{$namespace}ptt, .#{$namespace}pvt, .#{$namespace}pat { padding-top: $tiny-spacing !important; }

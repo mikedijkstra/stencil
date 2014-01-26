@@ -1,6 +1,10 @@
 /**
- * Color
- */
+  * Color
+  *
+  * @category   JoyceCSS
+  * @package    Helper
+  * @subpackage Color
+**/
 .body { color: $color-base; }
 .base { color: $color-base; }
 .highlight { color: $color-highlight; }
@@ -8,9 +12,13 @@
 .error { color: $color-error; }
 
 /**
- * Background Color
- * bg = background color
- */
+  * Background Color
+  * bg = background color
+  *
+  * @category   JoyceCSS
+  * @package    Helper
+  * @subpackage Background.Color
+**/
 .body { background-color: $bgBase; }
 .bgBase { background-color: $bgBase; }
 .bgHighlight { background-color: $bgHighlight; }
@@ -18,9 +26,13 @@
 .bgError { background-color: $bgError; }
 
 /**
- * Border Color
- * bc = border color
- */
+  * Border Color
+  * bc = border color
+  *
+  * @category   JoyceCSS
+  * @package    Helper
+  * @subpackage Border.Color
+**/
 .bcBase { border-color: $bcBase; }
 .bcHighlight { border-color: $bcHighlight; }
 .bcSuccess { border-color: $bcSuccess; }

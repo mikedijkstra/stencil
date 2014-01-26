@@ -1,7 +1,11 @@
 /**
- * Grid
- *
- */
+  * Grid
+  *
+  * @category   JoyceCSS
+  * @package    Helper
+  * @subpackage Grid
+  *
+**/
 @mixin grid-setup($namespace: "") {
   .#{$namespace}row, .#{$namespace}lastCol {
     overflow: hidden;
