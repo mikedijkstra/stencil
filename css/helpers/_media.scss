@@ -5,7 +5,6 @@
   * @package    Helper
   * @subpackage Media
 **/
- */
 
 .media {
     overflow: hidden;
@@ -15,14 +14,14 @@
 
 .media .img {
     float: left;
-    margin-right: $full-spacing;
+    margin-right: $medium-spacing;
 }
 
 .media .img img { display:block; }
 
 .media .imgExt {
     float: right;
-    margin-left: $full-spacing;
+    margin-left: $medium-spacing;
 }
 
 /**

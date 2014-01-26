@@ -12,7 +12,7 @@ label, input, button, select, textarea {
 }
 label {
     display: block;
-    margin-bottom: $full-spacing;
+    margin-bottom: $medium-spacing;
 }
 select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
     -webkit-box-sizing: border-box;
@@ -20,8 +20,8 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
     box-sizing: border-box;
     display: inline-block;
     height: $base-height;
-    padding: $half-spacing;
-    margin-bottom: $full-spacing;
+    padding: $small-spacing;
+    margin-bottom: $medium-spacing;
     font-size: $base;
     line-height: $base-line-height;
     color: $color-base;
@@ -37,7 +37,7 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
   @include form-field-style;
 }
 input[type="radio"], input[type="checkbox"] {
-    margin: $half-spacing 0;
+    margin: $small-spacing 0;
     *margin-top: 0;
     line-height: normal;
     cursor: pointer;
@@ -48,7 +48,7 @@ input[type="submit"], input[type="reset"], input[type="button"], input[type="rad
 select, input[type="file"] {
     font-size: $base;
     height: $base-height;
-    margin-top: $half-spacing;
+    margin-top: $small-spacing;
     line-height: $base-line-height;
 }
 select {
@@ -65,21 +65,21 @@ select:focus, input[type="file"]:focus, input[type="radio"]:focus, input[type="c
 }
 .radio, .checkbox {
     min-height: $base-height;
-    padding-left: $half-spacing;
+    padding-left: $small-spacing;
 }
 .radio input[type="radio"], .checkbox input[type="checkbox"] {
     float: left;
-    margin-left: -$half-spacing;
+    margin-left: -$small-spacing;
 }
 .controls > .radio:first-child, .controls > .checkbox:first-child {
-    padding-top: $half-spacing;
+    padding-top: $small-spacing;
 }
 .radio.inline, .checkbox.inline {
     display: inline-block;
-    padding-top: $half-spacing;
+    padding-top: $small-spacing;
     margin-bottom: 0;
     vertical-align: middle;
 }
 .radio.inline + .radio.inline, .checkbox.inline + .checkbox.inline {
-    margin-left: $full-spacing;
+    margin-left: $medium-spacing;
 }

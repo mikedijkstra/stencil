@@ -12,6 +12,7 @@ a {
 }
 
 a:hover {
+  color: $link-hover-color;
   text-decoration: $link-hover-text-decoration;
 }
 
@@ -23,7 +24,7 @@ hr {
   border: none;
   display: block;
   height: $line-height;
-  margin: $full-spacing 0;
+  margin: $medium-spacing 0;
 }
 
 body {
@@ -63,22 +64,55 @@ h3, .h3 {
   font-weight: $h3-weight;
 }
 
-h1, .h1, .alpha {
-  font-size: $alpha;
-  line-height: $alpha-line-height;
-  margin-bottom: $alpha-margin-bottom;
+h4, .h4 {
+  font-family: $h4-family;
+  font-weight: $h4-weight;
 }
 
-h2, .h2, .beta {
-  font-size: $beta;
-  line-height: $beta-line-height;
-  margin-bottom: $beta-margin-bottom;
+h5, .h5 {
+  font-family: $h5-family;
+  font-weight: $h5-weight;
 }
 
-h3, .h3, .gamma {
-  font-size: $gamma;
-  line-height: $gamma-line-height;
-  margin-bottom: $gamma-margin-bottom;
+h6, .h6 {
+  font-family: $h6-family;
+  font-weight: $h6-weight;
+}
+
+h1, .h1, .fsg {
+  font-size: $fsg;
+  line-height: $fsg-line-height;
+  margin-bottom: $fsg-margin-bottom;
+}
+
+h2, .h2, .fsh {
+  font-size: $fsh;
+  line-height: $fsh-line-height;
+  margin-bottom: $fsh-margin-bottom;
+}
+
+h3, .h3, .fsl {
+  font-size: $fsl;
+  line-height: $fsl-line-height;
+  margin-bottom: $fsl-margin-bottom;
+}
+
+h4, .h4, .fsm {
+  font-size: $fsm;
+  line-height: $fsm-line-height;
+  margin-bottom: $fsm-margin-bottom;
+}
+
+h5, .h5, .fss {
+  font-size: $fss;
+  line-height: $fss-line-height;
+  margin-bottom: $fss-margin-bottom;
+}
+
+h6, .h6, .fst {
+  font-size: $fst;
+  line-height: $fst-line-height;
+  margin-bottom: $fst-margin-bottom;
 }
 
 @include media-query(lap){
@@ -100,22 +134,40 @@ h3, .h3, .gamma {
    * Headings
    */
 
-  h1, .h1, .alpha {
-    font-size: $lap-alpha;
-    line-height: $lap-alpha-line-height;
-    margin-bottom: $lap-alpha-margin-bottom;
+  h1, .h1, .fsg {
+    font-size: $lap-fsg;
+    line-height: $lap-fsg-line-height;
+    margin-bottom: $lap-fsg-margin-bottom;
   }
 
-  h2, .h2, .beta {
-    font-size: $lap-beta;
-    line-height: $lap-beta-line-height;
-    margin-bottom: $lap-beta-margin-bottom;
+  h2, .h2, .fsh {
+    font-size: $lap-fsh;
+    line-height: $lap-fsh-line-height;
+    margin-bottom: $lap-fsh-margin-bottom;
   }
 
-  h3, .h3, .gamma {
-    font-size: $lap-gamma;
-    line-height: $lap-gamma-line-height;
-    margin-bottom: $lap-gamma-margin-bottom;
+  h3, .h3, .fsl {
+    font-size: $lap-fsl;
+    line-height: $lap-fsl-line-height;
+    margin-bottom: $lap-fsl-margin-bottom;
+  }
+
+  h4, .h4, .fsm {
+    font-size: $lap-fsm;
+    line-height: $lap-fsm-line-height;
+    margin-bottom: $lap-fsm-margin-bottom;
+  }
+
+  h5, .h5, .fss {
+    font-size: $lap-fss;
+    line-height: $lap-fss-line-height;
+    margin-bottom: $lap-fss-margin-bottom;
+  }
+
+  h6, .h6, .fst {
+    font-size: $lap-fst;
+    line-height: $lap-fst-line-height;
+    margin-bottom: $lap-fst-margin-bottom;
   }
 }
 
@@ -138,21 +190,39 @@ h3, .h3, .gamma {
    * Headings
    */
 
-  h1, .h1, .alpha {
-    font-size: $desk-alpha;
-    line-height: $desk-alpha-line-height;
-    margin-bottom: $desk-alpha-margin-bottom;
+  h1, .h1, .fsg {
+    font-size: $desk-fsg;
+    line-height: $desk-fsg-line-height;
+    margin-bottom: $desk-fsg-margin-bottom;
   }
 
-  h2, .h2, .beta {
-    font-size: $desk-beta;
-    line-height: $desk-beta-line-height;
-    margin-bottom: $desk-beta-margin-bottom;
+  h2, .h2, .fsh {
+    font-size: $desk-fsh;
+    line-height: $desk-fsh-line-height;
+    margin-bottom: $desk-fsh-margin-bottom;
   }
 
-  h3, .h3, .gamma {
-    font-size: $desk-gamma;
-    line-height: $desk-gamma-line-height;
-    margin-bottom: $desk-gamma-margin-bottom;
+  h3, .h3, .fsl {
+    font-size: $desk-fsl;
+    line-height: $desk-fsl-line-height;
+    margin-bottom: $desk-fsl-margin-bottom;
+  }
+
+  h4, .h4, .fsm {
+    font-size: $desk-fsm;
+    line-height: $desk-fsm-line-height;
+    margin-bottom: $desk-fsm-margin-bottom;
+  }
+
+  h5, .h5, .fss {
+    font-size: $desk-fss;
+    line-height: $desk-fss-line-height;
+    margin-bottom: $desk-fss-margin-bottom;
+  }
+
+  h6, .h6, .fst {
+    font-size: $desk-fst;
+    line-height: $desk-fst-line-height;
+    margin-bottom: $desk-fst-margin-bottom;
   }
 }

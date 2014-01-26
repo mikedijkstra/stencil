@@ -36,59 +36,109 @@ $desk-base:                   18px;
 $desk-base-line-height:       1.4em;
 $desk-base-margin-bottom:     10px;
 
-/* h1 */
-$alpha:                       40px;
-$alpha-line-height:           1.4em;
-$alpha-margin-bottom:         10px;
+/* Font Size Gigantic */
+$fsg:                       40px;
+$fsg-line-height:           1.4em;
+$fsg-margin-bottom:         10px;
 
-$lap-alpha:                   50px;
-$lap-alpha-line-height:       1.4em;
-$lap-alpha-margin-bottom:     10px;
+$lap-fsg:                   50px;
+$lap-fsg-line-height:       1.4em;
+$lap-fsg-margin-bottom:     10px;
 
-$desk-alpha:                  60px;
-$desk-alpha-line-height:      1.4em;
-$desk-alpha-margin-bottom:    10px;
+$desk-fsg:                  60px;
+$desk-fsg-line-height:      1.4em;
+$desk-fsg-margin-bottom:    10px;
 
-/* h2 */
-$beta:                        30px;
-$beta-line-height:            1.4em;
-$beta-margin-bottom:          10px;
+/* Font Size Huge */
+$fsh:                        30px;
+$fsh-line-height:            1.4em;
+$fsh-margin-bottom:          10px;
 
-$lap-beta:                    40px;
-$lap-beta-line-height:        1.4em;
-$lap-beta-margin-bottom:      10px;
+$lap-fsh:                    40px;
+$lap-fsh-line-height:        1.4em;
+$lap-fsh-margin-bottom:      10px;
 
-$desk-beta:                   50px;
-$desk-beta-line-height:       1.4em;
-$desk-beta-margin-bottom:     10px;
+$desk-fsh:                   50px;
+$desk-fsh-line-height:       1.4em;
+$desk-fsh-margin-bottom:     10px;
 
-/* h3 */
-$gamma:                       20px;
-$gamma-line-height:           1.4em;
-$gamma-margin-bottom:         10px;
+/* Font Size Large */
+$fsl:                       20px;
+$fsl-line-height:           1.4em;
+$fsl-margin-bottom:         10px;
 
-$lap-gamma:                   30px;
-$lap-gamma-line-height:       1.4em;
-$lap-gamma-margin-bottom:     10px;
+$lap-fsl:                   30px;
+$lap-fsl-line-height:       1.4em;
+$lap-fsl-margin-bottom:     10px;
 
-$desk-gamma:                  40px;
-$desk-gamma-line-height:      1.4em;
-$desk-gamma-margin-bottom:    10px;
+$desk-fsl:                  40px;
+$desk-fsl-line-height:      1.4em;
+$desk-fsl-margin-bottom:    10px;
+
+/* Font Size Medium */
+$fsm:                       20px;
+$fsm-line-height:           1.4em;
+$fsm-margin-bottom:         10px;
+
+$lap-fsm:                   30px;
+$lap-fsm-line-height:       1.4em;
+$lap-fsm-margin-bottom:     10px;
+
+$desk-fsm:                  40px;
+$desk-fsm-line-height:      1.4em;
+$desk-fsm-margin-bottom:    10px;
+
+/* Font Size Small */
+$fss:                       20px;
+$fss-line-height:           1.4em;
+$fss-margin-bottom:         10px;
+
+$lap-fss:                   30px;
+$lap-fss-line-height:       1.4em;
+$lap-fss-margin-bottom:     10px;
+
+$desk-fss:                  40px;
+$desk-fss-line-height:      1.4em;
+$desk-fss-margin-bottom:    10px;
+
+/* Font Size Tiny */
+$fst:                       20px;
+$fst-line-height:           1.4em;
+$fst-margin-bottom:         10px;
+
+$lap-fst:                   30px;
+$lap-fst-line-height:       1.4em;
+$lap-fst-margin-bottom:     10px;
+
+$desk-fst:                  40px;
+$desk-fst-line-height:      1.4em;
+$desk-fst-margin-bottom:    10px;
 
 /* Headings*/
 $h1-family:                   $heading;
 $h1-weight:                   $weight-heavy;
+
 $h2-family:                   $sub-heading;
 $h2-weight:                   $weight-heavy;
+
 $h3-family:                   $sub-heading;
 $h3-weight:                   $weight-heavy;
 
+$h4-family:                   $sub-heading;
+$h4-weight:                   $weight-heavy;
+
+$h5-family:                   $sub-heading;
+$h5-weight:                   $weight-heavy;
+
+$h6-family:                   $sub-heading;
+$h6-weight:                   $weight-heavy;
+
 /* Spacing */
-$tiny-spacing:                2px; /* pat, mat */
-$half-spacing:                5px; /* pas, mas */
-$full-spacing:                10px; /* pam, mam */
-$double-spacing:              20px; /* pal, mal */
-$huge-spacing:                40px; /* pah, mah */
+$tiny-spacing:                2px;
+$small-spacing:               5px; /* half spacing */
+$medium-spacing:              10px; /* full spacing */
+$large-spacing:               20px; /* double spacing */
+$huge-spacing:                40px; /* double double spacing */
 
 /* Border */
 $border-tiny:                 1px;
@@ -103,6 +153,10 @@ $border-huge:                 13px;
 $link:                        #0088cc;
 $link-text-decoration:        none;
 $link-hover-text-decoration:  underline;
+$link-color:                  #eeeeee;
+$link-hover-color:            #eeeeee;
+
+/* Lines */
 $line-color:                  #eeeeee;
 $line-height:                 1px;
 
