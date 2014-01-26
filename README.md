@@ -1,4 +1,4 @@
-#  Stencil.css
+#  CSS
 
 This is not another CSS framework. It's a set of lightweight CSS helpers to give you a head start developing your next web site.
 
