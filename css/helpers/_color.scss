@@ -10,6 +10,11 @@
 .highlight { color: $color-highlight; }
 .success { color: $color-success; }
 .error { color: $color-error; }
+.dull { color: $color-dull; }
+.bright { color: $color-bright; }
+.primary { color: $color-primary; }
+.secondary { color: $color-secondary; }
+.tertiary { color: $color-tertiary; }
 
 /**
   * Background Color
@@ -24,6 +29,11 @@
 .bgHighlight { background-color: $bgHighlight; }
 .bgSuccess { background-color: $bgSuccess; }
 .bgError { background-color: $bgError; }
+.bgDull { background-color: $bgDull; }
+.bgBright { background-color: $bgBright; }
+.bgPrimary { background-color: $bgPrimary; }
+.bgSecondary { background-color: $bgSecondary; }
+.bgTertiary { background-color: $bgTertiary; }
 
 /**
   * Border Color
@@ -37,3 +47,8 @@
 .bcHighlight { border-color: $bcHighlight; }
 .bcSuccess { border-color: $bcSuccess; }
 .bcError { border-color: $bcError; }
+.bcDull { border-color: $bcDull; }
+.bcBright { border-color: $bcBright; }
+.bcPrimary { border-color: $bcPrimary; }
+.bcSecondary { border-color: $bcSecondary; }
+.bcTertiary { border-color: $bcTertiary; }

@@ -165,18 +165,33 @@ $color-base:                  #333;
 $color-highlight:             #fc4557;
 $color-success:               #dff0d8;
 $color-error:                 #f2dede;
+$color-dull:                  #111111;
+$color-bright:                #efefef;
+$color-primary:               #ff5946;
+$color-secondary:             #ffdd00;
+$color-tertiary:              #5ba4da;
 
 /* Background colors */
 $bgBase:                      #fff;
 $bgHighlight:                 lighten($color-highlight, 10%);
 $bgSuccess:                   #dff0d8;
 $bgError:                     #f2dede;
+$bgDull:                      #111111;
+$bgBright:                    #efefef;
+$bgPrimary:                   #ff5946;
+$bgSecondary:                 #ffdd00;
+$bgTertiary:                  #5ba4da;
 
 /* Border colors */
 $bcBase:                      darken($color-base, 10%);
 $bcHighlight:                 darken($color-highlight, 10%);
 $bcSuccess:                   darken($color-success, 10%);
 $bcError:                     darken($color-error, 10%);
+$bcDull:                      #111111;
+$bcBright:                    #efefef;
+$bcPrimary:                   #ff5946;
+$bcSecondary:                 #ffdd00;
+$bcTertiary:                  #5ba4da;
 
 /* Button */
 $button-padding:              10px 12px;
