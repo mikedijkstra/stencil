@@ -34,7 +34,7 @@
   .#{$namespace}pls, .#{$namespace}phs, .#{$namespace}pas { padding-left: $small-spacing !important; }
   .#{$namespace}plm, .#{$namespace}phm, .#{$namespace}pam { padding-left: $medium-spacing !important; }
   .#{$namespace}pll, .#{$namespace}phl, .#{$namespace}pal { padding-left: $large-spacing !important; }
-  #{$namespace}.plh, .#{$namespace}phh, .#{$namespace}pah { padding-left: $huge-spacing !important; }
+  .#{$namespace}plh, .#{$namespace}phh, .#{$namespace}pah { padding-left: $huge-spacing !important; }
   .#{$namespace}mtn, .#{$namespace}mvn, .#{$namespace}man { margin-top: 0px !important; }
   .#{$namespace}mtt, .#{$namespace}mvt, .#{$namespace}mat { margin-top: $tiny-spacing !important; }
   .#{$namespace}mts, .#{$namespace}mvs, .#{$namespace}mas { margin-top: $small-spacing !important; }
