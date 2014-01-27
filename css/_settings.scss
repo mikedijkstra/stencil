@@ -203,26 +203,49 @@ $button-small-font-size:      12px;
 /* .btnLarge */
 $button-large-padding:        10px 12px;
 $button-large-font-size:      12px;
+/* .btnBlock */
+$button-block-width:          210px;
 
 @include button(
   "" /* Default = Blank */,
-  #fafafa /* Background Color */,
-  lighten(#fafafa, 10%) /* Hover Background Color */,
-  darken(#fafafa, 10%) /* Border Color */,
-  $color-base /* Color */
+  lighten($bgBase, 10%) /* Background Color */,
+  lighten($bgBase, 20%) /* Hover Background Color */,
+  darken($bgBase, 20%) /* Border Color */,
+  $color-dull /* Color */
 );
 @include button(
   "Success" /* Namespace */,
-  $color-success /* Background Color */,
-  lighten($color-success, 10%) /* Hover Background Color */,
-  darken($color-success, 10%) /* Border Color */,
+  $bgSuccess /* Background Color */,
+  lighten($bgSuccess, 10%) /* Hover Background Color */,
+  darken($bgSuccess, 10%) /* Border Color */,
   #ffffff /* Color */
 );
 @include button(
   "Error" /* Namespace */,
-  $color-error /* Background Color */,
-  lighten($color-error, 10%) /* Hover Background Color */,
-  darken($color-error, 10%) /* Border Color */,
+  $bgError /* Background Color */,
+  lighten($bgError, 10%) /* Hover Background Color */,
+  darken($bgError, 10%) /* Border Color */,
+  #ffffff /* Color */
+);
+@include button(
+  "Primary" /* Namespace */,
+  $bgPrimary /* Background Color */,
+  lighten($bgPrimary, 10%) /* Hover Background Color */,
+  darken($bgPrimary, 10%) /* Border Color */,
+  #ffffff /* Color */
+);
+@include button(
+  "Secondary" /* Namespace */,
+  $bgSecondary /* Background Color */,
+  lighten($bgSecondary, 10%) /* Hover Background Color */,
+  darken($bgSecondary, 10%) /* Border Color */,
+  #ffffff /* Color */
+);
+@include button(
+  "Tertiary" /* Namespace */,
+  $bgTertiary /* Background Color */,
+  lighten($bgTertiary, 10%) /* Hover Background Color */,
+  darken($bgTertiary, 10%) /* Border Color */,
   #ffffff /* Color */
 );
 
