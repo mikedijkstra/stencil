@@ -1,137 +1,8 @@
-@import "mixins";
-
 /* Page Breaks */
 $lap-break-point:             480px;
 $desk-break-point:            980px;
 $max-page-width:              100%;
 $ie-max-page-width:           640px;
-
-/**
- * Font Settings
- */
-
-/* Families */
-$body:                        Helmut, Helvetica, Arial, sans-serf;
-$heading:                     Helmut, Helvetica, Arial, sans-serf;
-$sub-heading:                 Helmut, Helvetica, Arial, sans-serf;
-
-/* Weights */
-$weight-light:                300;
-$weight-base:                 500;
-$weight-heavy:                700;
-
-/* Sizes */
-
-/* Base (p, li) */
-$base:                        14px;
-$base-line-height:            1.4em;
-$base-height:                 20px; /* Usually $base * $base-line-height */
-$base-margin-bottom:          10px;
-
-$lap-base:                    16px;
-$lap-base-line-height:        1.4em;
-$lap-base-margin-bottom:      10px;
-
-$desk-base:                   18px;
-$desk-base-line-height:       1.4em;
-$desk-base-margin-bottom:     10px;
-
-/* Font Size Gigantic */
-$fsg:                       40px;
-$fsg-line-height:           1.4em;
-$fsg-margin-bottom:         10px;
-
-$lap-fsg:                   50px;
-$lap-fsg-line-height:       1.4em;
-$lap-fsg-margin-bottom:     10px;
-
-$desk-fsg:                  60px;
-$desk-fsg-line-height:      1.4em;
-$desk-fsg-margin-bottom:    10px;
-
-/* Font Size Huge */
-$fsh:                        30px;
-$fsh-line-height:            1.4em;
-$fsh-margin-bottom:          10px;
-
-$lap-fsh:                    40px;
-$lap-fsh-line-height:        1.4em;
-$lap-fsh-margin-bottom:      10px;
-
-$desk-fsh:                   50px;
-$desk-fsh-line-height:       1.4em;
-$desk-fsh-margin-bottom:     10px;
-
-/* Font Size Large */
-$fsl:                       20px;
-$fsl-line-height:           1.4em;
-$fsl-margin-bottom:         10px;
-
-$lap-fsl:                   30px;
-$lap-fsl-line-height:       1.4em;
-$lap-fsl-margin-bottom:     10px;
-
-$desk-fsl:                  40px;
-$desk-fsl-line-height:      1.4em;
-$desk-fsl-margin-bottom:    10px;
-
-/* Font Size Medium */
-$fsm:                       20px;
-$fsm-line-height:           1.4em;
-$fsm-margin-bottom:         10px;
-
-$lap-fsm:                   30px;
-$lap-fsm-line-height:       1.4em;
-$lap-fsm-margin-bottom:     10px;
-
-$desk-fsm:                  40px;
-$desk-fsm-line-height:      1.4em;
-$desk-fsm-margin-bottom:    10px;
-
-/* Font Size Small */
-$fss:                       20px;
-$fss-line-height:           1.4em;
-$fss-margin-bottom:         10px;
-
-$lap-fss:                   30px;
-$lap-fss-line-height:       1.4em;
-$lap-fss-margin-bottom:     10px;
-
-$desk-fss:                  40px;
-$desk-fss-line-height:      1.4em;
-$desk-fss-margin-bottom:    10px;
-
-/* Font Size Tiny */
-$fst:                       20px;
-$fst-line-height:           1.4em;
-$fst-margin-bottom:         10px;
-
-$lap-fst:                   30px;
-$lap-fst-line-height:       1.4em;
-$lap-fst-margin-bottom:     10px;
-
-$desk-fst:                  40px;
-$desk-fst-line-height:      1.4em;
-$desk-fst-margin-bottom:    10px;
-
-/* Headings*/
-$h1-family:                   $heading;
-$h1-weight:                   $weight-heavy;
-
-$h2-family:                   $sub-heading;
-$h2-weight:                   $weight-heavy;
-
-$h3-family:                   $sub-heading;
-$h3-weight:                   $weight-heavy;
-
-$h4-family:                   $sub-heading;
-$h4-weight:                   $weight-heavy;
-
-$h5-family:                   $sub-heading;
-$h5-weight:                   $weight-heavy;
-
-$h6-family:                   $sub-heading;
-$h6-weight:                   $weight-heavy;
 
 /* Spacing */
 $tiny-spacing:                2px;
@@ -140,118 +11,37 @@ $medium-spacing:              10px; /* full spacing */
 $large-spacing:               20px; /* double spacing */
 $huge-spacing:                40px; /* double double spacing */
 
-/* Border */
+/* Border Height */
 $border-tiny:                 1px;
 $border-small:                2px;
 $border-medium:               5px;
 $border-large:                8px;
 $border-huge:                 13px;
 
-/* Colors */
+/* Base Font Size (p, li) */
+$base-color:                  #333;
+$base-font-size:              12px;
+$base-line-height:            1.4em;
+$base-height:                 17px; /* base-font-size * base-line*height */
 
-/* Links */
-$link:                        #0088cc;
-$link-text-decoration:        none;
-$link-hover-text-decoration:  underline;
-$link-color:                  #eeeeee;
-$link-hover-color:            #eeeeee;
+$lap-base-font-size:          14px;
+$lap-base-line-height:        1.4em;
+$lap-base-height:             21px; /* base-font-size * base-line*height */
 
-/* Lines */
-$line-color:                  #eeeeee;
-$line-height:                 1px;
+$desk-base-font-size:         16px;
+$desk-base-line-height:       1.4em;
+$desk-base-height:            22px; /* base-font-size * base-line*height */
 
-/* Font colors */
-$color-base:                  #333;
-$color-highlight:             #fc4557;
-$color-success:               #dff0d8;
-$color-error:                 #f2dede;
-$color-dull:                  #111111;
-$color-bright:                #efefef;
-$color-primary:               #ff5946;
-$color-secondary:             #ffdd00;
-$color-tertiary:              #5ba4da;
+/* Spacing */
+$tiny-spacing:                2px;
+$small-spacing:               5px; /* half spacing */
+$medium-spacing:              10px; /* full spacing */
+$large-spacing:               20px; /* double spacing */
+$huge-spacing:                40px; /* double double spacing */
 
-/* Background colors */
-$bgBase:                      #fff;
-$bgHighlight:                 lighten($color-highlight, 10%);
-$bgSuccess:                   #dff0d8;
-$bgError:                     #f2dede;
-$bgDull:                      #111111;
-$bgBright:                    #efefef;
-$bgPrimary:                   #ff5946;
-$bgSecondary:                 #ffdd00;
-$bgTertiary:                  #5ba4da;
-
-/* Border colors */
-$bcBase:                      darken($color-base, 10%);
-$bcHighlight:                 darken($color-highlight, 10%);
-$bcSuccess:                   darken($color-success, 10%);
-$bcError:                     darken($color-error, 10%);
-$bcDull:                      #111111;
-$bcBright:                    #efefef;
-$bcPrimary:                   #ff5946;
-$bcSecondary:                 #ffdd00;
-$bcTertiary:                  #5ba4da;
-
-/* Button */
-$button-padding:              10px 12px;
-$button-font-size:            14px;
-$button-line-height:          1.1em;
-/* .btnSmall */
-$button-small-padding:        10px 12px;
-$button-small-font-size:      12px;
-/* .btnLarge */
-$button-large-padding:        10px 12px;
-$button-large-font-size:      12px;
-/* .btnBlock */
-$button-block-width:          210px;
-
-@include button(
-  "" /* Default = Blank */,
-  lighten($bgBase, 10%) /* Background Color */,
-  lighten($bgBase, 20%) /* Hover Background Color */,
-  darken($bgBase, 20%) /* Border Color */,
-  $color-dull /* Color */
-);
-@include button(
-  "Success" /* Namespace */,
-  $bgSuccess /* Background Color */,
-  lighten($bgSuccess, 10%) /* Hover Background Color */,
-  darken($bgSuccess, 10%) /* Border Color */,
-  #ffffff /* Color */
-);
-@include button(
-  "Error" /* Namespace */,
-  $bgError /* Background Color */,
-  lighten($bgError, 10%) /* Hover Background Color */,
-  darken($bgError, 10%) /* Border Color */,
-  #ffffff /* Color */
-);
-@include button(
-  "Primary" /* Namespace */,
-  $bgPrimary /* Background Color */,
-  lighten($bgPrimary, 10%) /* Hover Background Color */,
-  darken($bgPrimary, 10%) /* Border Color */,
-  #ffffff /* Color */
-);
-@include button(
-  "Secondary" /* Namespace */,
-  $bgSecondary /* Background Color */,
-  lighten($bgSecondary, 10%) /* Hover Background Color */,
-  darken($bgSecondary, 10%) /* Border Color */,
-  #ffffff /* Color */
-);
-@include button(
-  "Tertiary" /* Namespace */,
-  $bgTertiary /* Background Color */,
-  lighten($bgTertiary, 10%) /* Hover Background Color */,
-  darken($bgTertiary, 10%) /* Border Color */,
-  #ffffff /* Color */
-);
-
-/* Forms */
-$form-background-color:       #ffffff;
-$form-focus-background-color: #ffffff;
-$form-border-color:           #ccc;
-$form-focus-border-color:     #ccc;
-$form-border-radius:          3px
+/* Border Width */
+$border-tiny:                 1px;
+$border-small:                2px;
+$border-medium:               5px;
+$border-large:                8px;
+$border-huge:                 13px;

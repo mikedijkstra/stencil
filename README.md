@@ -1,31 +1,27 @@
-#  CSS
+#  Stencil
 
 This is not another CSS framework. It's a set of lightweight CSS helpers to give you a head start developing your next web site.
 
 ## What you get
-+ 6 font sizes
-+ 6 font weights
-+ Base, Highlight, Success and Error colors for text, backgrounds and buttons
-+ OOCSS helpers for layout, modules and media objects
++ Generic styles for reset and form
++ OOCSS helpers for layout, grid, space, media and module objects
 + Responsive OOCSS helpers for palm, lap and desk breakpoints
 
 
 ## Getting Started
 
-- Run the watch command to ensure your Sass stylesheet is compiled
+- Compile your Sass stylesheet by running the watch command `./watch` in the css
+  folder
 - Update css/_settings.scss with your preferences
-- Customise css/_mixins.scss with your preferred styles
-- Place all custom CSS in css/_custom.scss
+- Add all custom CSS to css/_custom.scss
 
 ## How it works
 
-The css/helpers folder contains the reset styling, generic styles for things like forms and OOCSS objects like media and module.
+The css/helpers folder contains the reset styling, generic styles for things like forms and OOCSS objects like grid, spacing, media and module.
 
 The css/_settings.scss file contains default variables all 'out of the box' objects and styles.
 
-The css/_mixins.scss file contains customisable snippets for objects like buttons.
-
-The css/_custom.scss file is an empty file ready for all your custom CSS.
+The css/_custom.scss file is ready for all your custom CSS.
 
 ## Thanks to
 
