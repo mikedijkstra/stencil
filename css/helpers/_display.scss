@@ -6,7 +6,22 @@
   * @subpackage Display
 **/
 
-.block { display: block; }
-.hide { display: none; }
-.inline { display: inline; }
-.inlineBlock { display: inline-block; }
+@mixin display-setup($namespace: "") {
+  .#{$namespace}block { display: block; }
+  .#{$namespace}hide { display: none; }
+  .#{$namespace}inline { display: inline; }
+  .#{$namespace}inlineBlock { display: inline-block; }
+}
+
+/* Palm */
+@include display-setup("");
+
+/* Lap */
+@include media-query(lap){
+  @include display-setup("lap-");
+}
+
+/* Desk */
+@include media-query(desk){
+  @include display-setup("desk-");
+}
