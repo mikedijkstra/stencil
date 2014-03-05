@@ -15,6 +15,16 @@ This is not another CSS framework. It's a set of lightweight CSS helpers to give
 - Update css/_settings.scss with your preferences
 - Add all custom CSS to css/_custom.scss
 
+
+## Getting Started with Rails
+
+- Copy the contents of `/css` to `app/assets/stylesheets`
+- Update `app/assets/stylesheets/application.css` to `require style` and remove `require_tree .`
+- Update `app/assets/stylesheets/_settings.scss` with your preferences
+- Add all custom CSS to `app/assets/stylesheets/_custom.scss`
+- Build something people want
+- Count cash
+
 ## How it works
 
 The css/helpers folder contains the reset styling, generic styles for things like forms and OOCSS objects like grid, spacing, media and module.
