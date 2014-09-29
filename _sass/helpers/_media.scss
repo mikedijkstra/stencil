@@ -1,0 +1,39 @@
+/**
+  * Media
+**/
+
+@mixin media-setup($namespace: "") {
+  %#{$namespace}module {
+      overflow: hidden;
+      *overflow: visible;
+      zoom: 1;
+  }
+
+  %#{$namespace}media-img {
+      float: left;
+      margin-right: 10px;
+
+      img {
+        display:block;
+      }
+  }
+
+  %#{$namespace}media-img-ext {
+      float: right;
+      margin-left: 10px;
+  }
+
+  %#{$namespace}fluid {
+      border: 0;
+      display: block;
+      margin: 0;
+      padding: 0;
+      position: relative;
+  }
+  %#{$namespace}fluid-img {
+      display: block;
+      height: auto;
+      margin: 0 auto;
+      max-width: 100%;
+  }
+}

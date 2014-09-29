@@ -1,0 +1,5 @@
+#!/bin/sh
+
+ruby _lib/stencil.rb
+
+exit 0

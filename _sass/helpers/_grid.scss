@@ -1,0 +1,65 @@
+/**
+  * Grid
+**/
+@mixin grid-setup($namespace: "") {
+  %#{$namespace}row, %#{$namespace}lastCol {
+    overflow: hidden;
+    *overflow: visible;
+    *zoom: 1;
+  }
+  %#{$namespace}col { float:left; }
+  %#{$namespace}colRight { float:right; }
+  %#{$namespace}span1of1,%#{$namespace}span2of2,%#{$namespace}span3of3,%#{$namespace}span4of4,%#{$namespace}span5of5,%#{$namespace}span6of6,%#{$namespace}span7of7,%#{$namespace}span8of8,%#{$namespace}span9of9,%#{$namespace}span10of10,%#{$namespace}span11of11,%#{$namespace}span12of12 { width: 100%; }
+  %#{$namespace}span1of2,%#{$namespace}span2of4,%#{$namespace}span3of6,%#{$namespace}span4of8,%#{$namespace}span5of10,%#{$namespace}span6of12 { width: 50%; }
+  %#{$namespace}span1of3,%#{$namespace}span2of6,%#{$namespace}span3of9,%#{$namespace}span4of12 { width: 33.333333333333%; }
+  %#{$namespace}span2of3,%#{$namespace}span4of6,%#{$namespace}span6of9,%#{$namespace}span8of12 { width: 66.666666666667%; }
+  %#{$namespace}span1of4,%#{$namespace}span2of8,%#{$namespace}span3of12 { width: 25%; }
+  %#{$namespace}span3of4,%#{$namespace}span6of8,%#{$namespace}span9of12 { width: 75%; }
+  %#{$namespace}span1of5,%#{$namespace}span2of10 { width: 20%; }
+  %#{$namespace}span2of5,%#{$namespace}span4of10 { width: 40%; }
+  %#{$namespace}span3of5,%#{$namespace}span6of10 { width: 60%; }
+  %#{$namespace}span4of5,%#{$namespace}span8of10 { width: 80%; }
+  %#{$namespace}span1of6,%#{$namespace}span2of12 { width: 16.666666666667%; }
+  %#{$namespace}span5of6,%#{$namespace}span10of12 { width: 83.333333333333%; }
+  %#{$namespace}span1of7 { width: 14.285714285714%; }
+  %#{$namespace}span2of7 { width: 28.571428571429%; }
+  %#{$namespace}span3of7 { width: 42.857142857143%; }
+  %#{$namespace}span4of7 { width: 57.142857142857%; }
+  %#{$namespace}span5of7 { width: 71.428571428571%; }
+  %#{$namespace}span6of7 { width: 85.714285714286%; }
+  %#{$namespace}span1of8 { width: 12.5%; }
+  %#{$namespace}span3of8 { width: 37.5%; }
+  %#{$namespace}span5of8 { width: 62.5%; }
+  %#{$namespace}span7of8 { width: 87.5%; }
+  %#{$namespace}span1of9 { width: 11.111111111111%; }
+  %#{$namespace}span2of9 { width: 22.222222222222%; }
+  %#{$namespace}span4of9 { width: 44.444444444444%; }
+  %#{$namespace}span5of9 { width: 55.555555555556%; }
+  %#{$namespace}span7of9 { width: 77.777777777778%; }
+  %#{$namespace}span8of9 { width: 88.888888888889%; }
+  %#{$namespace}span1of10 { width: 10%; }
+  %#{$namespace}span3of10 { width: 30%; }
+  %#{$namespace}span7of10 { width: 70%; }
+  %#{$namespace}span9of10 { width: 90%; }
+  %#{$namespace}span1of11 { width: 9.0909090909091%; }
+  %#{$namespace}span2of11 { width: 18.181818181818%; }
+  %#{$namespace}span3of11 { width: 27.272727272727%; }
+  %#{$namespace}span4of11 { width: 36.363636363636%; }
+  %#{$namespace}span5of11 { width: 45.454545454545%; }
+  %#{$namespace}span6of11 { width: 54.545454545455%; }
+  %#{$namespace}span7of11 { width: 63.636363636364%; }
+  %#{$namespace}span8of11 { width: 72.727272727273%; }
+  %#{$namespace}span9of11 { width: 81.818181818182%; }
+  %#{$namespace}span10of11 { width: 90.909090909091%; }
+  %#{$namespace}span1of12 { width: 8.3333333333333%; }
+  %#{$namespace}span5of12 { width: 41.666666666667%; }
+  %#{$namespace}span7of12 { width: 58.333333333333%; }
+  %#{$namespace}span11of12 { width: 91.666666666667%; }
+  %#{namespace}lastCol {
+    float: none;
+    _left: -3px;
+    _margin-right: -3px;
+    _position: relative;
+    width: auto;
+  }
+}

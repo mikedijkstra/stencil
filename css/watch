@@ -1,9 +1,0 @@
-#!/bin/sh
-
-# No minification
-sass --watch style.scss:style.css --style expanded
-
-# Minification
-#sass --watch style.scss:style.min.css --style compressed
-
-exit 0
