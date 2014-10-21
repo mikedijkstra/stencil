@@ -1,1 +1,5 @@
-number = 42
+$ ->
+  # Document Ready
+
+$(window).load ->
+  # Window Loaded

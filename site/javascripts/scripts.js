@@ -1,6 +1,6 @@
 (function() {
-  var number;
+  $(function() {});
 
-  number = 42;
+  $(window).load(function() {});
 
 }).call(this);
