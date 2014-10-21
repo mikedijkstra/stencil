@@ -3,7 +3,7 @@
  */
 
 /******************************************************************
-  Typography
+  Base Typography
 ******************************************************************/
 
 body {
@@ -50,21 +50,70 @@ h3 {
   @extend %desk-text-l;
 }
 
-blockquote {
-  border-left: $border-xl solid $color-line;
-  @extend %text-m, %line-m, %padding-left-m;
-}
+/******************************************************************
+  Reading Text
+******************************************************************/
 
-ul, ol {
-  list-style-position: outside;
-}
+%reading-text {
+  @extend %text-regular, %text-s, %line-s;
 
-ol {
-  list-style-type: decimal;
-}
+  a {
+    color: $color-link;
+  }
 
-ul {
-  list-style-type: disc;
+  a:hover {
+    color: $color-link-hover;
+    text-decoration: underline;
+  }
+
+  a:active, a:focus {
+    outline: 0;
+  }
+
+  hr {
+    @extend %margin-vertical-l;
+    color: $color-line;
+    background: $color-line;
+    border: none;
+    display: block;
+    height: $border-s;
+  }
+
+  h1 {
+    @extend %text-l, %text-bold;
+    @extend %lap-text-xl;
+    @extend %desk-text-xxl;
+  }
+
+  h2 {
+    @extend %text-m, %text-bold;
+    @extend %lap-text-l;
+    @extend %desk-text-xl;
+  }
+
+  h3 {
+    font-size: $text-l;
+    @extend %text-s, %text-bold;
+    @extend %lap-text-m;
+    @extend %desk-text-l;
+  }
+
+  blockquote {
+    border-left: $border-xl solid $color-line;
+    @extend %text-m, %line-m, %padding-left-m;
+  }
+
+  ul, ol {
+    list-style-position: outside;
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
+
+  ul {
+    list-style-type: disc;
+  }
 }
 
 /******************************************************************
