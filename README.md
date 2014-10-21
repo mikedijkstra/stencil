@@ -1,11 +1,6 @@
 #  Stencil
 A collection of compilers to help you prototype a new web site or web application preloaded with a set of CSS helpers to help you get shit done fast.
 
-## What you get
-+ Generic styles for reset and form
-+ Sass patterns for layout, grid, space, media objects, module objects and responsive media queries
-+ A pattern folder to maintain reusable snippets of code
-
 ## Getting Started
 + Run bundle install `$ bundle install`
 + Start the watcher `$ ./watch`
