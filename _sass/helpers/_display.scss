@@ -1,0 +1,11 @@
+/**
+  * Display
+  *
+**/
+
+@mixin display-setup($namespace: "") {
+  %#{$namespace}block { display: block; }
+  %#{$namespace}hide { display: none; }
+  %#{$namespace}inline { display: inline; }
+  %#{$namespace}inlineBlock { display: inline-block; }
+}
