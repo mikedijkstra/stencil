@@ -162,6 +162,6 @@ footer {
 
 .page-index {
   .body {
-    @extend %margin-vertical-xl;
+    @extend %reading-text, %margin-vertical-xl;
   }
 }
