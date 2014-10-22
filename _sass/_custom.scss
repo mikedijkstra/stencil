@@ -8,6 +8,7 @@
 
 body {
   @extend %text-regular, %text-s, %line-s;
+  color: $color-base;
 }
 
 a {
@@ -163,5 +164,9 @@ footer {
 .page-index {
   .body {
     @extend %reading-text, %margin-vertical-xl;
+
+    .cta {
+      @extend %form-action;
+    }
   }
 }

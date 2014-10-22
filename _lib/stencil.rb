@@ -93,7 +93,7 @@ def save_patterns
     pattern_html =  '<div class="stencil-pattern"><div class="stencil-display"><div class="stencil-display-content">'
     pattern_html << pattern
     pattern_html << '</div></div><div class="stencil-source"><div class="stencil-source-content"><textarea>'
-    pattern_html << pattern.gsub('"', "'")
+    pattern_html << pattern.gsub('<', '&lt;').gsub('>', '&gt;')
     pattern_html << '</textarea></div></div></div>'
     html << pattern_html
   end
@@ -123,6 +123,8 @@ FileWatcher.new(ALL_FOLDERS).watch() do |path, event|
     folder = path.split('/').first.gsub('_', '')
     if folder == 'layouts'
       save_views
+      save_patterns
+    elsif folder == 'patterns'
       save_patterns
     else
       if event == :delete

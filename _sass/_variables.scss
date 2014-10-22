@@ -4,87 +4,106 @@
  * Feel free to change but do not delete any of these variables.
 */
 
-$page-max-width:              1024px;
-
 /* Device sizes */
-$device-xxs:                  480px;
-$device-xs:                   567px;
-$device-s:                    640px;
-$device-m:                    768px;
-$device-l:                    1024px;
-$device-xl:                   1224px;
-$device-xxl:                  1824px;
+$device-xxs:                        480px;
+$device-xs:                         567px;
+$device-s:                          640px;
+$device-m:                          768px;
+$device-l:                          1024px;
+$device-xl:                         1224px;
+$device-xxl:                        1824px;
 
 /* Screen size shortcuts */
-$lap:                         $device-s;
-$desk:                        $device-l;
-$cinema:                      $device-xxl;
+$lap:                               $device-s;
+$desk:                              $device-l;
+$cinema:                            $device-xxl;
+
+/* Layout sizes */
+$page-max-width:                    1024px;
+$footer-height:                     40px;
 
 /* Spacing */
-$space-xxs:                   2px;
-$space-xs:                    5px;
-$space-s:                     10px;
-$space-m:                     15px;
-$space-l:                     20px;
-$space-xl:                    30px;
-$space-xxl:                   40px;
+$space-xxs:                         2px;
+$space-xs:                          5px;
+$space-s:                           10px;
+$space-m:                           15px;
+$space-l:                           20px;
+$space-xl:                          30px;
+$space-xxl:                         40px;
 
 /* Border Height */
-$border-xxs:                  1px;
-$border-xs:                   2px;
-$border-s:                    3px;
-$border-m:                    4px;
-$border-l:                    5px;
-$border-xl:                   10px;
-$border-xxl:                  15px;
+$border-xxs:                        1px;
+$border-xs:                         2px;
+$border-s:                          3px;
+$border-m:                          4px;
+$border-l:                          5px;
+$border-xl:                         10px;
+$border-xxl:                        15px;
 
 /* Font Sizes */
-$text-xxs:                    12px;
-$text-xs:                     14px;
-$text-s:                      18px;
-$text-m:                      24px;
-$text-l:                      30px;
-$text-xl:                     42px;
-$text-xxl:                    60px;
+$text-xxs:                          12px;
+$text-xs:                           14px;
+$text-s:                            18px;
+$text-m:                            24px;
+$text-l:                            30px;
+$text-xl:                           42px;
+$text-xxl:                          60px;
 
-$letter-xxs:                  1px;
-$letter-xs:                   2px;
-$letter-s:                    3px;
-$letter-m:                    4px;
-$letter-l:                    5px;
-$letter-xl:                   6px;
-$letter-xxl:                  7px;
+$letter-xxs:                        1px;
+$letter-xs:                         2px;
+$letter-s:                          3px;
+$letter-m:                          4px;
+$letter-l:                          5px;
+$letter-xl:                         6px;
+$letter-xxl:                        7px;
 
-$line-xxs:                    0.8;
-$line-xs:                     1.0;
-$line-s:                      1.2;
-$line-m:                      1.4;
-$line-l:                      1.6;
-$line-xl:                     1.8;
-$line-xxl:                    2.0;
+$line-xxs:                          0.8;
+$line-xs:                           1.0;
+$line-s:                            1.2;
+$line-m:                            1.4;
+$line-l:                            1.6;
+$line-xl:                           1.8;
+$line-xxl:                          2.0;
 
-$text-light:                  Helmet 700;
-$text-regular:                Helmet 500;
-$text-bold:                   Helmet 300;
-
-/* Forms */
-$form-height-s:               20px;
-$form-height-m:               40px;
-$form-height-l:               60px;
-
-$form-style-border-color:     #ccc;
-$form-style-border-size:      #ccc;
-$form-style-border-radius:    2px;
-$form-style-background:       #fff;
-$form-style-color:            #333;
+$text-light:                        Helmet 700;
+$text-regular:                      Helmet 500;
+$text-bold:                         Helmet 300;
 
 /* Colors */
-$color-link:                  #4183c4;
-$color-link-hover:            #4183c4;
+$color-base:                        #333;
 
-$color-line:                  #ccc;
-$color-muted:                 #777;
-$color-primary:               #40b294;
-$color-warning:               #a94442;
+$color-link:                        #4183c4;
+$color-link-hover:                  #4183c4;
 
-$footer-height:               40px;
+$color-line:                        #ccc;
+$color-muted:                       #777;
+$color-primary:                     #40b294;
+$color-warning:                     #a94442;
+
+/* Forms */
+$form-element-height:               42px;
+$form-font-size:                    14px;
+$form-color:                        $color-base;
+$form-background:                   #fff;
+$form-border-color:                 #ccc;
+$form-border-size:                  1px;
+$form-border-radius:                2px;
+
+$form-focus-color:                  $form-color;
+$form-focus-background:             $form-background;
+$form-focus-border-color:           #4183c4;
+
+$form-action-color:                 #fff;
+$form-action-background:            #3498db;
+$form-action-border-color:          $form-action-background;
+$form-action-border-size:           1px;
+$form-action-border-radius:         2px;
+$form-action-hover-color:           $form-action-color;
+$form-action-hover-background:      darken(#3498db, 10%);
+$form-action-hover-border-color:    $form-action-border-color;
+
+/**
+ * Add all your custom variables here.
+ */
+
+$color-brand:                       red;
