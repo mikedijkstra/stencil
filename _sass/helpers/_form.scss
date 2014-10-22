@@ -236,14 +236,6 @@
   }
 }
 
-input {
-  @extend %form-reset-input;
-}
-
-input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
- @extend %form-control, %form-control-single
-}
-
 label {
   @extend %form-reset-label;
 }
@@ -259,4 +251,61 @@ button, input[type=submit] {
 textarea {
   @extend %form-reset-textarea, %form-control;
   min-height: $form-element-height * 3;
+}
+
+input {
+  @extend %form-reset-input;
+}
+
+input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+ @extend %form-control, %form-control-single
+}
+
+input[type=checkbox], input[type=radio] {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+
+input[type=checkbox]:checked + label.checkbox {
+  &:before {
+    content: "\2713";
+    border-color: $form-focus-border-color;
+  }
+}
+
+input[type=radio]:checked + label.radio {
+  &:before {
+    background-color: $form-focus-border-color;
+    border-color: $form-focus-border-color;
+  }
+}
+
+label.checkbox {
+  line-height: $form-element-height;
+  padding-left: $form-element-height + 5;
+  position: relative;
+
+  &:before {
+    border: $form-border-size solid $form-border-color;
+    border-radius: $form-border-radius;
+    color: $form-focus-border-color;
+    content: "";
+    font-size: 24px;
+    height: $form-element-height - 10;
+    line-height: $form-element-height - 10;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 5px;
+    width: $form-element-height - 10;
+  }
+}
+
+label.radio {
+  @extend label.checkbox;
+
+  &:before {
+    border-radius: 100px;
+  }
 }
