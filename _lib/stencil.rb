@@ -10,7 +10,7 @@ Sass.load_paths << "_sass/patterns"
 FILE_FOLDERS = ["_views", "_sass", "_coffee", "_layouts"]
 PATTERN_FOLDER = '_patterns'
 ALL_FOLDERS = FILE_FOLDERS.dup << PATTERN_FOLDER
-EXCLUDED_FILES = ['.', '..', '.DS_Store']
+EXCLUDED_FILES = ['.', '..', '.DS_Store', '.git', '.gitmodules']
 
 COMPILE_TO_FOLDERS = ['./site/']
 
