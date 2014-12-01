@@ -45,10 +45,25 @@ h2 {
 }
 
 h3 {
-  font-size: $text-l;
   @extend %text-s, %text-bold;
   @extend %lap-text-m;
   @extend %desk-text-l;
+}
+
+h4 {
+  @extend %text-xs, %text-bold;
+  @extend %lap-text-s;
+  @extend %desk-text-m;
+}
+
+h5 {
+  @extend %text-xxs, %text-bold;
+  @extend %lap-text-xs;
+  @extend %desk-text-m;
+}
+
+h6 {
+  @extend %text-xxs, %text-bold;
 }
 
 /******************************************************************
@@ -81,27 +96,31 @@ h3 {
   }
 
   h1 {
-    @extend %text-l, %text-bold;
-    @extend %lap-text-xl;
-    @extend %desk-text-xxl;
+    @extend %text-l, %text-bold, %margin-bottom-l;
+    @extend %lap-text-xl, %lap-margin-bottom-xl;
+    @extend %desk-text-xxl, %desk-margin-bottom-xxl;
   }
 
   h2 {
-    @extend %text-m, %text-bold;
-    @extend %lap-text-l;
-    @extend %desk-text-xl;
+    @extend %text-m, %text-bold, %margin-bottom-m;
+    @extend %lap-text-l, %lap-margin-bottom-l;
+    @extend %desk-text-xl, %desk-margin-bottom-xl;
   }
 
   h3 {
-    font-size: $text-l;
-    @extend %text-s, %text-bold;
-    @extend %lap-text-m;
-    @extend %desk-text-l;
+    @extend %text-s, %text-bold, %margin-bottom-s;
+    @extend %lap-text-m, %lap-margin-bottom-m;
+    @extend %desk-text-l, %desk-margin-bottom-l;
   }
 
   blockquote {
     border-left: $border-xl solid $color-line;
     @extend %text-m, %line-m, %padding-left-m;
+  }
+
+  ul, ol, p {
+    @extend %margin-bottom-m;
+    @extend %desk-margin-bottom-l;
   }
 
   ul, ol {
@@ -125,8 +144,8 @@ html, body {
   height: 100%;
 }
 
-header {
-  @extend %padding-all-l;
+header{
+  @extend %padding-vertical-m;
 }
 
 .wrapper {
@@ -147,26 +166,28 @@ footer {
   @extend %text-center;
 }
 
-.section {
-  @extend %margin-horizontal-l;
-    @extend %desk-margin-horizontal-auto;
-  max-width: 1024px;
-}
-
-.head, .foot {
-  @extend %text-center;
-}
-
 /******************************************************************
   Page — Index
 ******************************************************************/
 
 .page-index {
-  .body {
+  .container-head {
+    @extend %text-center;
+  }
+
+  .container-body {
     @extend %reading-text, %margin-vertical-xl;
 
-    .cta {
-      @extend %form-action;
+    .article-head {
+      @extend %text-center;
     }
+
+    .article-foot {
+      @extend %text-center;
+    }
+  }
+
+  .container-foot {
+    @extend %text-center;
   }
 }

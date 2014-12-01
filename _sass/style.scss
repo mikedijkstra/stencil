@@ -3,6 +3,7 @@
  * Stencil.css
  */
 
-@import "_variables";
+@import "variables";
 @import "stencil/stencil";
-@import "_custom";
+@import "modules";
+@import "custom";
