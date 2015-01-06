@@ -1,4 +1,13 @@
-.sass-cache/
+# Ignore annoying files
 *.DS_Store
 *.swo
 *.swp
+
+# Ignore sass cache
+.sass-cache/
+
+# Ignore bundler config.
+/.bundle
+
+# Ignore NPM files
+node_modules
