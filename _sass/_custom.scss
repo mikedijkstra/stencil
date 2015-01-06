@@ -45,25 +45,10 @@ h2 {
 }
 
 h3 {
+  font-size: $text-l;
   @extend %text-s, %text-bold;
   @extend %lap-text-m;
   @extend %desk-text-l;
-}
-
-h4 {
-  @extend %text-xs, %text-bold;
-  @extend %lap-text-s;
-  @extend %desk-text-m;
-}
-
-h5 {
-  @extend %text-xxs, %text-bold;
-  @extend %lap-text-xs;
-  @extend %desk-text-m;
-}
-
-h6 {
-  @extend %text-xxs, %text-bold;
 }
 
 /******************************************************************
@@ -96,31 +81,27 @@ h6 {
   }
 
   h1 {
-    @extend %text-l, %text-bold, %margin-bottom-l;
-    @extend %lap-text-xl, %lap-margin-bottom-xl;
-    @extend %desk-text-xxl, %desk-margin-bottom-xxl;
+    @extend %text-l, %text-bold;
+    @extend %lap-text-xl;
+    @extend %desk-text-xxl;
   }
 
   h2 {
-    @extend %text-m, %text-bold, %margin-bottom-m;
-    @extend %lap-text-l, %lap-margin-bottom-l;
-    @extend %desk-text-xl, %desk-margin-bottom-xl;
+    @extend %text-m, %text-bold;
+    @extend %lap-text-l;
+    @extend %desk-text-xl;
   }
 
   h3 {
-    @extend %text-s, %text-bold, %margin-bottom-s;
-    @extend %lap-text-m, %lap-margin-bottom-m;
-    @extend %desk-text-l, %desk-margin-bottom-l;
+    font-size: $text-l;
+    @extend %text-s, %text-bold;
+    @extend %lap-text-m;
+    @extend %desk-text-l;
   }
 
   blockquote {
     border-left: $border-xl solid $color-line;
     @extend %text-m, %line-m, %padding-left-m;
-  }
-
-  ul, ol, p {
-    @extend %margin-bottom-m;
-    @extend %desk-margin-bottom-l;
   }
 
   ul, ol {
@@ -133,61 +114,5 @@ h6 {
 
   ul {
     list-style-type: disc;
-  }
-}
-
-/******************************************************************
-  Site
-******************************************************************/
-
-html, body {
-  height: 100%;
-}
-
-header{
-  @extend %padding-vertical-m;
-}
-
-.wrapper {
-  min-height: 100%;
-  margin-bottom: -$footer-height;
-}
-
-.wrapper:after {
-  content: "";
-  display: block;
-}
-
-footer, .wrapper:after {
-  height: $footer-height;
-}
-
-footer {
-  @extend %text-center;
-}
-
-/******************************************************************
-  Page — Index
-******************************************************************/
-
-.page-index {
-  .container-head {
-    @extend %text-center;
-  }
-
-  .container-body {
-    @extend %reading-text, %margin-vertical-xl;
-
-    .article-head {
-      @extend %text-center;
-    }
-
-    .article-foot {
-      @extend %text-center;
-    }
-  }
-
-  .container-foot {
-    @extend %text-center;
   }
 }

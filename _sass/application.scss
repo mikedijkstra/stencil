@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+// Important: Import variables first to override default Stencil variables
+@import "_variables";
+
+// Import stencil before custom styles to allow overrides
+@import "stencil/stencil";
+
+// Choose which stencil modules to include
+@import "stencil/modules/button";
+@import "stencil/modules/fluid_object";
+@import "stencil/modules/media_object";
+@import "stencil/modules/nav";
+@import "stencil/modules/loader";
+@import "stencil/modules/scroll";
+@import "stencil/modules/sticky_footer";
+
+// Import modules
+@import "_modules";
+
+// Import custom styles
+@import "_custom";
