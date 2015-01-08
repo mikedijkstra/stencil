@@ -5,5 +5,4 @@ bootstrap:
 	@./_lib/bootstrap.sh
 
 watch:
-watch:
 	@grunt
