@@ -7,27 +7,29 @@ module.exports = (grunt) ->
         options:
           join: true
         files:
-          '_scripts/build/application.js': [ '_scripts/*.coffee' ]
+          '_scripts/build/application.js': [ '_scripts/modules/*.coffee', '_scripts/*.coffee' ]
 
     concat:
       dist:
         src: [
-          "_vendor/*.js"
+          "_scripts/vendor/*.js"
+          "_scripts/build/modules.js"
           "_scripts/build/application.js"
         ]
-        dest: "site/assets/application.js"
+        dest: "assets/application.js"
 
     uglify:
       build:
-        src: "site/assets/application.js"
-        dest: "site/assets/application.min.js"
+        src: "assets/application.js"
+        dest: "assets/application.min.js"
 
     sass:
       dist:
         options:
           style: 'compressed'
+          sourcemap: 'none'
         files:
-          'site/assets/application.css': ['_sass/application.scss' ]
+          'assets/application.css': ['_sass/application.scss' ]
 
     watch:
       sass:
@@ -38,10 +40,8 @@ module.exports = (grunt) ->
 
       scripts:
         files: [
-          '_vendor/*.js'
-          '_scripts/*.js'
-          '_scripts/*.coffee'
-          'assets/application.js'
+          '_scripts/**/'
+          '_scripts/*'
         ]
         tasks: [
           'coffee'

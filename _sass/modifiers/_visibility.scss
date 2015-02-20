@@ -1,0 +1,4 @@
+@mixin visibility-setup($namespace: "") {
+  %#{$namespace}is-hidden    { display: none; }
+  %#{$namespace}is-invisible { visibility: none; }
+}

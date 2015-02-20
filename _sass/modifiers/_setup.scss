@@ -1,0 +1,181 @@
+@include display-setup("");
+@include responsive-setup("");
+@include space-setup("");
+@include text-setup("");
+@include visibility-setup("");
+
+@include from($device-xxs) {
+  @include display-setup("xxs-");
+  @include responsive-setup("xxs-");
+  @include space-setup("xxs-");
+  @include text-setup("xxs-");
+  @include visibility-setup("xxs-");
+}
+
+@include from($device-xs) {
+  @include display-setup("xs-");
+  @include responsive-setup("xs-");
+  @include space-setup("xs-");
+  @include text-setup("xs-");
+  @include visibility-setup("xs-");
+}
+
+@include from($device-s) {
+  @include display-setup("s-");
+  @include responsive-setup("s-");
+  @include space-setup("s-");
+  @include text-setup("s-");
+  @include visibility-setup("s-");
+}
+
+@include from($device-m) {
+  @include display-setup("m-");
+  @include responsive-setup("m-");
+  @include space-setup("m-");
+  @include text-setup("m-");
+  @include visibility-setup("m-");
+}
+
+@include from($device-l) {
+  @include display-setup("l-");
+  @include responsive-setup("l-");
+  @include space-setup("l-");
+  @include text-setup("l-");
+  @include visibility-setup("l-");
+}
+
+@include from($device-xl) {
+  @include display-setup("xl-");
+  @include responsive-setup("xl-");
+  @include space-setup("xl-");
+  @include text-setup("xl-");
+  @include visibility-setup("xl-");
+}
+
+@include from($device-xxl) {
+  @include display-setup("xxl-");
+  @include responsive-setup("xxl-");
+  @include space-setup("xxl-");
+  @include text-setup("xxl-");
+  @include visibility-setup("xxl-");
+}
+
+@include tab {
+  @include display-setup("tab-");
+  @include responsive-setup("tab-");
+  @include space-setup("tab-");
+  @include text-setup("tab-");
+  @include visibility-setup("tab-");
+}
+
+@include lap {
+  @include display-setup("lap-");
+  @include responsive-setup("lap-");
+  @include space-setup("lap-");
+  @include text-setup("lap-");
+  @include visibility-setup("lap-");
+}
+
+@include desk {
+  @include display-setup("desk-");
+  @include responsive-setup("desk-");
+  @include space-setup("desk-");
+  @include text-setup("desk-");
+  @include visibility-setup("desk-");
+}
+
+@include cinema {
+  @include display-setup("cinema-");
+  @include responsive-setup("cinema-");
+  @include space-setup("cinema-");
+  @include text-setup("cinema-");
+  @include visibility-setup("cinema-");
+}
+
+@include to($device-xxs) {
+  @include display-setup("to-xxs-");
+  @include responsive-setup("to-xxs-");
+  @include space-setup("to-xxs-");
+  @include text-setup("to-xxs-");
+  @include visibility-setup("to-xxs-");
+}
+
+@include to($device-xs) {
+  @include display-setup("to-xs-");
+  @include responsive-setup("to-xs-");
+  @include space-setup("to-xs-");
+  @include text-setup("to-xs-");
+  @include visibility-setup("to-xs-");
+}
+
+@include to($device-s) {
+  @include display-setup("to-s-");
+  @include responsive-setup("to-s-");
+  @include space-setup("to-s-");
+  @include text-setup("to-s-");
+  @include visibility-setup("to-s-");
+}
+
+@include to($device-m) {
+  @include display-setup("to-m-");
+  @include responsive-setup("to-m-");
+  @include space-setup("to-m-");
+  @include text-setup("to-m-");
+  @include visibility-setup("to-m-");
+}
+
+@include to($device-l) {
+  @include display-setup("to-l-");
+  @include responsive-setup("to-l-");
+  @include space-setup("to-l-");
+  @include text-setup("to-l-");
+  @include visibility-setup("to-l-");
+}
+
+@include to($device-xl) {
+  @include display-setup("to-xl-");
+  @include responsive-setup("to-xl-");
+  @include space-setup("to-xl-");
+  @include text-setup("to-xl-");
+  @include visibility-setup("to-xl-");
+}
+
+@include to($device-xxl) {
+  @include display-setup("to-xxl-");
+  @include responsive-setup("to-xxl-");
+  @include space-setup("to-xxl-");
+  @include text-setup("to-xxl-");
+  @include visibility-setup("to-xxl-");
+}
+
+@include to($tab) {
+  @include display-setup("to-tab-");
+  @include responsive-setup("to-tab-");
+  @include space-setup("to-tab-");
+  @include text-setup("to-tab-");
+  @include visibility-setup("to-tab-");
+}
+
+@include to($lap) {
+  @include display-setup("to-lap-");
+  @include responsive-setup("to-lap-");
+  @include space-setup("to-lap-");
+  @include text-setup("to-lap-");
+  @include visibility-setup("to-lap-");
+}
+
+@include to($desk) {
+  @include display-setup("to-desk-");
+  @include responsive-setup("to-desk-");
+  @include space-setup("to-desk-");
+  @include text-setup("to-desk-");
+  @include visibility-setup("to-desk-");
+}
+
+@include to($cinema) {
+  @include display-setup("to-cinema-");
+  @include responsive-setup("to-cinema-");
+  @include space-setup("to-cinema-");
+  @include text-setup("to-cinema-");
+  @include visibility-setup("to-cinema-");
+}

@@ -1,0 +1,7 @@
+.loader {
+  @include background-size(50px);
+  @include overlay;
+  background-color: $color-white;
+  background-image: url(loader.gif);
+  z-index: 999;
+}
