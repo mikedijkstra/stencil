@@ -1,22 +1,41 @@
 @charset "UTF-8";
 
-// Important: Import variables first to override default Stencil variables
-@import "_variables";
+/**
+    _____ _                  _ _
+  / ____| |                (_) |
+  | (___ | |_ ___ _ __   ___ _| |
+  \___ \| __/ _ \ '_ \ / __| | |
+  ____) | ||  __/ | | | (__| | |
+  |_____/ \__\___|_| |_|\___|_|_|
 
-// Import stencil before custom styles to allow overrides
-@import "stencil/stencil";
+  - - - - - - - - - - - - - - - - */
 
-// Choose which stencil modules to include
-@import "stencil/modules/button";
-@import "stencil/modules/fluid_object";
-@import "stencil/modules/media_object";
-@import "stencil/modules/nav";
-@import "stencil/modules/loader";
-@import "stencil/modules/scroll";
-@import "stencil/modules/sticky_footer";
+@import "global/_variables";
 
-// Import modules
-@import "_modules";
+@import "helpers/_media-queries";
+@import "helpers/_animation";
+@import "helpers/_background";
+@import "helpers/_box";
+@import "helpers/_form";
+@import "helpers/_grid";
+@import "helpers/_mask";
+@import "helpers/_style";
+@import "helpers/_text";
 
-// Import custom styles
-@import "_custom";
+@import "modifiers/_display";
+@import "modifiers/_responsive";
+@import "modifiers/_space";
+@import "modifiers/_text";
+@import "modifiers/_visibility";
+@import "modifiers/_setup";
+
+@import "objects/_button";
+@import "objects/_nav";
+@import "objects/_form";
+@import "objects/_grid";
+@import "objects/_loader";
+@import "objects/_media";
+@import "objects/_tooltip";
+
+@import "global/_reset";
+@import "global/_base";

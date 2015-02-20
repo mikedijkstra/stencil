@@ -1,0 +1,57 @@
+button {
+  @extend %form-reset-button;
+}
+
+fieldset {
+  @extend %margin-vertical-l;
+}
+
+input {
+  @extend %form-reset-input;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+select,
+textarea {
+  @include border-box;
+  @include text-regular;
+  @include text-size(xs, s);
+  @extend %padding-all-xs;
+  border: 1px solid $color-mercury;
+  color: $color-mine-shaft;
+  height: $form-input-height;
+  line-height: 1.0;
+  width: 100%;
+}
+
+textarea,
+select[multiple] {
+  height: 2 * $form-input-height;
+}
+
+label {
+  @include text-bold;
+  @include text-size(xxs, xs);
+  @extend %form-reset-label;
+}
+
+select {
+  @extend %form-reset-select;
+}
+
+textarea {
+  @extend %form-reset-textarea;
+}

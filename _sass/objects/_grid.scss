@@ -1,0 +1,27 @@
+.container-fluid {
+  @include container-fixed;
+}
+
+.row {
+  @include make-row;
+}
+
+@include make-grid-columns;
+
+@include make-grid(palm);
+
+@include tab {
+  @include make-grid(tab);
+}
+
+@include lap {
+  @include make-grid(lap);
+}
+
+@include desk {
+  @include make-grid(desk);
+}
+
+@include cinema {
+  @include make-grid(cinema);
+}

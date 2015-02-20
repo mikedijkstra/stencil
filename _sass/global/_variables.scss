@@ -1,0 +1,99 @@
+//
+// Device Sizes
+//
+$device-xxs:                             480px;
+$device-xs:                              567px;
+$device-s:                               640px;
+$device-m:                               768px;
+$device-l:                               1024px;
+$device-xl:                              1224px;
+$device-xxl:                             1824px;
+
+// Shortcuts
+$tab:                                    $device-m;
+$lap:                                    $device-l;
+$desk:                                   $device-xl;
+$cinema:                                 $device-xxl;
+
+//
+// Text sizes
+//
+$text-xxs:                               12px;
+$text-xs:                                14px;
+$text-s:                                 18px;
+$text-m:                                 24px;
+$text-l:                                 30px;
+$text-xl:                                42px;
+$text-xxl:                               60px;
+
+//
+// Letter spacing
+//
+$letter-xxs:                             0.05em;
+$letter-xs:                              0.1em;
+$letter-s:                               1px;
+$letter-m:                               2px;
+$letter-l:                               3px;
+$letter-xl:                              4px;
+$letter-xxl:                             5px;
+
+//
+// Line height
+//
+$line-xxs:                               0.8;
+$line-xs:                                1.0;
+$line-s:                                 1.2;
+$line-m:                                 1.4;
+$line-l:                                 1.6;
+$line-xl:                                1.8;
+$line-xxl:                               2.0;
+
+//
+// Margin and Padding
+//
+$space-xxs:                              2px;
+$space-xs:                               5px;
+$space-s:                                10px;
+$space-m:                                15px;
+$space-l:                                20px;
+$space-xl:                               30px;
+$space-xxl:                              40px;
+
+//
+// Bootstrap Grid
+//
+$grid-columns:                           12;
+$grid-gutter-width:                      30px;
+$container-tab:                          $tab + $grid-gutter-width;
+$container-lap:                          $lap + $grid-gutter-width;
+$container-desk:                         $desk + $grid-gutter-width;
+$container-cinema:                       $cinema + $grid-gutter-width;
+
+//
+// Object Settings
+//
+// Button
+$button-height:                          40px;
+
+// Form
+$form-input-height:                      40px;
+
+// Nav
+$nav-height:                             50px;
+$footer-height:                          40px;
+
+// Tooltip
+$tooltip-color:               #fff !default;
+$tooltip-bg:                  #000 !default;
+$tooltip-arrow-width:         5px !default;
+$tooltip-arrow-color:         $tooltip-bg !default;
+
+//
+// Colors
+//
+$color-black:                            #000000;
+$color-white:                            #ffffff;
+$color-mine-shaft:                       #333;
+$color-mercury:                          #e1e1e1;
+$color-boston-blue:                      #4183c4;
+$color-bay-of-many:                      #25527E;

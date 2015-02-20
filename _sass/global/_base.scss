@@ -1,0 +1,54 @@
+//
+// Layout
+//
+
+html, body {
+  height: 100%;
+}
+
+body.no-scroll {
+  @include overlay;
+  overflow: hidden;
+  position: fixed;
+}
+
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -$footer-height;
+}
+
+.wrapper:after {
+  content: "";
+  display: block;
+}
+
+footer, .wrapper:after {
+  height: $footer-height;
+  width: 100%;
+}
+
+//
+// Typography
+//
+
+body {
+  @include text-regular;
+  @include text-size(xxs, xs);
+  color: $color-mine-shaft;
+}
+
+//
+// Links
+//
+
+a {
+  color: $color-boston-blue;
+}
+
+a:hover {
+  color: $color-bay-of-many;
+}
+
+a:active, a:focus {
+  outline: 0;
+}

@@ -1,0 +1,5 @@
+@mixin display-setup($namespace: "") {
+  %#{$namespace}block { display: block; }
+  %#{$namespace}inline { display: inline; }
+  %#{$namespace}inline-block { display: inline-block; }
+}
