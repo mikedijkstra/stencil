@@ -52,3 +52,11 @@ a:hover {
 a:active, a:focus {
   outline: 0;
 }
+
+//
+// Images
+//
+
+img {
+  @extend %is-responsive-image;
+}
