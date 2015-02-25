@@ -165,14 +165,26 @@
     position: 0,
     settings: {
       disableClass: 'no-scroll',
-      defaultSelector: 'body'
+      defaultSelector: 'body',
+      scrollSelector: 'html, body',
+      scrollToAttribute: 'data-scroll-to',
+      scrollToOffsetAttribute: 'data-scroll-to-offset',
+      scrollToSelector: '[data-scroll-to]'
     },
     init: function(options) {
+      var scrollToSelector;
       Stencil.Scroll.settings = $.extend(Stencil.Scroll.settings, options);
-      return $(window).scroll(function() {
+      $(window).scroll(function() {
         if (!Stencil.Scroll.disabled) {
           return Stencil.Scroll.position = $(window).scrollTop();
         }
+      });
+      scrollToSelector = Stencil.Scroll.settings.scrollToSelector;
+      return $(scrollToSelector).click(function() {
+        var offset, scrollTo;
+        scrollTo = $(this).attr(Stencil.Scroll.settings.scrollToAttribute);
+        offset = parseInt($(this).attr(Stencil.Scroll.settings.scrollToOffsetAttribute));
+        return Stencil.Scroll.to(scrollTo, offset);
       });
     },
     disable: function(selector) {
@@ -185,6 +197,14 @@
       $(selector).removeClass(Stencil.Scroll.settings.disableClass);
       $(window).scrollTop(Stencil.Scroll.position);
       return Stencil.Scroll.disabled = false;
+    },
+    to: function(selector, offset) {
+      var scrollTo;
+      offset = offset || 0;
+      scrollTo = $(selector).offset().top + offset;
+      return $(Stencil.Scroll.settings.scrollSelector).animate({
+        scrollTop: scrollTo
+      }, "fast");
     }
   };
 

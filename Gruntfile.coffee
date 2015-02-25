@@ -42,7 +42,7 @@ module.exports = (grunt) ->
 
       scripts:
         files: [
-          '_scripts/**/'
+          '_scripts/**/*'
           '_scripts/*'
         ]
         tasks: [
