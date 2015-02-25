@@ -267,6 +267,82 @@ _sass
 ├── application.scss
 ```
 
+### Modifiers
+
+All modifiers come with prefixes for `tab`, `lap`, `desk`, and `cinema`. The value for these break-points can be set in `global/_variables`.
+
+#### Display
++ `%block’
++ + `%inline’
++ + `%inline-block’
+
+#### Responsive
++ `%is-responsive-image`
+
+#### Space
+
+Space modifiers are configured for `margin` and `padding` and come with suffixes for `n`, `xxs`, `xs`, `s`, `m`, `l`, `xl`, `xxl`. The value of each of these can be set in `global/_variables`.
+
+Example for no padding:
++ `%padding-bottom-n`
++ `%padding-left-n`
++ `%padding-right-n`
++ + `%padding-top-n`
++ `%padding-horizontal-n`
++ `%padding-vertical-n`
+
+#### Text
+
+Text modifiers for `size`, `letter-spacing`, `line-height` come with suffixes for `xxs`, `xs`, `s`, `m`, `l`, `xl`, `xxl`. The value of each of these can be set in `global/_variables`.
+
+##### Text size
++ `%text-xxs`
++ `%text-xs`
++ `%text-s`
++ `%text-m`
++ `%text-l`
++ `%text-xl`
++ `%text-xxl`
+
+##### Letter spacing
++ `%letter-xxs`
++ `%letter-xs`
++ `%letter-s`
++ `%letter-m`
++ `%letter-l`
++ `%letter-xl`
++ `%letter-xxl`
+
+##### Line height
++ `%line-xxs`
++ `%line-xs`
++ `%line-s`
++ `%line-m`
++ `%line-l`
++ `%line-xl`
++ `%line-xxl`
+
+##### Alignment
++ `%text-center`
++ `%text-left`
++ `%text-right`
++ `%text-top`
++ `%text-bottom`
++ `%text-middle`
+
+##### Transform
++ `%text-uppercase`
++ `%text-lowercase`
++ `%text-capitalize`
+
+##### Decoration
++ `%text-underline`
++ + `%text-none`
+
+#### Visibility
++ `%is-hidden`
++ `%is-visible`
+
 #### References
 + http://roytomeij.com/blog/2013/should-you-use-a-sass-mixin-or-extend.html
 + http://csswizardry.com/2014/01/extending-silent-classes-in-sass/

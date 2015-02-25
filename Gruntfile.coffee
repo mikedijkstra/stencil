@@ -1,3 +1,5 @@
+'use strict'
+
 module.exports = (grunt) ->
   grunt.initConfig
     pkg: grunt.file.readJSON("package.json")
@@ -75,7 +77,6 @@ module.exports = (grunt) ->
     'coffee'
     'concat'
     'uglify'
-    'sass'
     'notify'
     'concurrent:watcher'
   ]

@@ -70,6 +70,13 @@ $container-desk:                         $desk + $grid-gutter-width;
 $container-cinema:                       $cinema + $grid-gutter-width;
 
 //
+// Mixin Settings
+//
+
+// Animation
+$default-animation:                      0.3s ease;
+
+//
 // Object Settings
 //
 // Button

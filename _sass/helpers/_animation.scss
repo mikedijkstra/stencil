@@ -1,5 +1,5 @@
 @mixin animate {
-  @include transition(0.3s ease);
+  @include transition($default-animation);
 }
 
 @mixin transition($transition...) {

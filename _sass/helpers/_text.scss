@@ -26,5 +26,9 @@
 }
 
 @mixin text-size($palm, $tab: $palm, $lap: $tab, $desk: $lap, $cinema: $desk) {
-  @extend %text-#{$palm}, %tab-text-#{$tab}, %lap-text-#{$lap}, %desk-text-#{$desk}, %cinema-text-#{$cinema};
+  @extend %text-#{$palm};
+  @extend %tab-text-#{$tab};
+  @extend %lap-text-#{$lap};
+  @extend %desk-text-#{$desk};
+  @extend %cinema-text-#{$cinema};
 }
