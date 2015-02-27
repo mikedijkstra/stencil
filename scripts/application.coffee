@@ -6,7 +6,7 @@ $ ->
   Stencil.Loader.init()
   Stencil.Toggle.init()
   Stencil.Tooltip.init()
-  return
+
 
 # Window Loaded
 $(window).load ->

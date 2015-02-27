@@ -2,27 +2,89 @@
 
 A collection of helpers, modifiers, objects and compilers to help you get started building a new web site or web application fast.
 
-## Quick start
-+ Bootstrap your environment by running:  
-`$ make bootstrap`
-+ Start the watcher by running:  
-`$ make watch`
-+ Create/edit files in `_sass/` and `_scripts/`
-+ View compiled files in `assets`
-+ Count cash
+## The short version
++ Edit sass files in `sass`.
++ Edit CoffeeScript files in `scripts`.
++ Copy JavaScript and CSS modules/plugins into `vendor` (they are prepended to your `application.css` and `application.js` files)
++ User bower to install components and the main file will be copied to `vendor`.
++ Manage and edit your site files in `assets`, `templates`, `layouts` and `snippets`.
++ Deploy to GitHub pages with `grunt deploy`.
+
+## Getting started
++ Install NPM:
+`$ curl https://www.npmjs.org/install.sh | sh `
++ Install Grunt:
+`$ npm install -g grunt-cli`
++ Install NPM packages:
+`$ npm install`
++ Run Grunt
+`$ grunt`
+
+Grunt will automatically open your default browser to [http://localhost:8000](http://localhost:8000) and is configured for automatic live reload.
+
+## Deployment
+
+Stencil is configured to compile files and copy assets to the `_site` folder.
+
+### GitHub Pages
+
+Stencil includes a deployment script to automate deployment to GitHub pages. When you’re ready, you can deploy by running the following task:
+
+```
+$ grunt deploy
+```
+
+This will push your `_site` folder to a `gh-pages` branch at origin.
 
 ## Copying to an existing project
 
-Stencil uses Grunt and NPM packages to create a better workflow. It’s recommended you include the following in the `.gitignore` file of your existing repo:
+Stencil uses NPM packages, Bower and Sass to provide a better workflow. It’s recommended you include the following in the `.gitignore` file of your  repo:
+
 ```text
-# Ignore sass cache
-.sass-cache/
+# Ignore bower files
+bower_components
+
+# Ignore build folder
+.build
 
 # Ignore NPM files
 node_modules
+
+# Ignore sass cache
+.sass-cache/
+```
+
+## Liquid Templating
+
+Stencil uses liquid templating to help you generate static sites but reuse blocks of code. 
+
+### Templates
+
+Templates, or pages, are stored in the `templates` folder and should be saved as `.liquid` files.
+
+### Includes
+
+Includes, or snippets, are stored in the `includes` folder and should be saved as `.liquid` files.
+
+#### Example
+
+The file `includes/head.liquid` can be included with the following syntax:
+
+```liquid
+{% include head %}
 ```
 
 ## CSS
+
+### Compilation
+
+The main Sass file is `sass/application.scss` which will be compiled and combined with all the CSS files found in `vendor` and saved as `assets/application.css`. The file will then be minified and saved as `assets/application.min.css`. The `vendor` files will be added to the start of the file.
+
+#### Adding third party CSS
+
+1. Copy the compiled CSS file into `vendor`.
+
+That’s it! It will be automatically appended to your `application.css` and `appliction.min.css` files.
 
 ### Coding style
 + Use soft-tabs with a **two space indent**.
@@ -60,7 +122,7 @@ Extends are prone to causing specificity issues so they should be used sparingly
 #### Use Extend when …
 The output of the included CSS is always the same and you are extending a global modifier or there is a relationship between the selectors.
 
-##### Example Sass
+##### Example sass
 ```scss
 %text-s {
   font-size: $text-s;
@@ -83,7 +145,7 @@ The output of the included CSS is always the same and you are extending a global
 }
 ```
 
-##### Example Sass
+##### Example sass
 ```scss
 .button,
 %button {
@@ -139,7 +201,7 @@ The output of the included CSS is always the same and you are extending a global
 #### Use a Mixin when …
 The output of the included CSS changes or you need to repeat the same group of declarations.
 
-##### Example Sass
+##### Example sass
 ```scss
 @mixin border-radius($radius) {
   border-radius: $radius;
@@ -173,7 +235,7 @@ The output of the included CSS changes or you need to repeat the same group of d
 }
 ```
 
-##### Example Sass
+##### Example sass
 ```scss
 @mixin text-bold() {
   font-family: webfont, sans-serif;
@@ -246,7 +308,7 @@ The output of the included CSS changes or you need to repeat the same group of d
 
 ### File Structure
 ```text
-_sass
+sass
 ├── global
 │   └── _base.scss
 │   └── _reset.scss
@@ -270,6 +332,7 @@ _sass
 │   ├── _typography.scss
 ├── objects
 │   ├── _button.scss
+│   ├── _footer.scss
 │   ├── _form.scss
 │   ├── _grid.scss
 │   ├── _media.scss
@@ -402,28 +465,64 @@ The grid system is based off the bootstrap grid but has been modified to use the
 
 ### Compilation
 
-CoffeeScript and JavaScript files found in `_scripts/modules` and `_scripts` will be compiled into
-JavaScript and saved as `_scripts/build/application.js`. The `modules` files will be compiled first to ensure they're available to the custom script files.
-
-The compiled `application.js` file will then be combined with all the Javascript files
-found in `_scripts/vendor`, minified and saved as `assets/application.min.js`. The `vendor` files will be compiled first to ensure they're available to the custom script files.
+CoffeeScript and JavaScript files found in will be converted to JavaScript and combined with all the Javascript files found in `vendor`, minified and saved as `assets/application.min.js`. The `vendor` files will be compiled first, then sub folders within `scripts` and finally root files within `scripts`.
 
 #### Adding Javascript plugins
 
-1. Copy and paste the plugin into `_scripts/vendor`
-2. Initialize your plugin in a custom script file in `_scripts`, e.g. `_scripts/application.coffee`
+1. Copy the plugin into `vendor`
+2. Initialize your plugin in a custom script file in `scripts`, e.g. `scripts/application.coffee`
+
+### Objects
+
+Stencil has a number of built in objects for commonly used patterns.
+
+#### Align
+
+TODO
+
+#### Loader
+
+TODO
+
+#### Nav
+
+TODO
+
+#### Scroll
+
+TODO
+
+#### Toggle
+
+TODO
+
+#### Tooltip
+
+The Tooltip object has been taken from Bootstrap and works in conjunction with `sass/objects/_nav.scss`.
+
+##### Example
+
+Initialize the object:
+
+```js
+Stencil.Tooltip.init()
+```
+
+Add it to your HTML:
+
+```html
+<div data-tooltip data-placement=“bottom” title=“Hello, I am a tooltip.”>Show me a tooltip!</div>
+```
 
 ### File Structure
 ```text
-_scripts
-├── modules
+scripts
+├── objects
 │   ├── align.coffee
 │   ├── loader.coffee
 │   ├── nav.coffee
 │   ├── scroll.coffee
 │   ├── toggle.coffee
 │   ├── tooltip.coffee
-├── vendor
-│   ├── bootstrap-tooltip.js
 ├── application.coffee
 ```

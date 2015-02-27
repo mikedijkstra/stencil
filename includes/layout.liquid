@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    {% include head %}
+  </head>
+  <body>
+    <div class="loader" data-loader></div>
+    <div class="wrapper">
+      <div class="main">
+        {% include 'nav' %}
+
+        {% block body %}
+          Default Content
+        {% endblock %}
+      </div>
+    </div>
+
+    {% include 'footer' %}
+    {% include scripts %}
+  </body>
+</html>

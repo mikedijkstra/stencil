@@ -22,6 +22,10 @@ body.no-scroll {
   display: block;
 }
 
+.main {
+  @extend %padding-bottom-xl, %padding-bottom-xxl;
+}
+
 footer, .wrapper:after {
   height: $footer-height;
   width: 100%;

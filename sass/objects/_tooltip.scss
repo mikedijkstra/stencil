@@ -1,4 +1,8 @@
 // Bootstrap Tooltip
+$tooltip-color:               #fff !default;
+$tooltip-bg:                  #000 !default;
+$tooltip-arrow-width:         5px !default;
+$tooltip-arrow-color:         $tooltip-bg !default;
 
 // Base class
 .tooltip {

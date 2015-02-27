@@ -3,11 +3,14 @@
 *.swo
 *.swp
 
-# Ignore sass cache
-.sass-cache/
+# Ignore Bower components
+bower_components
 
-# Ignore bundler config.
-/.bundle
+# Ignore build folder
+/.build
 
 # Ignore NPM files
 node_modules
+
+# Ignore sass cache
+.sass-cache/

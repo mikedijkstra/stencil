@@ -51,8 +51,14 @@
       <div class="container">
         <div class="reading-text">
           <section>
-            <h1>Reading Text</h1>
+            <h1>Text</h1>
             <p class="lead">An example of the `reading-text` class from the typography module</p>
+
+            <p>
+              <a href="#" data-scroll-to="#section-2" data-scroll-to-offset="-100">
+                Scroll to section Two
+              </a>
+            </p>
 
             <h2>Heading 2</h2>
             <p>So she set to work, and very soon finished off the cake.</p>
@@ -83,9 +89,15 @@
             </ul>
           </section>
 
-          <section>
+          <section id="section-2">
             <h2>Section Two</h2>
             <p class="lead">An example of the `reading-text` section from the typography module</p>
+
+            <p>
+              <a href="#" data-tooltip data-tooltip data-placement="bottom" title="Hello!">
+                Show me a tooltip!
+              </a>
+            </p>
           </section>
         </div>
       </div>
@@ -181,8 +193,6 @@
           <input type="submit" name="submit" value="Send" class="button">
         </form>
       </div>
-
-      <div data-scroll-to="#phone-number" data-scroll-to-offset="-100">Scroll to phone number</div>
 
     </div>
   </body>
