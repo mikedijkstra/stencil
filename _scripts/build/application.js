@@ -31,36 +31,40 @@
       return child.css('margin-left', 0);
     },
     alignElements: function() {
+      var that;
+      that = this;
       $('[data-valign-from]').each(function() {
         if ($(window).width() >= $(this).attr('data-valign-from')) {
-          return Stencil.Align.verticalAlign(this);
+          return that.verticalAlign(this);
         } else {
-          return Stencil.Align.verticalAlignClear(this);
+          return that.verticalAlignClear(this);
         }
       });
       $('[data-valign]').each(function() {
-        return Stencil.Align.verticalAlign(this);
+        return that.verticalAlign(this);
       });
       $('[data-halign-from]').each(function() {
         if ($(window).width() >= $(this).attr('data-halign-from')) {
-          return Stencil.Align.horizontalAlign(this);
+          return that.horizontalAlign(this);
         } else {
-          return Stencil.Align.horizontalAlignClear(this);
+          return that.horizontalAlignClear(this);
         }
       });
       return $('[data-halign]').each(function() {
-        return Stencil.Align.horizontalAlign(this);
+        return that.horizontalAlign(this);
       });
     },
     init: function() {
+      var that;
+      that = this;
       $(window).resize(function() {
-        return Stencil.Align.alignElements();
+        return that.alignElements();
       });
       $(window).load(function() {
-        return Stencil.Align.alignElements();
+        return that.alignElements();
       });
       return $(document).on("ready pjax:success", function() {
-        return Stencil.Align.alignElements();
+        return that.alignElements();
       });
     }
   };

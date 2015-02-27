@@ -23,30 +23,32 @@ Stencil.Align =
     child.css('margin-left', 0)
 
   alignElements: ->
+    that = this
     $('[data-valign-from]').each ->
       if ($(window).width() >= $(this).attr('data-valign-from'))
-        Stencil.Align.verticalAlign(this)
+        that.verticalAlign(this)
       else
-        Stencil.Align.verticalAlignClear(this)
+        that.verticalAlignClear(this)
 
     $('[data-valign]').each ->
-      Stencil.Align.verticalAlign(this)
+      that.verticalAlign(this)
 
     $('[data-halign-from]').each ->
       if ($(window).width() >= $(this).attr('data-halign-from'))
-        Stencil.Align.horizontalAlign(this)
+        that.horizontalAlign(this)
       else
-        Stencil.Align.horizontalAlignClear(this)
+        that.horizontalAlignClear(this)
 
     $('[data-halign]').each ->
-      Stencil.Align.horizontalAlign(this)
+      that.horizontalAlign(this)
 
   init: ->
+    that = this
     $(window).resize ->
-      Stencil.Align.alignElements()
+      that.alignElements()
 
     $(window).load ->
-      Stencil.Align.alignElements()
+      that.alignElements()
 
     $(document).on "ready pjax:success", ->
-      Stencil.Align.alignElements()
+      that.alignElements()

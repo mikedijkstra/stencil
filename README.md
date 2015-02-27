@@ -31,7 +31,7 @@ A collection of helpers, modifiers, objects and compilers to help you get starte
 + Limit the use of shorthand declarations to instances where you must explicitly set all the available values.
 
 #### Example
-```css
+```scss
 .post,
 .another-post {
   background-color: $color-cornflour-blue;
@@ -51,7 +51,7 @@ Extends are prone to causing specificity issues so they should be used sparingly
 The output of the included CSS is always the same and you are extending a global modifier or there is a relationship between the selectors.
 
 ##### Example Sass
-```css
+```scss
 %text-s {
   font-size: $text-s;
 }
@@ -66,7 +66,7 @@ The output of the included CSS is always the same and you are extending a global
 ```
 
 ##### Example output
-```css
+```scss
 .post-description,
 .page-meta {
   font-size: 12px;
@@ -74,7 +74,7 @@ The output of the included CSS is always the same and you are extending a global
 ```
 
 ##### Example Sass
-```css
+```scss
 .button,
 %button {
   display: inline-block;
@@ -101,7 +101,7 @@ The output of the included CSS is always the same and you are extending a global
 ```
 
 ##### Example output
-```css
+```scss
 .button,
 .button-positive,
 .button-negative,
@@ -130,7 +130,7 @@ The output of the included CSS is always the same and you are extending a global
 The output of the included CSS changes or you need to repeat the same group of declarations.
 
 ##### Example Sass
-```css
+```scss
 @mixin border-radius($radius) {
   border-radius: $radius;
 }
@@ -149,7 +149,7 @@ The output of the included CSS changes or you need to repeat the same group of d
 ```
 
 ##### Example output
-```css
+```scss
 .foo {
   border-radius: 5px;
 }
@@ -164,7 +164,7 @@ The output of the included CSS changes or you need to repeat the same group of d
 ```
 
 ##### Example Sass
-```css
+```scss
 @mixin text-bold() {
   font-family: webfont, sans-serif;
   font-weight: 700;
@@ -184,7 +184,7 @@ The output of the included CSS changes or you need to repeat the same group of d
 ```
 
 ##### Example output
-```css
+```scss
 .foo {
   font-family: webfont, sans-serif;
   font-weight: 700;
@@ -207,20 +207,20 @@ The output of the included CSS changes or you need to repeat the same group of d
 
 #### Object
 
-```css
+```scss
 .noun {}	        //examples: .button, .menu, .textbox, .header
 ```
 
 #### Module
 
-```css
+```scss
 .noun {}            // parent: .post
 .noun-noun {}       // child:  .post-title
 ```
 
 #### Modifiers
 
-```css
+```scss
 .is-state {}        // state: is-selected, is-hidden
 .adjective {}       // examples: .left, .right, .block, .inline
 
@@ -230,7 +230,7 @@ The output of the included CSS changes or you need to repeat the same group of d
 
 #### Subclasses
 
-```css
+```scss
 .adjective-noun {}  // example: .dropdown-button
 ```
 
@@ -257,7 +257,7 @@ _sass
 │   └── _text.scss
 │   └── _visibility.scss
 ├── modules
-│   ├── _template.scss
+│   ├── _typography.scss
 ├── objects
 │   ├── _button.scss
 │   ├── _form.scss
@@ -270,7 +270,7 @@ _sass
 
 ### Modifiers
 
-All modifiers come with prefixes for `tab`, `lap`, `desk`, and `cinema`. The value for these break-points can be set in `global/_variables`.
+All modifiers are available to extend as placeholders or add direct to HTML as classes and come with prefixes for `tab`, `lap`, `desk`, and `cinema`. The value for these break-points can be set in `global/_variables`.
 
 #### Display
 + `%block’
@@ -343,6 +343,42 @@ Text modifiers for `size`, `letter-spacing`, `line-height` come with suffixes fo
 #### Visibility
 + `%is-hidden`
 + `%is-visible`
+
+### Grid
+
+The grid system is based off the bootstrap grid but has been modified to use the `tab`, `lap`, `desk`, and `cinema` break point sizes which can be set in `global/_variables`.
+
+#### Default class example
+```html
+<div class=“container-fluid”>
+  <div class=“row”>
+    <div class=“col-palm-12 col-tab-4”></div>
+    <div class=“col-palm-12 col-tab-4”></div>
+    <div class=“col-palm-12 col-tab-4”></div>
+  </div>
+</div>
+```
+
+#### Modular example
+``` html
+<div class=“container-fluid”>
+  <div class=“posts”>
+    <div class=“posts-post”></div>
+    <div class=“posts-post”></div>
+    <div class=“posts-post”></div>
+  </div>
+</div>
+```
+
+```scss
+.posts {  
+  @inlcude row;
+}
+
+.posts-post {
+  @extend %col-palm-12, %tab-col-4;
+}
+```
 
 #### References
 + http://roytomeij.com/blog/2013/should-you-use-a-sass-mixin-or-extend.html

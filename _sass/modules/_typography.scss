@@ -1,0 +1,122 @@
+.reading-text,
+%reading-text {
+  &, h1, h2, h3, h4, h5, h6, p, li {
+    @extend %text-s, %line-s;
+    @include text-regular;
+  }
+
+  a {
+    color: $color-boston-blue;
+  }
+
+  a:hover {
+    color: $color-bay-of-many;
+    text-decoration: underline;
+  }
+
+  a:active, a:focus {
+    outline: 0;
+  }
+
+  section {
+    @extend %margin-vertical-xl;
+    @extend %tab-margin-vertical-xxl;
+  }
+
+  hr {
+    @extend %margin-vertical-l;
+    color: $color-gallery;
+    background: $color-gallery;
+    border: none;
+    display: block;
+    height: 3px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @include text-bold;
+  }
+
+  h1 {
+    @extend %text-xl, %margin-bottom-m;
+    @extend %lap-text-xxl, %tab-margin-bottom-l;
+  }
+
+  h2 {
+    @extend %text-l, %margin-bottom-m;
+    @extend %lap-text-xl, %lap-margin-bottom-l;
+
+    &:not(:first-child) {
+      @extend %margin-top-m;
+      @extend %lap-margin-top-l;
+    }
+  }
+
+  h3 {
+    @extend %text-m, %margin-bottom-s;
+    @extend %lap-text-l, %lap-margin-bottom-m;
+
+    &:not(:first-child) {
+      @extend %margin-top-s;
+      @extend %lap-margin-top-m;
+    }
+  }
+
+  h4 {
+    @extend %text-s, %margin-bottom-xs;
+    @extend %lap-text-m, %lap-margin-bottom-s;
+
+    &:not(:first-child) {
+      @extend %margin-top-xs;
+      @extend %lap-margin-top-s;
+    }
+  }
+
+  h5 {
+    @extend %text-xs, %margin-bottom-xxs;
+    @extend %lap-text-s, %lap-margin-bottom-xs;
+
+    &:not(:first-child) {
+      @extend %margin-top-xxs;
+      @extend %lap-margin-top-xs;
+    }
+  }
+
+  h6 {
+    @extend %text-xxs;
+    @extend %lap-text-xs, %lap-margin-bottom-xxs;
+
+    &:not(:first-child) {
+      @extend %margin-top-xxs;
+    }
+  }
+
+  blockquote {
+    border-left: 3px solid $color-gallery;
+    @extend %text-m, %line-m, %padding-left-m;
+  }
+
+  ol,
+  ul {
+    list-style-position: outside;
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  li,
+  p {
+    @extend %text-xs, %margin-bottom-s, %line-m;
+    @extend %lap-text-s, %lap-margin-bottom-m;
+  }
+
+  .lead,
+  %lead {
+    @extend %text-s, %margin-bottom-m, %line-m;
+    @extend %lap-text-m, %lap-margin-bottom-l;
+  }
+}
