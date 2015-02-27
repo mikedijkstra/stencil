@@ -3,14 +3,24 @@
 A collection of helpers, modifiers, objects and compilers to help you get started building a new web site or web application fast.
 
 ## Quick start
-+ Bootstrap your environment by running:··
++ Bootstrap your environment by running:  
 `$ make bootstrap`
-+ Start the watcher by running:··
++ Start the watcher by running:  
 `$ make watch`
-+ Create/edit files in `_sass/`, `_scripts/`
++ Create/edit files in `_sass/` and `_scripts/`
 + View compiled files in `assets`
-+ Edit the index file in `index.html`
 + Count cash
+
+## Copying to an existing project
+
+Stencil uses Grunt and NPM packages to create a better workflow. It’s recommended you include the following in the `.gitignore` file of your existing repo:
+```text
+# Ignore sass cache
+.sass-cache/
+
+# Ignore NPM files
+node_modules
+```
 
 ## CSS
 
