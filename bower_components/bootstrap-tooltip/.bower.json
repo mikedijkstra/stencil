@@ -1,0 +1,32 @@
+{
+  "name": "bootstrap-tooltip",
+  "main": "bootstrap-tooltip.js",
+  "homepage": "https://github.com/stencil-js/bootstrap-tooltip",
+  "description": "Tooltip JS from Twitter Bootstrap",
+  "keywords": [
+    "bootstrap",
+    "tooltip",
+    "tooltip"
+  ],
+  "authors": [
+    "Twitter Boostrap"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "1f5242cf8b",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "1f5242cf8b9186f50589ba85d3281c4c0343b1db"
+  },
+  "_source": "git@github.com:stenciljs/bootstrap-tooltip.git",
+  "_target": "*",
+  "_originalSource": "git@github.com:stenciljs/bootstrap-tooltip.git",
+  "_direct": true
+}

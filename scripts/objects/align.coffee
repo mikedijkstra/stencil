@@ -1,10 +1,20 @@
 Stencil = Stencil || {}
 Stencil.Align =
   verticalAlign: (element) ->
-    parent = $(element)
-    child = $(element).find('[data-valign-child]')
-    topMargin = ((parent.height() - child.height()) / 2)
-    child.css('margin-top', topMargin)
+    $(element).find('[data-valign-child]').each ->
+      child = $(this)
+      if child.attr('data-valign-to-window') != undefined
+        parent = $(window)
+      else if child.attr('data-valign-on') != undefined
+        parent = $(child.attr('data-valign-on'))
+      else
+        parent = $(element)
+
+      if child.height() < parent.height()
+        topMargin = ((parent.height() - child.height()) / 2)
+        child.css('margin-top', topMargin)
+      else
+        verticalAlignClear(element)
 
   verticalAlignClear: (element) ->
     parent = $(element)

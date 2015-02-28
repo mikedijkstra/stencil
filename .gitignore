@@ -3,9 +3,6 @@
 *.swo
 *.swp
 
-# Ignore Bower components
-bower_components
-
 # Ignore build folder
 /.build
 

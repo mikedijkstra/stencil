@@ -17,9 +17,3 @@ Stencil.Toggle =
         $(target).attr('data-toggle-expanded', '')
       else
         $(target).removeAttr('data-toggle-expanded')
-
-      if Stencil.Scroll
-        Stencil.Scroll.disable()
-      else
-        console.error 'Error initializing Stencil.Loader'
-        console.error 'Dependency Missing: Stencil.Scroll'

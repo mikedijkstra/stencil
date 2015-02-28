@@ -3,12 +3,35 @@
 A collection of helpers, modifiers, objects and compilers to help you get started building a new web site or web application fast.
 
 ## The short version
++ Run compiler tasks with `$ grunt`.
 + Edit sass files in `sass`.
-+ Edit CoffeeScript files in `scripts`.
++ Edit CoffeeScript and Javascript files in `scripts`.
 + Copy JavaScript and CSS modules/plugins into `vendor` (they are prepended to your `application.css` and `application.js` files)
-+ User bower to install components and the main file will be copied to `vendor`.
-+ Manage and edit your site files in `assets`, `templates`, `layouts` and `snippets`.
-+ Deploy to GitHub pages with `grunt deploy`.
++ User bower to install components and the main file(s) will be copied to `vendor`.
++ Manage and edit your site files in `assets`, `templates` and `includes`.
++ Your files and assets are compiled to `_site`
++ Deploy to GitHub pages with `$ grunt deploy`.
+
+## Table of Contents
+
++ [Getting Started](#getting-started)
++ [Deployment](#deployment)
++ [Copying to an existing project](#copying-to-an-existing-project)
++ [Liquid HTML](#liquid-html)
++ [Sass and CSS](#sass-and-css)
+++ [Sass compiler](#sass-compiler)
+++ [Third-party CSS](#third-party-css)
+++ [Coding style](#coding-style)
+++ [Extend vs Mixin](#extend-vs-mixin)
+++ [Naming Conventions](#naming-conventions)
+++ [File structure](#sass-file-structure)
+++ [Modifiers](#modifiers)
+++ [Grid](#grid)
++ [CoffeeScript and Javascript](#coffeescript-and-javascript)
+++ [CoffeeScript compiler](#coffeescript-compiler)
+++ [Javascript plugins](#javascript-plugins)
+++ [Objects](#objects)
+++ [File structure](#scripts-file-structure)
 
 ## Getting started
 + Install NPM:
@@ -38,12 +61,9 @@ This will push your `_site` folder to a `gh-pages` branch at origin.
 
 ## Copying to an existing project
 
-Stencil uses NPM packages, Bower and Sass to provide a better workflow. It’s recommended you include the following in the `.gitignore` file of your  repo:
+Stencil uses NPM packages and Sass to provide a better workflow. It’s recommended you include the following in the `.gitignore` file of your  repo:
 
 ```text
-# Ignore bower files
-bower_components
-
 # Ignore build folder
 .build
 
@@ -54,9 +74,9 @@ node_modules
 .sass-cache/
 ```
 
-## Liquid Templating
+## Liquid HTML
 
-Stencil uses liquid templating to help you generate static sites but reuse blocks of code. 
+Stencil uses the [Liquid Templating language](http://liquidmarkup.org/) to help you generate static sites while reusing blocks of code. 
 
 ### Templates
 
@@ -74,13 +94,13 @@ The file `includes/head.liquid` can be included with the following syntax:
 {% include head %}
 ```
 
-## CSS
+## Sass and CSS
 
-### Compilation
+### Sass Compiler
 
 The main Sass file is `sass/application.scss` which will be compiled and combined with all the CSS files found in `vendor` and saved as `assets/application.css`. The file will then be minified and saved as `assets/application.min.css`. The `vendor` files will be added to the start of the file.
 
-#### Adding third party CSS
+####  Third party CSS
 
 1. Copy the compiled CSS file into `vendor`.
 
@@ -306,7 +326,7 @@ The output of the included CSS changes or you need to repeat the same group of d
 .adjective-noun {}  // example: .dropdown-button
 ```
 
-### File Structure
+### Sass file structure
 ```text
 sass
 ├── global
@@ -461,16 +481,16 @@ The grid system is based off the bootstrap grid but has been modified to use the
 + http://thesassway.com/advanced/modular-css-typography
 + https://github.com/styleguide/css
 
-## JS
+## CoffeeScript and JavaScript
 
-### Compilation
+### CoffeeScript compiler
 
 CoffeeScript and JavaScript files found in will be converted to JavaScript and combined with all the Javascript files found in `vendor`, minified and saved as `assets/application.min.js`. The `vendor` files will be compiled first, then sub folders within `scripts` and finally root files within `scripts`.
 
-#### Adding Javascript plugins
+####  Javascript plugins
 
 1. Copy the plugin into `vendor`
-2. Initialize your plugin in a custom script file in `scripts`, e.g. `scripts/application.coffee`
+2. Initialize your plugin in a custom script file in `scripts`
 
 ### Objects
 
@@ -478,23 +498,176 @@ Stencil has a number of built in objects for commonly used patterns.
 
 #### Align
 
-TODO
+The Align object provides data attributes to vertically and horizontally align absolutely positioned elements.
+
+##### Example
+
+Initialize the object:
+
+```js
+Stencil.Align.init()
+```
+
+**Vertically align**
+
+```html
+<div data-valign>
+	<div data-valign-child>
+	</div>
+</div>
+```
+
+**Vertically align from breakpoint**
+
+```html
+<div data-valign-from=“780px”>
+	<div data-valign-child>
+	</div>
+</div>
+```
+
+**Vertically align within window**
+
+```html
+<div data-valign>
+	<div data-valign-child  data-valign-to-window>
+	</div>
+</div>
+```
+
+**Horziontally align**
+
+```html
+<div data-halign>
+	<div data-halign-child>
+	</div>
+</div>
+```
+
+**Horizontally align from breakpoint**
+
+```html
+<div data-halign-from=“780px”>
+	<div data-halign-child>
+	</div>
+</div>
+```
 
 #### Loader
 
-TODO
+The loader will show a full screen div with a  loading gif until the document is ready.
+
+##### Example
+
+Initialize the object:
+
+```js
+Stencil.Loader.init()
+```
+
+Add the loader to your HTML:
+
+```html
+<div data-loader></div>
+<div class=“wrapper”>
+	…
+</div>
+```
 
 #### Nav
 
-TODO
+The Nav object will collapse the navigation at a given breakpoint.
+
+Initialize the object:
+
+```js
+Stencil.Nav.init()
+```
+
+Add the nav to your HTML:
+
+```html
+<div class=“container-fluid” data-nav>
+  <div class=“nav-overlay” data-nav-overlay data-hidden></div>
+  <div class=“nav”>
+    <div class=“nav-brand”>
+      <a href=“/“ itemprop=“url” class=“nav-logo”>
+        <img src=“assets/logo.png” alt=“CompanyName” itemprop=“logo”>
+      </a> 
+    </div>
+
+    <div class=“nav-menu-toggle”>
+      <a href=“#” class=“nav-menu-toggle-control” data-toggle-nav-menu>Menu</a>
+    </div>
+
+    <div class=“nav-menu” data-nav-menu data-nav-menu-break-point=“768”>
+      <ul class=“nav-menu-items”>
+        <li class=“nav-menu-item”><a href=“#”>Link</a></li>
+        <li class=“nav-menu-item nav-menu-item-right”><a href=“#”>Link</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+```
 
 #### Scroll
 
-TODO
+The Scroll object provides a few different functions to either manipulate the page scrolling (useful when showing a modal overlay) or scroll to an element on the page.
+
+##### Example
+
+Initialize the object:
+
+```js
+Stencil.Scroll.init()
+```
+
+**Disable page scroll**
+
+```js
+Stencil.Scroll.disable()
+```
+
+**Enable page scroll**
+
+```js
+Stencil.Scroll.enable()
+```
+
+**Scroll to selector**
+
+```html
+<a href=“#” data-scroll-to=“#section-2” data-scroll-to-offset=“-100”>Scroll to section two</a>
+```
 
 #### Toggle
 
-TODO
+The Toggle object provides data attributes to show/hide elements on the page.
+
+##### Example
+
+Initialize the object:
+
+```js
+Stencil.Toggle.init()
+```
+
+**Hide attribute on page load**
+
+```html
+<div data-hidden>
+	You can’t see me!
+</div>
+```
+
+**Toggle show/hide for element**
+
+```html
+<div data-toggle=“#section-two”>
+	Hide section two
+</div>
+```
+
 
 #### Tooltip
 
@@ -514,7 +687,7 @@ Add it to your HTML:
 <div data-tooltip data-placement=“bottom” title=“Hello, I am a tooltip.”>Show me a tooltip!</div>
 ```
 
-### File Structure
+### Scripts file structure
 ```text
 scripts
 ├── objects
