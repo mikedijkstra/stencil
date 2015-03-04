@@ -16,6 +16,7 @@ A collection of helpers, modifiers, objects and compilers to help you get starte
 
 + [Getting Started](#getting-started)
 + [Deployment](#deployment)
++ + [Adding to a Rails project](#adding-to-a-rails-project)
 + [Copying to an existing project](#copying-to-an-existing-project)
 + [Liquid HTML](#liquid-html)
 + [Sass and CSS](#sass-and-css)
@@ -58,6 +59,25 @@ $ grunt deploy
 ```
 
 This will push your `_site` folder to a `gh-pages` branch at origin.
+
+## Adding to a Rails project
+### Sass
++ Download the repo
++ Copy the contents of `sass/` to `app/assets/stylesheets`
++ Rename `application.css` to `application.css.scss`
++ Delete the line `*= require_tree` from `application.css.css`
++ Copy and paste the contents of `application.scss` to the bottom of `application.css.scss`
++ Delete the file `application.scss`
+
+### Scripts
++ Download the repo
++ Copy the content of `scripts/` to `app/assets/javascripts`
++ Add the line `//= require_tree ./objects` above `//= require_tree .` in `application.js`
++ Rename `applcation.coffee` to `scripts.coffee`
+
+### Vendor
+
+Copy any CSS or JS from `vendor/` into the rails vendor folder and include as you would any other third-party files.
 
 ## Copying to an existing project
 
