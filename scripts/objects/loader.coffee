@@ -1,4 +1,4 @@
-Stencil = Stencil || {}
+window.Stencil = window.Stencil || {}
 Stencil.Loader =
   settings:
     loaderAttribute: 'data-loader'

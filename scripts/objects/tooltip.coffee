@@ -1,4 +1,4 @@
-Stencil = Stencil || {}
+window.Stencil = window.Stencil || {}
 Stencil.Tooltip =
   settings:
     tooltipAttribute: 'data-tooltip'

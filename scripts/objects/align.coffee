@@ -1,4 +1,4 @@
-Stencil = Stencil || {}
+window.Stencil = window.Stencil || {}
 Stencil.Align =
   verticalAlign: (element) ->
     $(element).find('[data-valign-child]').each ->

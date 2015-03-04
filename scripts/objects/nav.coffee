@@ -1,4 +1,4 @@
-Stencil = Stencil || {}
+window.Stencil = window.Stencil || {}
 Stencil.Nav =
   settings:
     breakPointAttribute: 'data-nav-menu-break-point'

@@ -1,4 +1,4 @@
-Stencil = Stencil || {}
+window.Stencil = window.Stencil || {}
 Stencil.Scroll =
   disabled: false
   position: 0

@@ -1,4 +1,4 @@
-Stencil = Stencil || {}
+window.Stencil = window.Stencil || {}
 Stencil.Toggle =
   settings:
     hideAttribute: 'data-hidden'
