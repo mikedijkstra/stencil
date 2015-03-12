@@ -25,10 +25,17 @@
   font-style: normal;
 }
 
-@mixin text-size($palm, $tab: $palm, $lap: $tab, $desk: $lap, $cinema: $desk) {
+@mixin text($palm, $tab: $palm, $lap: $tab, $desk: $lap, $cinema: $desk) {
   @extend %text-#{$palm};
   @extend %tab-text-#{$tab};
   @extend %lap-text-#{$lap};
   @extend %desk-text-#{$desk};
   @extend %cinema-text-#{$cinema};
+}
+
+@mixin link($color, $hover: darken($color, 10%)) {
+  color: $color;
+  &:hover {
+    color: $hover;
+  }
 }

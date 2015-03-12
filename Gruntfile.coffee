@@ -4,10 +4,13 @@ module.exports = (grunt) ->
   grunt.initConfig
     pkg: grunt.file.readJSON("package.json")
 
-    bower:
-      install:
-        options:
-          targetDir: './vendor'
+    autoprefixer:
+      options:
+        silent: false
+        browsers: ['last 2 versions', 'ie 8', 'ie 9']
+      single_file:
+        src: '.build/application.css'
+        dest: '.build/application.prefixed.css'
 
     coffee:
       compileJoined:
@@ -31,7 +34,7 @@ module.exports = (grunt) ->
       all:
         src: [
           "vendor/*.css"
-          ".build/application.css"
+          ".build/application.prefixed.css"
         ]
         dest: "assets/application.css"
 
@@ -71,7 +74,7 @@ module.exports = (grunt) ->
     sass:
       dist:
         options:
-          style: 'compressed'
+          style: 'expanded'
           sourcemap: 'none'
         files:
           '.build/application.css': ['sass/application.scss' ]
@@ -82,10 +85,6 @@ module.exports = (grunt) ->
         dest: "assets/application.min.js"
 
     watch:
-      bower:
-        files: [ 'bower_components/*', 'bower_components/**/*' ]
-        tasks: [ 'bower']
-
       copy:
         files: [ 'assets/**/*', 'assets/*' ]
         tasks: [ 'copy' ]
@@ -96,7 +95,7 @@ module.exports = (grunt) ->
 
       sass:
         files: [ 'sass/*', 'sass/**/*' ]
-        tasks: [ 'sass', 'concat_css', 'cssmin', 'copy' ]
+        tasks: [ 'sass', 'autoprefixer', 'concat_css', 'cssmin', 'copy' ]
 
       scripts:
         files: [ 'scripts/**/*', 'scripts/*' ]
@@ -123,13 +122,12 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks "grunt-notify"
   grunt.loadNpmTasks "grunt-contrib-connect"
   grunt.loadNpmTasks "grunt-contrib-cssmin"
-  grunt.loadNpmTasks 'grunt-bower-task'
   grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-liquid'
   grunt.loadNpmTasks 'grunt-exec'
+  grunt.loadNpmTasks 'grunt-autoprefixer'
 
   grunt.registerTask "default", [
-    'bower'
     'notify'
     'copy'
     'connect'
@@ -138,6 +136,14 @@ module.exports = (grunt) ->
 
   grunt.registerTask "deploy", [
     'exec:deploy'
+  ]
+
+  grunt.registerTask "watch_sass", [
+    'watch:sass'
+  ]
+
+  grunt.registerTask "watch_scripts", [
+    'watch:scripts'
   ]
 
   return

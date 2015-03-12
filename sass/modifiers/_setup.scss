@@ -4,6 +4,10 @@
 @include text-setup("");
 @include visibility-setup("");
 
+@mixin c($name) {
+  @extend .#{$name} !optional
+}
+
 @include from($device-xxs) {
   @include display-setup("xxs-");
   @include responsive-setup("xxs-");

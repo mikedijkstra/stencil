@@ -7,3 +7,10 @@
       max-width: 100%;
   }
 }
+
+@mixin is-responsive-image {
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    max-width: 100%;
+}

@@ -71,3 +71,39 @@
   .#{$namespace}line-xl { line-height: $line-xl; }
   .#{$namespace}line-xxl { line-height: $line-xxl; }
 }
+
+@mixin text-xxs { font-size: $text-xxs; }
+@mixin text-xs { font-size: $text-xs; }
+@mixin text-s { font-size: $text-s; }
+@mixin text-m { font-size: $text-m; }
+@mixin text-l { font-size: $text-l; }
+@mixin text-xl { font-size: $text-xl; }
+@mixin text-xxl { font-size: $text-xxl; }
+
+@mixin letter-xxs { letter-spacing: $letter-xxs; }
+@mixin letter-xs { letter-spacing: $letter-xs; }
+@mixin letter-s { letter-spacing: $letter-s; }
+@mixin letter-m{ letter-spacing: $letter-m; }
+@mixin letter-l { letter-spacing: $letter-l; }
+@mixin letter-xl { letter-spacing: $letter-xl; }
+@mixin letter-xxl { letter-spacing: $letter-xxl; }
+
+@mixin text-center { text-align: center; }
+@mixin text-left { text-align: left; }
+@mixin text-right { text-align: right; }
+@mixin text-top { vertical-align: top; }
+@mixin text-bottom { vertical-align: bottom; }
+@mixin text-middle { vertical-align: middle; }
+@mixin text-uppercase { text-transform: uppercase; }
+@mixin text-lowercase { text-transform: lowercase; }
+@mixin text-capitalize { text-transform: capitalize; }
+@mixin text-underline { text-decoration: underline; }
+@mixin text-none { text-decoration: none; }
+
+@mixin line-xxs { line-height: $line-xxs; }
+@mixin line-xs { line-height: $line-xs; }
+@mixin line-s { line-height: $line-s; }
+@mixin line-m { line-height: $line-m; }
+@mixin line-l { line-height: $line-l; }
+@mixin line-xl { line-height: $line-xl; }
+@mixin line-xxl { line-height: $line-xxl; }
