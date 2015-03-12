@@ -4,7 +4,7 @@ A collection of helpers, modifiers, objects and compilers to help you get starte
 
 ## The short version
 + Run compiler tasks with `$ grunt`.
-+ Edit sass files in `sass`.
++ Maintain custom CSS/Sass in `sass/_custom.sass`
 + Edit CoffeeScript and Javascript files in `scripts`.
 + Copy JavaScript and CSS modules/plugins into `vendor` (they are prepended to your `application.css` and `application.js` files)
 + User bower to install components and the main file(s) will be copied to `vendor`.
@@ -16,7 +16,7 @@ A collection of helpers, modifiers, objects and compilers to help you get starte
 
 + [Getting Started](#getting-started)
 + [Deployment](#deployment)
-+ + [Adding to a Rails project](#adding-to-a-rails-project)
++ [Adding to a Rails project](#adding-to-a-rails-project)
 + [Copying to an existing project](#copying-to-an-existing-project)
 + [Liquid HTML](#liquid-html)
 + [Sass and CSS](#sass-and-css)
@@ -35,13 +35,13 @@ A collection of helpers, modifiers, objects and compilers to help you get starte
 	+ [File structure](#scripts-file-structure)
 
 ## Getting started
-+ Install NPM:
++ Install NPM:  
 `$ curl https://www.npmjs.org/install.sh | sh `
-+ Install Grunt:
++ Install Grunt:  
 `$ npm install -g grunt-cli`
-+ Install NPM packages:
++ Install NPM packages:  
 `$ npm install`
-+ Run Grunt
++ Run Grunt  
 `$ grunt`
 
 Grunt will automatically open your default browser to [http://localhost:8000](http://localhost:8000) and is configured for automatic live reload.
