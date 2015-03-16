@@ -1,0 +1,41 @@
+@mixin appearance($appearance)
+  -webkit-appearance:     $appearance
+  -moz-appearance:        $appearance
+  -ms-appearance:         $appearance
+  -o-appearance:          $appearance
+  appearance:             $appearance
+
+@mixin box-shadow($box-shadow)
+  -webkit-box-shadow: $box-shadow
+  -moz-box-shadow: $box-shadow
+  box-shadow: $box-shadow
+
+@mixin border-radius($radius)
+  -moz-border-radius: $radius
+  -webkit-border-radius: $radius
+  -ms-border-radius: $radius
+  border-radius: $radius
+
+@mixin opacity($opacity)
+  opacity: $opacity
+  // IE8 filter
+  $opacity-ie: ($opacity * 100)
+  filter: #{alpha(opacity=$opacity-ie)}
+
+@mixin overflow-scroll()
+  overflow-y: scroll
+  -webkit-overflow-scrolling: touch
+
+@mixin overlay()
+  bottom: 0
+  left: 0
+  position: fixed
+  right: 0
+  top: 0
+
+@mixin rotate($degrees)
+  -webkit-transform: rotate($degrees)
+  -moz-transform: rotate($degrees)
+  -ms-transform: rotate($degrees)
+  -o-transform: rotate($degrees)
+  transform: rotate($degrees)

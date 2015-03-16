@@ -1,0 +1,33 @@
+@mixin display-setup($namespace: "")
+  .#{$namespace}block
+    +block
+
+  .#{$namespace}inline
+    +inline
+
+  .#{$namespace}inline-block
+    +inline-block
+
+  .#{$namespace}relative
+    +relative
+
+  .#{$namespace}absolute
+    +absolute
+
+  .#{$namespace}fixed
+    +fixed
+
+  .#{$namespace}static
+    +static
+
+  .#{$namespace}is-hidden
+    +is-hidden
+
+  .#{$namespace}is-showing
+    +block
+
+  .#{$namespace}is-invisible
+    +is-invisible
+
+  .#{$namespace}is-visible
+    +is-visible

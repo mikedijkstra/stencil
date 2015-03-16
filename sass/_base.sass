@@ -1,0 +1,48 @@
+// Layout
+
+html, body
+  height: 100%
+
+body.no-scroll
+  +fixed
+  +overlay
+  overflow: hidden
+
+.wrapper
+  min-height: 100%
+  margin-bottom: -$footer-height
+
+
+.wrapper:after
+  content: ""
+  display: block
+
+.main
+  +padding($bottom: 'xl')
+
+  +tab
+    +padding($bottom: 'xxl')
+
+footer, .wrapper:after
+  height: $footer-height
+  width: 100%
+
+// Typography
+
+body
+  +text-regular
+  +text(xxs, $tab: xs)
+  color: $color-mine-shaft
+
+// Links
+
+a
+  +link($color-boston-blue, $hover: $color-bay-of-many)
+
+a:active, a:focus
+  outline: 0
+
+// Images
+
+img
+  +img-is-responsive

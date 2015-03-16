@@ -1,0 +1,40 @@
+%module
+  overflow: hidden
+  *overflow: visible
+  zoom: 1
+
+.media
+  @extend %module
+
+.media-body
+  @extend %module
+
+.media-image
+  float: left
+  margin-right: 10px
+
+  img
+    display:block
+
+.media-image-right
+  float: right
+  margin-left: 10px
+
+.flag
+  display: table
+  width: 100%
+
+.flag-image,
+.flag-body
+  display: table-cell
+  vertical-align: middle
+
+.flag-image
+  padding-right: 10px
+
+  > img
+    display: block
+    max-width: none
+
+.flag-body
+  width: 100%

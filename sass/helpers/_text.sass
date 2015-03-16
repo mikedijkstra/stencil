@@ -1,0 +1,100 @@
+@mixin hyphenate
+  -ms-word-break: break-all
+  word-break: break-all
+  word-break: break-word
+  -webkit-hyphens: auto
+  -moz-hyphens: auto
+  hyphens: auto
+
+@mixin text-bold
+  font-family: Helvetica, Helmut, Arial, sans-serif
+  font-weight: bold
+  font-style: normal
+
+@mixin text-light
+  font-family: Helvetica, Helmut, Arial, sans-serif
+  font-weight: light
+  font-style: normal
+
+@mixin text-regular
+  font-family: Helvetica, Helmut, Arial, sans-serif
+  font-weight: normal
+  font-style: normal
+
+@mixin text-center
+  text-align: center
+@mixin text-left
+  text-align: left
+@mixin text-right
+  text-align: right
+@mixin text-top
+  vertical-align: top
+@mixin text-bottom
+  vertical-align: bottom
+@mixin text-middle
+  vertical-align: middle
+@mixin text-uppercase
+  text-transform: uppercase
+@mixin text-lowercase
+  text-transform: lowercase
+@mixin text-capitalize
+  text-transform: capitalize
+@mixin text-underline
+  text-decoration: underline
+@mixin text-none
+  text-decoration: none
+
+@mixin text($palm, $tab: '', $lap: '', $desk: '', $cinema: '')
+  font-size: font-size-for($palm)
+  @if $tab != ''
+    +tab
+      font-size: font-size-for($tab)
+  @if $lap != ''
+    +lap
+      font-size: font-size-for($lap)
+  @if $desk != ''
+    +desk
+      font-size: font-size-for($desk)
+  @if $cinema != ''
+    +cinema
+      font-size: font-size-for($cinema)
+
+@function font-size-for($size)
+  @if $size == 'xxs'
+    @return $text-xxs
+  @if $size == 'xs'
+    @return $text-xs
+  @if $size == 's'
+    @return $text-s
+  @if $size == 'm'
+    @return $text-m
+  @if $size == 'l'
+    @return $text-l
+  @if $size == 'xl'
+    @return $text-xl
+  @if $size == 'xxl'
+    @return $text-xxl
+
+@mixin link($color, $hover: darken($color, 10%))
+  color: $color
+  &:hover
+    color: $hover
+
+@mixin line($size)
+  line-height: line-height-for($size)
+
+@function line-height-for($size)
+  @if $size == 'xxs'
+    @return $line-xxs
+  @if $size == 'xs'
+    @return $line-xs
+  @if $size == 's'
+    @return $line-s
+  @if $size == 'm'
+    @return $line-m
+  @if $size == 'l'
+    @return $line-l
+  @if $size == 'xl'
+    @return $line-xl
+  @if $size == 'xxl'
+    @return $line-xxl

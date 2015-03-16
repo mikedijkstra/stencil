@@ -1,0 +1,102 @@
+.reading-text
+  &,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li
+    +line(s)
+    +text(s)
+    +text-regular
+
+  a
+    +link($color-boston-blue, $hover: $color-bay-of-many)
+    &:hover
+      text-decoration: underline
+    &:active,
+    &:focus
+      outline: 0
+
+  section
+    +margin($vertical: xl)
+    +tab
+      +margin($vertical: xxl)
+
+  hr
+    +margin($vertical: l)
+    color: $color-gallery
+    background: $color-gallery
+    border: none
+    display: block
+    height: 3px
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+    +text-bold
+
+  h1
+    +text(xl, $lap: xxl)
+    +margin($bottom: m)
+    +tab
+      +margin($bottom: l)
+
+  h2
+    +text(l, $lap: xl)
+    +margin($bottom: m)
+    +tab
+      +margin($bottom: l)
+
+    &:not(:first-child)
+      +margin($top: m)
+      +lap
+        +margin($top: l)
+
+  h3
+    +text(m, $lap: l)
+    +margin($bottom: s)
+    +lap
+      +margin($bottom: m)
+
+    &:not(:first-child)
+      +margin($top: s)
+      +lap
+        +margin($top: m)
+
+  blockquote
+    border-left: 3px solid $color-gallery
+    +text(m)
+    +line(m)
+    +padding($left: m)
+
+  ol,
+  ul
+    list-style-position: outside
+
+  ol
+    list-style-type: decimal
+
+  ul
+    list-style-type: disc
+
+  li,
+  p
+    +line(m)
+    +margin($bottom: s)
+    +text(xs, $lap: s)
+    +lap
+      +margin($bottom: m)
+
+  .lead,
+  %lead
+    +line(m)
+    +margin($bottom: m)
+    +text(s, $lap: m)
+    +lap
+      +margin($bottom: l)

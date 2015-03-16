@@ -1,0 +1,40 @@
+.button,
+%button
+  +animate
+  background-color: $color-black
+  border: 1px solid $color-black
+  color: $color-white
+  cursor: pointer
+  height: $button-height
+  line-height: 1.0
+  +padding($horizontal: m)
+
+  &:active,
+  &:hover
+    background-color: $color-white
+    color: $color-black
+
+.button-invert
+  @extend %button
+  background-color: $color-white
+  border-color: $color-white
+  color: $color-black
+
+  &:active,
+  &:hover
+    background-color: $color-black
+    color: $color-white
+
+.button-neutral
+  @extend %button
+  background-color: transparent
+  border-color: $color-black
+  color: $color-black
+
+  &:active,
+  &:hover
+    background-color: $color-black
+    color: $color-white
+
+.button[disabled]
+  +opacity(0.5)

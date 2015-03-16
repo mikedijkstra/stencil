@@ -1,0 +1,97 @@
+.nav-overlay
+  bottom: 0
+  left: 0
+  right: 0
+  top: 0
+  position: fixed
+  z-index: 29
+
+.nav
+  +make-row
+  height: $nav-height
+  z-index: 30
+  position: relative
+
+  a
+    +animate
+    color: $color-black
+    height: $nav-height
+    line-height: $nav-height
+    margin: 0
+    padding: 10px 15px
+
+    &:hover
+      color: $color-black
+
+.nav-brand
+  @extend .col-palm-9
+  @extend .col-tab-5
+  line-height: $nav-height
+  z-index: 32
+
+.nav-logo
+  padding: 0 !important
+
+  &:hover
+    background: transparent !important
+
+  img
+    display: inline-block
+    margin-top: -10px
+    height: 50px
+    vertical-align: middle
+    width: auto
+
+.nav-with-logo
+  .nav-name
+    +to($tab)
+      display: none
+
+.nav-menu-toggle
+  @extend .col-palm-3
+  +tab
+    +is-hidden
+
+.nav-menu-toggle-control
+  +tab
+    +is-hidden
+  float: right
+  height: $nav-height !important
+  line-height: $nav-height !important
+  position: relative
+  padding: 0 !important
+  z-index: 32
+
+.nav-menu
+  @extend .col-tab-7
+  +is-hidden
+  +tab
+    +block
+  padding: 0
+
+  +to($tab)
+    background: $color-white
+    left: 0
+    top: 0
+    padding-top: $nav-height
+    position: absolute !important
+    width: 100%
+    z-index: 31
+
+  +tab
+    a
+      &:hover
+        background: $color-black
+        color: $color-white
+
+.nav-menu-items
+  +tab
+    +text-right
+
+.nav-menu-item
+  @extend .col-palm-12
+
+  +tab
+    +inline-block
+    float: none !important
+    width: auto !important

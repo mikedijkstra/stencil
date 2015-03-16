@@ -4,7 +4,7 @@ A collection of helpers, modifiers, objects and compilers to help you get starte
 
 ## The short version
 + Run compiler tasks with `$ grunt`.
-+ Maintain custom CSS/Sass in `sass/_custom.sass`
++ Maintain custom Sass in `sass/_base.sass` and `sass/_modules.sass`
 + Edit CoffeeScript and Javascript files in `scripts`.
 + Copy JavaScript and CSS modules/plugins into `vendor` (they are prepended to your `application.css` and `application.js` files)
 + User bower to install components and the main file(s) will be copied to `vendor`.
@@ -66,8 +66,8 @@ This will push your `_site` folder to a `gh-pages` branch at origin.
 + Copy the contents of `sass/` to `app/assets/stylesheets`
 + Rename `application.css` to `application.css.scss`
 + Delete the line `*= require_tree` from `application.css.css`
-+ Copy and paste the contents of `application.scss` to the bottom of `application.css.scss`
-+ Delete the file `application.scss`
++ Copy and paste the contents of `application.sass` to the bottom of `application.css.scss`
++ Delete the file `application.sass`
 
 ### Scripts
 + Download the repo
@@ -114,11 +114,11 @@ The file `includes/head.liquid` can be included with the following syntax:
 {% include head %}
 ```
 
-## Sass and CSS
+## Sass
 
 ### Sass Compiler
 
-The main Sass file is `sass/application.scss` which will be compiled and combined with all the CSS files found in `vendor` and saved as `assets/application.css`. The file will then be minified and saved as `assets/application.min.css`. The `vendor` files will be added to the start of the file.
+The main Sass file is `sass/application.sass` which will be compiled and combined with all the CSS files found in `vendor` and saved as `assets/application.css`. The file will then be minified and saved as `assets/application.min.css`. The `vendor` files will be added to the start of the file.
 
 ####  Third party CSS
 
@@ -129,30 +129,29 @@ That’s it! It will be automatically appended to your `application.css` and `ap
 ### Coding style
 + Use soft-tabs with a **two space indent**.
 + Put spaces after `:` in property declarations.
-+ Put spaces before `{` in rule declarations.
 + Put line breaks between rulesets.
-+ Keep individual selectors to a single line.
-+ Place closing braces of declaration blocks on a new line.
++ Keep individual selectors to a single line, including `@extend`s.
 + Each declaration should appear on its own line.
 + Order declarations within a selector alphabetically.
 + Group parent and child objects, declaring parents first.
-+ Use variables for colors prefixed with `$color-` ([Name that color](http://chir.ag/projects/name-that-color/))
++ Use variables for colors prefixed with `$color-` (See [Name that color](http://chir.ag/projects/name-that-color/) for naming inspiration)
 + Use `px` for `font-size`.
 + Leave `line-height` unit-less.
 + Don’t specify units for zero values, e.g., `margin: 0` instead of `margin: 0px`.
 + Limit the use of shorthand declarations to instances where you must explicitly set all the available values.
++ + When writing CSS put spaces before `{` in rule declarations.
++ When writing CSS place closing braces of declaration blocks on a new line.
 
 #### Example
 ```scss
 .post,
-.another-post {
-  background-color: $color-cornflour-blue;
-  border: 1px solid $color-denim;
-  color: $color-black;
-  font-size: 12px;
-  line-height: 1.5;
-  margin-bottom: 20px; // Not margin: 0 0 20px;
-}
+.another-post
+  background-color: $color-cornflour-blue
+  border: 1px solid $color-denim
+  color: $color-black
+  font-size: 12px
+  line-height: 1.5
+  margin-bottom: 20px // Not margin: 0 0 20px
 ```
 
 ### Extend vs Mixin
@@ -164,52 +163,25 @@ The output of the included CSS is always the same and you are extending a global
 
 ##### Example sass
 ```scss
-%text-s {
-  font-size: $text-s;
-}
-
-.post-description {
-  @extend %text-s;
-}
-
-.page-meta {
-  @extend %text-s;
-}
-```
-
-##### Example output
-```scss
-.post-description,
-.page-meta {
-  font-size: 12px;
-}
-```
-
-##### Example sass
-```scss
 .button,
-%button {
-  display: inline-block;
-  padding: 1em;
-}
+%button
+  display: inline-block
+  padding: 1em
 
-.button-positive {
-  @extend %button;
-  background-color: $color-green;
-  color: $color-white;
-}
+.button-positive
+  @extend %button
+  background-color: $color-green
+  color: $color-white
 
-.button-negative {
-  @extend %button;
-  background-color: $color-red;
-  color: $color-white;
-}
+.button-negative
+  @extend %button
+  background-color: $color-red
+  color: $color-white
 
-.button-neutral {
-  @extend %button;
-  background-color: $color-lightgray;
-  color: $color-black;
-}
+.button-neutral
+  @extend %button
+  background-color: $color-lightgray
+  color: $color-black
 ```
 
 ##### Example output
@@ -243,21 +215,18 @@ The output of the included CSS changes or you need to repeat the same group of d
 
 ##### Example sass
 ```scss
-@mixin border-radius($radius) {
-  border-radius: $radius;
-}
+@mixin border-radius($radius)
+  border-radius: $radius
+  -webkit-border-radius: $radius
  
-.foo {
-  @include border-radius(5px);
-}
+.foo
+  @include border-radius(5px)
  
-.bar {
-  @include border-radius(7px);
-}
+.bar
+  @include border-radius(7px)
  
-.baz {
-  @include border-radius(9px);
-}
+.baz
+  @include border-radius(9px)
 ```
 
 ##### Example output
@@ -272,46 +241,6 @@ The output of the included CSS changes or you need to repeat the same group of d
  
 .baz {
   border-radius: 9px;
-}
-```
-
-##### Example sass
-```scss
-@mixin text-bold() {
-  font-family: webfont, sans-serif;
-  font-weight: 700;
-}
- 
-.foo {
-  @include text-bold();
-}
- 
-.bar {
-  @include text-bold();
-}
- 
-.baz {
-  @include text-bold();
-}
-```
-
-##### Example output
-```scss
-.foo {
-  font-family: webfont, sans-serif;
-  font-weight: 700;
-
-}
- 
-.bar {
-  font-family: webfont, sans-serif;
-  font-weight: 700;
-
-}
- 
-.baz {
-  font-family: webfont, sans-serif;
-  font-weight: 700;
 }
 ```
 
@@ -336,8 +265,8 @@ The output of the included CSS changes or you need to repeat the same group of d
 .is-state {}        // state: is-selected, is-hidden
 .adjective {}       // examples: .left, .right, .block, .inline
 
-%is-hidden { display:    none !important; }
-%left { float: left !important; }
+.is-hidden { display: none !important; }
+.left { float: left !important; }
 ```
 
 #### Subclasses
@@ -350,9 +279,7 @@ The output of the included CSS changes or you need to repeat the same group of d
 ```text
 sass
 ├── global
-│   └── _base.scss
 │   └── _reset.scss
-│   └── _variables.scss
 ├── helpers
 │   ├── _animation.scss
 │   ├── _background.scss
@@ -378,65 +305,42 @@ sass
 │   ├── _media.scss
 │   ├── _nav.scss
 │   ├── _tooltip.scss
+└── _base.scss
+└── _modules.scss
+└── _variables.scss
 ├── application.scss
 ```
 
 ### Modifiers
 
-All modifiers are available to extend as placeholders or add direct to HTML as classes and come with prefixes for `tab`, `lap`, `desk`, and `cinema`. The value for these break-points can be set in `global/_variables`.
+All modifiers are available to extend or add direct to HTML as classes and come with prefixes for `tab`, `lap`, `desk`, and `cinema`. The value for these break-points can be set in `_variables`.
 
-#### Display
-+ `%block’
-+ + `%inline’
-+ + `%inline-block’
+#### Space modifiers
 
-#### Responsive
-+ `%is-responsive-image`
-
-#### Space
-
-Space modifiers are configured for `margin` and `padding` and come with suffixes for `n`, `xxs`, `xs`, `s`, `m`, `l`, `xl`, `xxl`. The value of each of these can be set in `global/_variables`.
+Space modifiers are configured for `margin` and `padding` and come with suffixes for `n`, `xxs`, `xs`, `s`, `m`, `l`, `xl`, `xxl`. The value of each of these can be set in `_variables`.
 
 Example for no padding:
-+ `%padding-bottom-n`
-+ `%padding-left-n`
-+ `%padding-right-n`
-+ + `%padding-top-n`
-+ `%padding-horizontal-n`
-+ `%padding-vertical-n`
++ `.padding-bottom-n`
++ `.padding-left-n`
++ `.padding-right-n`
++ `.padding-top-n`
++ `.padding-horizontal-n`
++ `.padding-vertical-n`
 
-#### Text
+#### Text modifiers
 
-Text modifiers for `size`, `letter-spacing`, `line-height` come with suffixes for `xxs`, `xs`, `s`, `m`, `l`, `xl`, `xxl`. The value of each of these can be set in `global/_variables`.
+Text modifiers for `size`, `letter-spacing`, `line-height` come with suffixes for `xxs`, `xs`, `s`, `m`, `l`, `xl`, `xxl`. The value of each of these can be set in `_variables`.
 
-##### Text size
-+ `%text-xxs`
-+ `%text-xs`
-+ `%text-s`
-+ `%text-m`
-+ `%text-l`
-+ `%text-xl`
-+ `%text-xxl`
+##### Example for text size
++ `.text-xxs`
++ `.text-xs`
++ `.text-s`
++ `.text-m`
++ `.text-l`
++ `.text-xl`
++ `.text-xxl`
 
-##### Letter spacing
-+ `%letter-xxs`
-+ `%letter-xs`
-+ `%letter-s`
-+ `%letter-m`
-+ `%letter-l`
-+ `%letter-xl`
-+ `%letter-xxl`
-
-##### Line height
-+ `%line-xxs`
-+ `%line-xs`
-+ `%line-s`
-+ `%line-m`
-+ `%line-l`
-+ `%line-xl`
-+ `%line-xxl`
-
-##### Alignment
+##### Example for alignment
 + `%text-center`
 + `%text-left`
 + `%text-right`
@@ -444,22 +348,9 @@ Text modifiers for `size`, `letter-spacing`, `line-height` come with suffixes fo
 + `%text-bottom`
 + `%text-middle`
 
-##### Transform
-+ `%text-uppercase`
-+ `%text-lowercase`
-+ `%text-capitalize`
-
-##### Decoration
-+ `%text-underline`
-+ + `%text-none`
-
-#### Visibility
-+ `%is-hidden`
-+ `%is-visible`
-
 ### Grid
 
-The grid system is based off the bootstrap grid but has been modified to use the `tab`, `lap`, `desk`, and `cinema` break point sizes which can be set in `global/_variables`.
+The grid system is based off the bootstrap grid but has been modified to use the `tab`, `lap`, `desk`, and `cinema` break point sizes which can be set in `_variables`.
 
 #### Default class example
 ```html
@@ -484,22 +375,13 @@ The grid system is based off the bootstrap grid but has been modified to use the
 ```
 
 ```scss
-.posts {  
-  @inlcude row;
-}
+.posts
+  +row
 
-.posts-post {
-  @extend %col-palm-12, %tab-col-4;
-}
+.posts-post
+  @extend .col-palm-12
+	@extend .tab-col-4
 ```
-
-#### References
-+ http://roytomeij.com/blog/2013/should-you-use-a-sass-mixin-or-extend.html
-+ http://csswizardry.com/2014/01/extending-silent-classes-in-sass/
-+ http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/
-+ http://thesassway.com/advanced/modular-css-naming-conventions
-+ http://thesassway.com/advanced/modular-css-typography
-+ https://github.com/styleguide/css
 
 ## CoffeeScript and JavaScript
 

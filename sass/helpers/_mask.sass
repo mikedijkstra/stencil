@@ -1,0 +1,23 @@
+@mixin mask($image)
+  -webkit-mask-image: url($image)
+  -o-mask-image: url($image)
+  -moz-mask-image: url($image)
+  mask-image: url($image)
+
+@mixin mask-position($position)
+  -webkit-mask-position: $position
+  -o-mask-position: $position
+  -moz-mask-position: $position
+  mask-position: $position
+
+@mixin mask-size($size)
+  -webkit-mask-size: $size
+  -o-mask-size: $size
+  -moz-mask-size: $size
+  mask-size: $size
+
+@mixin mask-repeat($repeat)
+  -webkit-mask-repeat: $repeat
+  -o-mask-repeat: $repeat
+  -moz-mask-repeat: $repeat
+  mask-repeat: $repeat
