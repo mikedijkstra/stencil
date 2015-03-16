@@ -7,7 +7,6 @@ A collection of helpers, modifiers, objects and compilers to help you get starte
 + Maintain custom Sass in `sass/_base.sass` and `sass/_modules.sass`
 + Edit CoffeeScript and Javascript files in `scripts`.
 + Copy JavaScript and CSS modules/plugins into `vendor` (they are prepended to your `application.css` and `application.js` files)
-+ User bower to install components and the main file(s) will be copied to `vendor`.
 + Manage and edit your site files in `assets`, `templates` and `includes`.
 + Your files and assets are compiled to `_site`
 + Deploy to GitHub pages with `$ grunt deploy`.
