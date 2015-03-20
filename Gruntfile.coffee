@@ -77,7 +77,7 @@ module.exports = (grunt) ->
           style: 'expanded'
           sourcemap: 'none'
         files:
-          '.build/application.css': ['sass/application.scss' ]
+          '.build/application.css': ['sass/application.sass' ]
 
     uglify:
       build:
