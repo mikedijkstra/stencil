@@ -472,8 +472,6 @@
 }(jQuery);
 
 (function() {
-  var Stencil;
-
   $(function() {
     Stencil.Nav.init();
     Stencil.Scroll.init({
@@ -487,15 +485,29 @@
 
   $(window).load(function() {});
 
-  Stencil = Stencil || {};
+  window.Stencil = window.Stencil || {};
 
   Stencil.Align = {
     verticalAlign: function(element) {
-      var child, parent, topMargin;
-      parent = $(element);
-      child = $(element).find('[data-valign-child]');
-      topMargin = (parent.height() - child.height()) / 2;
-      return child.css('margin-top', topMargin);
+      var that;
+      that = this;
+      return $(element).find('[data-valign-child]').each(function() {
+        var child, parent, topMargin;
+        child = $(this);
+        if (child.attr('data-valign-to-window') !== void 0) {
+          parent = $(window);
+        } else if (child.attr('data-valign-on') !== void 0) {
+          parent = $(child.attr('data-valign-on'));
+        } else {
+          parent = $(element);
+        }
+        if (child.height() < parent.height()) {
+          topMargin = (parent.height() - child.height()) / 2;
+          return child.css('margin-top', topMargin);
+        } else {
+          return that.verticalAlignClear(element);
+        }
+      });
     },
     verticalAlignClear: function(element) {
       var child, parent;
@@ -555,7 +567,7 @@
     }
   };
 
-  Stencil = Stencil || {};
+  window.Stencil = window.Stencil || {};
 
   Stencil.Loader = {
     settings: {
@@ -576,7 +588,7 @@
     }
   };
 
-  Stencil = Stencil || {};
+  window.Stencil = window.Stencil || {};
 
   Stencil.Nav = {
     settings: {
@@ -648,7 +660,7 @@
     }
   };
 
-  Stencil = Stencil || {};
+  window.Stencil = window.Stencil || {};
 
   Stencil.Scroll = {
     disabled: false,
@@ -698,7 +710,7 @@
     }
   };
 
-  Stencil = Stencil || {};
+  window.Stencil = window.Stencil || {};
 
   Stencil.Toggle = {
     settings: {
@@ -715,21 +727,15 @@
         target = $(this).attr("" + settings.toggleAttribute);
         $(target).fadeToggle();
         if ($(target).attr('data-toggle-expanded') === void 0) {
-          $(target).attr('data-toggle-expanded', '');
+          return $(target).attr('data-toggle-expanded', '');
         } else {
-          $(target).removeAttr('data-toggle-expanded');
-        }
-        if (Stencil.Scroll) {
-          return Stencil.Scroll.disable();
-        } else {
-          console.error('Error initializing Stencil.Loader');
-          return console.error('Dependency Missing: Stencil.Scroll');
+          return $(target).removeAttr('data-toggle-expanded');
         }
       });
     }
   };
 
-  Stencil = Stencil || {};
+  window.Stencil = window.Stencil || {};
 
   Stencil.Tooltip = {
     settings: {

@@ -41,15 +41,17 @@
 @function space-for($size)
   @if $size == 'xxs'
     @return $space-xxs
-  @if $size == 'xs'
+  @else if $size == 'xs'
     @return $space-xs
-  @if $size == 's'
+  @else if $size == 's'
     @return $space-s
-  @if $size == 'm'
+  @else if $size == 'm'
     @return $space-m
-  @if $size == 'l'
+  @else if $size == 'l'
     @return $space-l
-  @if $size == 'xl'
+  @else if $size == 'xl'
     @return $space-xl
-  @if $size == 'xxl'
+  @else if $size == 'xxl'
     @return $space-xxl
+  @else
+    @return $size
