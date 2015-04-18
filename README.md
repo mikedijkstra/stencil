@@ -1,6 +1,6 @@
 # Stencil
 
-A collection of helpers, modifiers, objects and compilers to help you get started building a new web site or web application fast.
+A collection of mixins, modifiers, modules and compilers to help you get started building a new web site or web application fast.
 
 ## Goals
 + Have a default structure so you know how to start
@@ -301,7 +301,7 @@ sass
 │   └── _reset.scss
 │   └── _setup.scss
 │   └── _variables.scss
-├── helpers
+├── mixins
 │   ├── _background.scss
 │   ├── _import.scss
 │   └── _media-queries.scss
