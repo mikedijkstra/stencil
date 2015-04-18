@@ -10,6 +10,10 @@
   -moz-box-shadow: $box-shadow
   box-shadow: $box-shadow
 
+@mixin drop-shadow($drop-shadow)
+  -webkit-filter: drop-shadow($drop-shadow)
+  filter: drop-shadow($drop-shadow)
+
 @mixin border-radius($radius)
   -moz-border-radius: $radius
   -webkit-border-radius: $radius

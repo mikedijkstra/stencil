@@ -7,19 +7,19 @@
   hyphens: auto
 
 @mixin text-bold
-  font-family: Helvetica, Helmut, Arial, sans-serif
-  font-weight: bold
-  font-style: normal
+  font-family: $text-bold-family
+  font-weight: $text-bold-weight
+  font-style: $text-bold-style
 
 @mixin text-light
-  font-family: Helvetica, Helmut, Arial, sans-serif
-  font-weight: light
-  font-style: normal
+  font-family: $text-light-family
+  font-weight: $text-light-weight
+  font-style: $text-light-style
 
 @mixin text-regular
-  font-family: Helvetica, Helmut, Arial, sans-serif
-  font-weight: normal
-  font-style: normal
+  font-family: $text-regular-family
+  font-weight: $text-regular-weight
+  font-style: $text-regular-style
 
 @mixin text-center
   text-align: center
@@ -62,23 +62,35 @@
 @function font-size-for($size)
   @if $size == 'xxs'
     @return $text-xxs
-  @if $size == 'xs'
+  @else if $size == 'xs'
     @return $text-xs
-  @if $size == 's'
+  @else if $size == 's'
     @return $text-s
-  @if $size == 'm'
+  @else if $size == 'm'
     @return $text-m
-  @if $size == 'l'
+  @else if $size == 'l'
     @return $text-l
-  @if $size == 'xl'
+  @else if $size == 'xl'
     @return $text-xl
-  @if $size == 'xxl'
+  @else if $size == 'xxl'
     @return $text-xxl
+  @else
+    @return $size
 
 @mixin link($color, $hover: darken($color, 10%))
   color: $color
-  &:hover
-    color: $hover
+
+  .no-touch &
+    &:hover
+      color: $hover
+
+@mixin link-hover-underline($color, $size: 4px)
+  border-bottom: $size solid transparent
+
+  .no-touch &
+    +inline-block
+    &:hover
+      border-bottom-color: $color
 
 @mixin line($size)
   line-height: line-height-for($size)
@@ -86,15 +98,38 @@
 @function line-height-for($size)
   @if $size == 'xxs'
     @return $line-xxs
-  @if $size == 'xs'
+  @else if $size == 'xs'
     @return $line-xs
-  @if $size == 's'
+  @else if $size == 's'
     @return $line-s
-  @if $size == 'm'
+  @else if $size == 'm'
     @return $line-m
-  @if $size == 'l'
+  @else if $size == 'l'
     @return $line-l
-  @if $size == 'xl'
+  @else if $size == 'xl'
     @return $line-xl
-  @if $size == 'xxl'
+  @else if $size == 'xxl'
     @return $line-xxl
+  @else
+    @return $size
+
+@mixin letter($size)
+  letter-spacing: letter-spacing-for($size)
+
+@function letter-spacing-for($size)
+  @if $size == 'xxs'
+    @return $letter-xxs
+  @else if $size == 'xs'
+    @return $letter-xs
+  @else if $size == 's'
+    @return $letter-s
+  @else if $size == 'm'
+    @return $letter-m
+  @else if $size == 'l'
+    @return $letter-l
+  @else if $size == 'xl'
+    @return $letter-xl
+  @else if $size == 'xxl'
+    @return $letter-xxl
+  @else
+    @return $size

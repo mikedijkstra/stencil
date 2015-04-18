@@ -5,7 +5,7 @@
 
 @mixin background-cover($image)
   +background-image($image)
-  +background-size(cover, '')
+  +background-size(cover)
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='$image', sizingMethod='scale')
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='$image', sizingMethod='scale')"
 
@@ -14,9 +14,9 @@
     +background-image($image)
     +background-size($width/2 $height/2)
 
-@mixin background-size($width, $height: $width)
+@mixin background-size($size)
   +background-image('')
-  -webkit-background-size: $width $height
-  -moz-background-size: $width $height
-  -o-background-size: $width $height
-  background-size: $width $height
+  -webkit-background-size: $size
+  -moz-background-size: $size
+  -o-background-size: $size
+  background-size: $size
