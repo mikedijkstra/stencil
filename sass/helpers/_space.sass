@@ -39,19 +39,11 @@
     margin: space-for($all)
 
 @function space-for($size)
-  @if $size == 'xxs'
-    @return $space-xxs
-  @else if $size == 'xs'
-    @return $space-xs
-  @else if $size == 's'
+  @if $size == 's'
     @return $space-s
   @else if $size == 'm'
     @return $space-m
   @else if $size == 'l'
     @return $space-l
-  @else if $size == 'xl'
-    @return $space-xl
-  @else if $size == 'xxl'
-    @return $space-xxl
   @else
     @return $size

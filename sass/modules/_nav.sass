@@ -1,3 +1,5 @@
+$nav-height: 60px
+
 .nav-overlay
   bottom: 0
   left: 0
@@ -13,7 +15,7 @@
   position: relative
 
   a
-    +animate
+    +ext(animate)
     color: $color-black
     height: $nav-height
     line-height: $nav-height
@@ -50,11 +52,11 @@
 .nav-menu-toggle
   @extend .col-palm-3
   +tab
-    +is-hidden
+    display: none
 
 .nav-menu-toggle-control
   +tab
-    +is-hidden
+    display: block
   float: right
   height: $nav-height !important
   line-height: $nav-height !important
@@ -64,9 +66,9 @@
 
 .nav-menu
   @extend .col-tab-7
-  +is-hidden
+  display: none
   +tab
-    +block
+    display: block
   padding: 0
 
   +to($tab)
@@ -86,12 +88,12 @@
 
 .nav-menu-items
   +tab
-    +text-right
+    text-align: right
 
 .nav-menu-item
   @extend .col-palm-12
 
   +tab
-    +inline-block
+    display: inline-block
     float: none !important
     width: auto !important

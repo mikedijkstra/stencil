@@ -8,17 +8,15 @@
   h6,
   p,
   li
-    +line(s)
+    line-height: $line-s
     +text(s)
-    +text-regular
+    +regular
 
   a
-    +link($color-boston-blue, $hover: $color-bay-of-many)
+    color: $color-reading-link
+
     &:hover
       text-decoration: underline
-    &:active,
-    &:focus
-      outline: 0
 
   section
     +margin($vertical: xl)
@@ -27,8 +25,8 @@
 
   hr
     +margin($vertical: l)
-    color: $color-gallery
-    background: $color-gallery
+    color: $color-reading-line
+    background: $color-reading-line
     border: none
     display: block
     height: 3px
@@ -39,7 +37,7 @@
   h4,
   h5,
   h6
-    +text-bold
+    +bold
 
   h1
     +text(xl, $lap: xxl)
@@ -70,10 +68,10 @@
         +margin($top: m)
 
   blockquote
-    border-left: 3px solid $color-gallery
-    +text(m)
-    +line(m)
+    border-left: 3px solid $color-reading-line
+    line-height: $line-m
     +padding($left: m)
+    +text(m)
 
   ol,
   ul
@@ -87,7 +85,7 @@
 
   li,
   p
-    +line(m)
+    line-height: $line-m
     +margin($bottom: s)
     +text(xs, $lap: s)
     +lap
@@ -95,7 +93,7 @@
 
   .lead,
   %lead
-    +line(m)
+    line-height: $line-m
     +margin($bottom: m)
     +text(s, $lap: m)
     +lap

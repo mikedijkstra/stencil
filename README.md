@@ -2,14 +2,20 @@
 
 A collection of helpers, modifiers, objects and compilers to help you get started building a new web site or web application fast.
 
+## Goals
++ Have a default structure so you know how to start
++ Be flexible so you’re never constrained
++ Encourage creating and sharing reusable modules
+
 ## The short version
++ Download and `cd` into the repo.
 + Run compiler tasks with `$ grunt`.
-+ Maintain custom Sass in `sass/_base.sass` and `sass/_modules.sass`
-+ Edit CoffeeScript and Javascript files in `scripts`.
-+ Copy JavaScript and CSS modules/plugins into `vendor` (they are prepended to your `application.css` and `application.js` files)
++ Write Sass in `sass`.
++ Write CoffeeScript and Javascript in `scripts`.
++ Copy JavaScript and CSS modules/plugins into `vendor`.
 + Manage and edit your site files in `assets`, `templates` and `includes`.
-+ Your files and assets are compiled to `_site`
-+ Deploy to GitHub pages with `$ grunt deploy`.
++ Your files and assets are compiled to `_site`.
++ Commit, then deploy to GitHub pages with `$ grunt deploy`.
 
 ## Table of Contents
 
@@ -47,7 +53,7 @@ Grunt will automatically open your default browser to [http://localhost:8000](ht
 
 ## Deployment
 
-Stencil is configured to compile files and copy assets to the `_site` folder.
+Stencil is configured to compile files and copy assets to the `_site` folder. You just need to copy this folder to a server.
 
 ### GitHub Pages
 
@@ -57,7 +63,7 @@ Stencil includes a deployment script to automate deployment to GitHub pages. Whe
 $ grunt deploy
 ```
 
-This will push your `_site` folder to a `gh-pages` branch at origin.
+This will push your `_site` folder to a `gh-pages` branch at `origin`.
 
 ## Adding to a Rails project
 ### Sass
@@ -117,13 +123,19 @@ The file `includes/head.liquid` can be included with the following syntax:
 
 ### Sass Compiler
 
-The main Sass file is `sass/application.sass` which will be compiled and combined with all the CSS files found in `vendor` and saved as `assets/application.css`. The file will then be minified and saved as `assets/application.min.css`. The `vendor` files will be added to the start of the file.
+The main Sass file is `sass/application.sass` which will be compiled and combined with all the CSS files found in `vendor` and saved as `assets/application.css`. The file will then be minified and saved as `assets/application.min.css`. The `vendor` files will be added to the start of the compiled file.
 
 ####  Third party CSS
 
-1. Copy the compiled CSS file into `vendor`.
+1. Copy CSS file into `vendor`.
 
 That’s it! It will be automatically appended to your `application.css` and `appliction.min.css` files.
+
+### Coding system
++ Variables are set in `global/_variables.sass`
++ Create re-usable blocks of code in `modules/`
++ Add custom CSS to `_base`
++ Put quick fixes in `_shame` to be refactored later!
 
 ### Coding style
 + Use soft-tabs with a **two space indent**.
@@ -133,21 +145,21 @@ That’s it! It will be automatically appended to your `application.css` and `ap
 + Each declaration should appear on its own line.
 + Order declarations within a selector alphabetically.
 + Group parent and child objects, declaring parents first.
-+ Use variables for colors prefixed with `$color-` (See [Name that color](http://chir.ag/projects/name-that-color/) for naming inspiration)
++ Use variables for colors prepend with `$color-`
 + Use `px` for `font-size`.
 + Leave `line-height` unit-less.
 + Don’t specify units for zero values, e.g., `margin: 0` instead of `margin: 0px`.
 + Limit the use of shorthand declarations to instances where you must explicitly set all the available values.
-+ + When writing CSS put spaces before `{` in rule declarations.
++ When writing CSS put spaces before `{` in rule declarations.
 + When writing CSS place closing braces of declaration blocks on a new line.
 
 #### Example
 ```scss
 .post,
 .another-post
-  background-color: $color-cornflour-blue
-  border: 1px solid $color-denim
-  color: $color-black
+  background-color: $color-post-background
+  border: 1px solid $color-post-line
+  color: $color-post-text
   font-size: 12px
   line-height: 1.5
   margin-bottom: 20px // Not margin: 0 0 20px
@@ -162,24 +174,23 @@ The output of the included CSS is always the same and you are extending a global
 
 ##### Example sass
 ```scss
-.button,
-%button
+.button
   display: inline-block
   padding: 1em
 
 .button-positive
-  @extend %button
-  background-color: $color-green
+  @extend .button
+  background-color: $color-button-brand
   color: $color-white
 
 .button-negative
-  @extend %button
-  background-color: $color-red
+  @extend .button
+  background-color: $color-button-error
   color: $color-white
 
 .button-neutral
-  @extend %button
-  background-color: $color-lightgray
+  @extend .button
+  background-color: $color-button-netural
   color: $color-black
 ```
 
@@ -232,14 +243,17 @@ The output of the included CSS changes or you need to repeat the same group of d
 ```scss
 .foo {
   border-radius: 5px;
+	-webkit-border-radius: 5px;
 }
  
 .bar {
   border-radius: 7px;
+	-webkit-border-radius: 7px;
 }
  
 .baz {
   border-radius: 9px;
+	-webkit-border-radius: 9px;
 }
 ```
 
@@ -278,45 +292,48 @@ The output of the included CSS changes or you need to repeat the same group of d
 ```text
 sass
 ├── global
+│   └── _fonts.scss
 │   └── _reset.scss
+│   └── _setup.scss
+│   └── _variables.scss
 ├── helpers
-│   ├── _animation.scss
 │   ├── _background.scss
-│   ├── _form.scss
-│   └── _mask.scss
+│   ├── _import.scss
+│   └── _media-queries.scss
 │   └── _scroll.scss
+│   └── _space.scss
 │   └── _style.scss
 │   └── _text.scss
 ├── modifiers
+│   ├── _animate.scss
 │   ├── _display.scss
+│   └── _import.scss
 │   └── _resonsive.scss
-│   └── _setup.scss
 │   └── _space.scss
 │   └── _text.scss
-│   └── _visibility.scss
 ├── modules
-│   ├── _typography.scss
-├── objects
 │   ├── _button.scss
 │   ├── _footer.scss
 │   ├── _form.scss
 │   ├── _grid.scss
+│   ├── _loader.scss
 │   ├── _media.scss
 │   ├── _nav.scss
+│   ├── _overlay.scss
+│   ├── _reading.scss
 │   ├── _tooltip.scss
 └── _base.scss
-└── _modules.scss
-└── _variables.scss
+└── _shame.scss
 ├── application.scss
 ```
 
 ### Modifiers
 
-All modifiers are available to extend or add direct to HTML as classes and come with prefixes for `tab`, `lap`, `desk`, and `cinema`. The value for these break-points can be set in `_variables`.
+All modifiers are available to extend or add direct to HTML as classes and come with prefixes for `tab`, `lap`, `desk`, and `cinema`. The value for these break-points can be set in `global/_variables`.
 
 #### Space modifiers
 
-Space modifiers are configured for `margin` and `padding` and come with suffixes for `n`, `xxs`, `xs`, `s`, `m`, `l`, `xl`, `xxl`. The value of each of these can be set in `_variables`.
+Space modifiers are configured for `margin` and `padding` and come with suffixes for `n`, `xxs`, `xs`, `s`, `m`, `l`, `xl`, `xxl`. The value of each of these can be set in `global/_variables`.
 
 Example for no padding:
 + `.padding-bottom-n`
@@ -328,7 +345,7 @@ Example for no padding:
 
 #### Text modifiers
 
-Text modifiers for `size`, `letter-spacing`, `line-height` come with suffixes for `xxs`, `xs`, `s`, `m`, `l`, `xl`, `xxl`. The value of each of these can be set in `_variables`.
+Text modifiers for `size` come with suffixes for `xxs`, `xs`, `s`, `m`, `l`, `xl`, `xxl`. The value of each of these can be set in `global/_variables`.
 
 ##### Example for text size
 + `.text-xxs`
@@ -340,16 +357,16 @@ Text modifiers for `size`, `letter-spacing`, `line-height` come with suffixes fo
 + `.text-xxl`
 
 ##### Example for alignment
-+ `%text-center`
-+ `%text-left`
-+ `%text-right`
-+ `%text-top`
-+ `%text-bottom`
-+ `%text-middle`
++ `.text-center`
++ `.text-left`
++ `.text-right`
++ `.text-top`
++ `.text-bottom`
++ `.text-middle`
 
 ### Grid
 
-The grid system is based off the bootstrap grid but has been modified to use the `tab`, `lap`, `desk`, and `cinema` break point sizes which can be set in `_variables`.
+The grid system is based off the Bootstrap grid but has been modified to use the `tab`, `lap`, `desk`, and `cinema` break point sizes which can be set in `global/_variables`.
 
 #### Default class example
 ```html

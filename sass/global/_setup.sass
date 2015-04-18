@@ -1,0 +1,29 @@
+@mixin ext($name, $silent: false)
+  @if $silent == true
+    @extend %#{$name} !optional
+  @else
+    @extend .#{$name} !optional
+
++tab
+  +display-setup("tab-")
+  +responsive-setup("tab-")
+  +space-setup("tab-")
+  +text-setup("tab-")
+
++lap
+  +display-setup("lap-")
+  +responsive-setup("lap-")
+  +space-setup("lap-")
+  +text-setup("lap-")
+
++desk
+  +display-setup("desk-")
+  +responsive-setup("desk-")
+  +space-setup("desk-")
+  +text-setup("desk-")
+
++cinema
+  +display-setup("cinema-")
+  +responsive-setup("cinema-")
+  +space-setup("cinema-")
+  +text-setup("cinema-")

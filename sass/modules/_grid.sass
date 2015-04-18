@@ -1,5 +1,11 @@
-// Grid system
+// Bootstrap Grid
 // Source: https://github.com/twbs/bootstrap-sass/
+$grid-columns: 12
+$grid-gutter-width: 30px
+$container-tab: $tab + $grid-gutter-width
+$container-lap: $lap + $grid-gutter-width
+$container-desk: $desk + $grid-gutter-width
+$container-cinema: $cinema + $grid-gutter-width
 
 @mixin clearfix()
   &:before,
@@ -152,7 +158,7 @@
     $list: "#{$list}, .col-palm-#{$i}, .col-tab-#{$i}, .col-lap-#{$i}, .col-desk-#{$i}, .col-cinema-#{$i}"
 
   #{$list}
-    +box-sizing(border-box)
+    box-sizing: border-box
     position: relative
     min-height: 1px
     padding-left:  ($grid-gutter-width / 2)
@@ -203,7 +209,7 @@
   +loop-grid-columns($grid-columns, $class, offset)
 
 .container
-  +border-box
+  box-sizing: border-box
   +container-fixed
 
   +tab
@@ -217,3 +223,25 @@
 
   +cinema
     width: $container-cinema
+
+.container-fluid
+  +container-fixed
+
+.row
+  +make-row
+
++make-grid-columns
+
++make-grid(palm)
+
++tab
+  +make-grid(tab)
+
++lap
+  +make-grid(lap)
+
++desk
+  +make-grid(desk)
+
++cinema
+  +make-grid(cinema)

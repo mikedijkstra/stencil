@@ -1,5 +1,6 @@
-//Sass Form Reset Helpers - Forked from: https://gist.github.com/anthonyshort/552543
+$form-input-height:                      40px
 
+//Sass Form Reset Helpers - Forked from: https://gist.github.com/anthonyshort/552543
 @mixin form-reset-general
   display: inline-block
   margin: 0
@@ -18,14 +19,6 @@
 
 %form-reset-general
   +form-reset-general
-
-@mixin form-reset-special-box-sizing
-  -webkit-box-sizing: border-box
-  -moz-box-sizing: border-box
-  box-sizing: border-box
-
-%form-reset-special-box-sizing
-  +form-reset-special-box-sizing
 
 @mixin form-reset-input-specific
   &:focus
@@ -62,7 +55,7 @@
   &[type=submit],
   &[type=checkbox],
   &[type=radio]
-    +form-reset-special-box-sizing
+    box-sizing: border-box
 
 %form-reset-input
   @extend %form-reset-general
@@ -74,7 +67,7 @@
   &[type=submit],
   &[type=checkbox],
   &[type=radio]
-    @extend %form-reset-special-box-sizing
+    box-sizing: border-box
 
 @mixin form-reset-label
   +form-reset-general
@@ -88,13 +81,13 @@
     vertical-align: top
 
 @mixin form-reset-select
+  box-sizing: border-box
   +form-reset-general
-  +form-reset-special-box-sizing
   +form-reset-select-specific
 
 %form-reset-select
   @extend %form-reset-general
-  @extend %form-reset-special-box-sizing
+  box-sizing: border-box
   +form-reset-select-specific
 
 @mixin form-reset-button-specific
@@ -152,3 +145,66 @@
 
   &:-ms-input-placeholder
     color: $color
+
+button
+  @extend %form-reset-button
+
+input
+  @extend %form-reset-input
+
+select
+  @extend %form-reset-select
+
+textarea
+  @extend %form-reset-textarea
+
+label
+  @extend %form-reset-label
+
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+select,
+textarea
+  box-sizing: border-box
+  line-height: 1.0
+  width: 100%
+
+fieldset
+  +padding($vertical: m)
+
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+select,
+textarea
+  border-color: $color-form-border
+  color: $color-form-text
+  height: $form-input-height
+  padding: 5px
+
+textarea,
+select[multiple]
+  height: 2 * $form-input-height

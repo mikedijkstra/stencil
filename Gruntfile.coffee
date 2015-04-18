@@ -5,10 +5,8 @@ module.exports = (grunt) ->
     pkg: grunt.file.readJSON("package.json")
 
     autoprefixer:
-      options:
-        silent: false
-        browsers: ['last 2 versions', 'ie 8', 'ie 9']
       single_file:
+        browsers: ['last 2 versions', 'ie 8', 'ie 9']
         src: '.build/application.css'
         dest: '.build/application.prefixed.css'
 

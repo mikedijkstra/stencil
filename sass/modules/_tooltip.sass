@@ -1,8 +1,9 @@
 // Bootstrap Tooltip
-$tooltip-color:               #fff !default
-$tooltip-bg:                  #000 !default
-$tooltip-arrow-width:         5px !default
-$tooltip-arrow-color:         $tooltip-bg !default
+$tooltip-text-size:           $xxs
+$tooltip-color:               #fff
+$tooltip-bg:                  #000
+$tooltip-arrow-width:         5px
+$tooltip-arrow-color:         $tooltip-bg
 
 // Base class
 .tooltip
@@ -11,7 +12,7 @@ $tooltip-arrow-color:         $tooltip-bg !default
   display: block
   visibility: visible
   // Reset font and text propertes given new insertion method
-  font-size: $text-xxs
+  font-size: $tooltip-text-size
   font-weight: normal
   line-height: 1.4
   +opacity(0)

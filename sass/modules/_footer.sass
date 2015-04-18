@@ -1,0 +1,59 @@
+$footer-height:                          40px
+
+.above-footer
+  min-height: 100%
+  margin-bottom: -$footer-height
+
+.above-footer:after
+  content: ""
+  display: block
+
+.footer,
+.above-footer:after
+  height: $footer-height
+  width: 100%
+
+.footer
+  background: black
+  z-index: 0
+  position: relative
+
+  +tab
+    min-height: $footer-height
+
+%footer-links
+  text-align: center
+  text-transform: lowercase
+
+.footer-links-left
+  @extend %footer-links
+  +tab
+    text-align: left
+
+.footer-links-right
+  @extend %footer-links
+  +tab
+    text-align: right
+
+.footer-link
+  display: inline-block
+  width: auto
+
+  a
+    color: white
+    height: 30px
+    line-height: 30px
+    +padding($right: xs)
+    +text(xs)
+    text-decoration: none
+
+    @include tab
+      height: $footer-height
+      line-height: $footer-height
+
+.no-touch
+  .footer-link
+    a
+      &:hover
+        color: white
+        text-decoration: underline

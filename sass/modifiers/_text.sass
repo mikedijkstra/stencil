@@ -1,33 +1,25 @@
 @mixin text-setup($namespace: "")
   .#{$namespace}text-xxs
-    font-size: $text-xxs
+    font-size: $xxs
   .#{$namespace}text-xs
-    font-size: $text-xs
+    font-size: $xs
   .#{$namespace}text-s
-    font-size: $text-s
+    font-size: $s
   .#{$namespace}text-m
-    font-size: $text-m
+    font-size: $m
   .#{$namespace}text-l
-    font-size: $text-l
+    font-size: $l
   .#{$namespace}text-xl
-    font-size: $text-xl
+    font-size: $xl
   .#{$namespace}text-xxl
-    font-size: $text-xxl
+    font-size: $xxl
 
-  .#{$namespace}letter-xxs
-    letter-spacing: $letter-xxs
-  .#{$namespace}letter-xs
-    letter-spacing: $letter-xs
   .#{$namespace}letter-s
     letter-spacing: $letter-s
   .#{$namespace}letter-m
     letter-spacing: $letter-m
   .#{$namespace}letter-l
     letter-spacing: $letter-l
-  .#{$namespace}letter-xl
-    letter-spacing: $letter-xl
-  .#{$namespace}letter-xxl
-    letter-spacing: $letter-xxl
 
   .#{$namespace}text-center
     text-align: center
@@ -52,17 +44,15 @@
   .#{$namespace}text-none
     text-decoration: none
 
-  .#{$namespace}line-xxs
-    line-height: $line-xxs
-  .#{$namespace}line-xs
-    line-height: $line-xs
   .#{$namespace}line-s
     line-height: $line-s
   .#{$namespace}line-m
     line-height: $line-m
   .#{$namespace}line-l
     line-height: $line-l
-  .#{$namespace}line-xl
-    line-height: $line-xl
-  .#{$namespace}line-xxl
-    line-height: $line-xxl
+
+  .#{$namespace}hyphenate
+    -ms-word-break: break-all
+    word-break: break-all
+    word-break: break-word
+    hyphens: auto
