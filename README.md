@@ -5,7 +5,7 @@ A collection of helpers, modifiers, objects and compilers to help you get starte
 ## Goals
 + Have a default structure so you know how to start
 + Be flexible so you’re never constrained
-+ Encourage creating and sharing reusable modules
++ Encourage creating and sharing reusable code as modules
 
 ## The short version
 + Download and `cd` into the repo.
@@ -27,12 +27,14 @@ A collection of helpers, modifiers, objects and compilers to help you get starte
 + [Sass and CSS](#sass-and-css)
 	+ [Sass compiler](#sass-compiler)
 	+ [Third-party CSS](#third-party-css)
+	+ [Coding system](#coding-system)
 	+ [Coding style](#coding-style)
-	+ [Extend vs Mixin](#extend-vs-mixin)
 	+ [Naming Conventions](#naming-conventions)
-	+ [File structure](#sass-file-structure)
 	+ [Modifiers](#modifiers)
+	+ [Shortcuts](#shortcuts)
 	+ [Grid](#grid)
+	+ [File structure](#sass-file-structure)
+	+ [Extend vs Mixin](#extend-vs-mixin)
 + [CoffeeScript and Javascript](#coffeescript-and-javascript)
 	+ [CoffeeScript compiler](#coffeescript-compiler)
 	+ [Javascript plugins](#javascript-plugins)
@@ -132,9 +134,11 @@ The main Sass file is `sass/application.sass` which will be compiled and combine
 That’s it! It will be automatically appended to your `application.css` and `appliction.min.css` files.
 
 ### Coding system
-+ Variables are set in `global/_variables.sass`
-+ Create re-usable blocks of code in `modules/`
-+ Add custom CSS to `_base`
++ Variables are set in `global/_variables.sass`.
++ Setup your font mixins in `global/_fonts`.
++ Create re-usable blocks of code in `modules/`.
++ Keep module specific variables in their own file (makes them easier to share between projects).
++ Add custom CSS to `_base`.
 + Put quick fixes in `_shame` to be refactored later!
 
 ### Coding style
@@ -163,6 +167,169 @@ That’s it! It will be automatically appended to your `application.css` and `ap
   font-size: 12px
   line-height: 1.5
   margin-bottom: 20px // Not margin: 0 0 20px
+```
+
+### Naming Conventions
+
+#### Object
+
+```scss
+.noun {}	        //examples: .button, .menu, .textbox, .header
+```
+
+#### Module
+
+```scss
+.noun {}            // parent: .post
+.noun-noun {}       // child:  .post-title
+```
+
+#### Modifiers
+
+```scss
+.is-state {}        // state: is-selected, is-hidden
+.adjective {}       // examples: .left, .right, .block, .inline
+
+.is-hidden { display: none !important; }
+.left { float: left !important; }
+```
+
+#### Subclasses
+
+```scss
+.adjective-noun {}  // example: .dropdown-button
+```
+
+### Modifiers
+
+All modifiers are available to extend or add direct to HTML as classes and come with prefixes for `tab`, `lap`, `desk`, and `cinema`. The value for these break-points can be set in `global/_variables`.
+
+#### Text modifiers
+
+Text modifiers for `size` come with suffixes for `xxs`, `xs`, `s`, `m`, `l`, `xl`, `xxl`. The value of each of these can be set in `global/_variables`.
+
+##### Example for text size
++ `.text-xxs`
++ `.text-xs`
++ `.text-s`
++ `.text-m`
++ `.text-l`
++ `.text-xl`
++ `.text-xxl`
+
+##### Example for line height
++ `.line-s`
++ `.line-m`
++ `.line-l`
+
+##### Example for letter spacing
++ `.letter-s`
++ `.letter-m`
++ `.letter-l`
+
+##### Example for alignment
++ `.text-center`
++ `.text-left`
++ `.text-right`
++ `.text-top`
++ `.text-bottom`
++ `.text-middle`
+
+#### Space modifiers
+
+Space modifiers are configured for `margin` and `padding` and come with suffixes for `n`, `s`, `m`, `l`. The value of each of these can be set in `global/_variables`.
+
+Example for small padding:
++ `.padding-bottom-s`
++ `.padding-left-s`
++ `.padding-right-s`
++ `.padding-top-s`
++ `.padding-horizontal-s`
++ `.padding-vertical-s`
++ `.padding-all-s`
+
+### Shortcuts
+
+#### Text
+
+You can quickly write text sizes for multiple break-points with the mixing: `text(xs, $tab: s, $lap: m, $desk: l, $cinema: xl). Only the first variable is required.
+
+#### Extend
+
+You can extend any class by writing `@extend .className` or the shortcut `+ext(className)`.
+
+### Grid
+
+The grid system is based off the Bootstrap grid but has been modified to use the `tab`, `lap`, `desk`, and `cinema` break point sizes which can be set in `global/_variables`.
+
+#### Default class example
+```html
+<div class=“container-fluid”>
+  <div class=“row”>
+    <div class=“col-palm-12 col-tab-4”></div>
+    <div class=“col-palm-12 col-tab-4”></div>
+    <div class=“col-palm-12 col-tab-4”></div>
+  </div>
+</div>
+```
+
+#### Modular example
+``` html
+<div class=“container-fluid”>
+  <div class=“posts”>
+    <div class=“posts-post”></div>
+    <div class=“posts-post”></div>
+    <div class=“posts-post”></div>
+  </div>
+</div>
+```
+
+```scss
+.posts
+  +row
+
+.posts-post
+  @extend .col-palm-12
+	@extend .tab-col-4
+```
+
+### Sass file structure
+```text
+sass
+├── global
+│   └── _fonts.scss
+│   └── _reset.scss
+│   └── _setup.scss
+│   └── _variables.scss
+├── helpers
+│   ├── _background.scss
+│   ├── _import.scss
+│   └── _media-queries.scss
+│   └── _scroll.scss
+│   └── _space.scss
+│   └── _style.scss
+│   └── _text.scss
+├── modifiers
+│   ├── _animate.scss
+│   ├── _display.scss
+│   └── _import.scss
+│   └── _resonsive.scss
+│   └── _space.scss
+│   └── _text.scss
+├── modules
+│   ├── _button.scss
+│   ├── _footer.scss
+│   ├── _form.scss
+│   ├── _grid.scss
+│   ├── _loader.scss
+│   ├── _media.scss
+│   ├── _nav.scss
+│   ├── _overlay.scss
+│   ├── _reading.scss
+│   ├── _tooltip.scss
+└── _base.scss
+└── _shame.scss
+├── application.scss
 ```
 
 ### Extend vs Mixin
@@ -255,148 +422,6 @@ The output of the included CSS changes or you need to repeat the same group of d
   border-radius: 9px;
 	-webkit-border-radius: 9px;
 }
-```
-
-### Naming Conventions
-
-#### Object
-
-```scss
-.noun {}	        //examples: .button, .menu, .textbox, .header
-```
-
-#### Module
-
-```scss
-.noun {}            // parent: .post
-.noun-noun {}       // child:  .post-title
-```
-
-#### Modifiers
-
-```scss
-.is-state {}        // state: is-selected, is-hidden
-.adjective {}       // examples: .left, .right, .block, .inline
-
-.is-hidden { display: none !important; }
-.left { float: left !important; }
-```
-
-#### Subclasses
-
-```scss
-.adjective-noun {}  // example: .dropdown-button
-```
-
-### Sass file structure
-```text
-sass
-├── global
-│   └── _fonts.scss
-│   └── _reset.scss
-│   └── _setup.scss
-│   └── _variables.scss
-├── helpers
-│   ├── _background.scss
-│   ├── _import.scss
-│   └── _media-queries.scss
-│   └── _scroll.scss
-│   └── _space.scss
-│   └── _style.scss
-│   └── _text.scss
-├── modifiers
-│   ├── _animate.scss
-│   ├── _display.scss
-│   └── _import.scss
-│   └── _resonsive.scss
-│   └── _space.scss
-│   └── _text.scss
-├── modules
-│   ├── _button.scss
-│   ├── _footer.scss
-│   ├── _form.scss
-│   ├── _grid.scss
-│   ├── _loader.scss
-│   ├── _media.scss
-│   ├── _nav.scss
-│   ├── _overlay.scss
-│   ├── _reading.scss
-│   ├── _tooltip.scss
-└── _base.scss
-└── _shame.scss
-├── application.scss
-```
-
-### Modifiers
-
-All modifiers are available to extend or add direct to HTML as classes and come with prefixes for `tab`, `lap`, `desk`, and `cinema`. The value for these break-points can be set in `global/_variables`.
-
-#### Space modifiers
-
-Space modifiers are configured for `margin` and `padding` and come with suffixes for `n`, `xxs`, `xs`, `s`, `m`, `l`, `xl`, `xxl`. The value of each of these can be set in `global/_variables`.
-
-Example for no padding:
-+ `.padding-bottom-n`
-+ `.padding-left-n`
-+ `.padding-right-n`
-+ `.padding-top-n`
-+ `.padding-horizontal-n`
-+ `.padding-vertical-n`
-
-#### Text modifiers
-
-Text modifiers for `size` come with suffixes for `xxs`, `xs`, `s`, `m`, `l`, `xl`, `xxl`. The value of each of these can be set in `global/_variables`.
-
-##### Example for text size
-+ `.text-xxs`
-+ `.text-xs`
-+ `.text-s`
-+ `.text-m`
-+ `.text-l`
-+ `.text-xl`
-+ `.text-xxl`
-
-##### Example for alignment
-+ `.text-center`
-+ `.text-left`
-+ `.text-right`
-+ `.text-top`
-+ `.text-bottom`
-+ `.text-middle`
-
-### Grid
-
-The grid system is based off the Bootstrap grid but has been modified to use the `tab`, `lap`, `desk`, and `cinema` break point sizes which can be set in `global/_variables`.
-
-#### Default class example
-```html
-<div class=“container-fluid”>
-  <div class=“row”>
-    <div class=“col-palm-12 col-tab-4”></div>
-    <div class=“col-palm-12 col-tab-4”></div>
-    <div class=“col-palm-12 col-tab-4”></div>
-  </div>
-</div>
-```
-
-#### Modular example
-``` html
-<div class=“container-fluid”>
-  <div class=“posts”>
-    <div class=“posts-post”></div>
-    <div class=“posts-post”></div>
-    <div class=“posts-post”></div>
-  </div>
-</div>
-```
-
-```scss
-.posts
-  +row
-
-.posts-post
-  @extend .col-palm-12
-	@extend .tab-col-4
 ```
 
 ## CoffeeScript and JavaScript
