@@ -1,0 +1,132 @@
+.nav-overlay {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  position: fixed;
+  z-index: 29;
+}
+
+.nav {
+  @include make-row;
+  height: $nav-height;
+  z-index: 30;
+  position: relative;
+
+  a {
+    @include animated;
+    color: $color-black;
+    height: $nav-height;
+    line-height: $nav-height;
+    margin: 0;
+    text-decoration: none;
+    padding: 10px 15px;
+  }
+}
+
+@include sm {
+  .no-touch {
+    .nav {
+      a {
+        &:hover {
+          color: $color-white;
+        }
+      }
+    }
+  }
+}
+
+.nav-brand {
+  @extend .col-xs-9;
+  @extend .col-sm-5;
+  line-height: $nav-height;
+  position: relative;
+  z-index: 32;
+}
+
+.nav-logo {
+  &:hover {
+    background: transparent !important;
+  }
+
+  img {
+    display: inline-block;
+    margin-top: -10px;
+    height: 50px;
+    vertical-align: middle;
+    width: auto;
+  }
+}
+
+.nav-with-logo {
+  .nav-name {
+    @include to($device-sm) {
+      @include hidden;
+    }
+  }
+}
+
+.nav-menu-toggle {
+  @extend .col-xs-3;
+  @include sm {
+    display: none;
+  }
+}
+
+.nav-menu-toggle-control {
+  @include sm {
+    display: block;
+  }
+
+  float: right;
+  height: $nav-height !important;
+  line-height: $nav-height !important;
+  position: relative;
+  z-index: 32;
+}
+
+.nav-menu {
+  @extend .col-sm-7;
+  @include hidden;
+
+  @include to($device-sm) {
+    background: $color-white;
+    left: 0;
+    padding-top: $nav-height;
+    position: absolute !important;
+    top: 0;
+    width: 100%;
+    z-index: 31;
+  }
+
+  @include sm {
+    @include visible;
+
+    a {
+      &:hover {
+        background: $color-black;
+        color: $color-white;
+      }
+    }
+  }
+
+  &.visible {
+    @include visible;
+  }
+}
+
+.nav-menu-items {
+  @include sm {
+    text-align: right;
+  }
+}
+
+.nav-menu-item {
+  @extend .col-xs-12;
+
+  @include sm {
+    display: inline-block;
+    float: none !important;
+    width: auto !important;
+  }
+}

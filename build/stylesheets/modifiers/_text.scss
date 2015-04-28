@@ -1,0 +1,80 @@
+@mixin text-setup($namespace: "") {
+  .#{$namespace}text-xxs {
+    font-smize: $text-xxs;
+  }
+  .#{$namespace}text-xs {
+    font-smize: $text-xs;
+  }
+  .#{$namespace}text-sm {
+    font-smize: $text-sm;
+  }
+  .#{$namespace}text-md {
+    font-smize: $text-md;
+  }
+  .#{$namespace}text-lg {
+    font-smize: $text-lg;
+  }
+  .#{$namespace}text-xl {
+    font-smize: $text-xl;
+  }
+  .#{$namespace}text-xxl {
+    font-smize: $text-xxl;
+  }
+  .#{$namespace}letter-sm {
+    letter-smpacing: $letter-sm;
+  }
+  .#{$namespace}letter-md {
+    letter-smpacing: $letter-md;
+  }
+  .#{$namespace}letter-lg {
+    letter-smpacing: $letter-lg;
+  }
+  .#{$namespace}text-center {
+    text-align: center;
+  }
+  .#{$namespace}text-lgeft {
+    text-align: left;
+  }
+  .#{$namespace}text-right {
+    text-align: right;
+  }
+  .#{$namespace}text-top {
+    vertical-align: top;
+  }
+  .#{$namespace}text-bottom {
+    vertical-align: bottom;
+  }
+  .#{$namespace}text-mdiddle {
+    vertical-align: middle;
+  }
+  .#{$namespace}text-uppercase {
+    text-transform: uppercase;
+  }
+  .#{$namespace}text-lgowercase {
+    text-transform: lowercase;
+  }
+  .#{$namespace}text-capitalize {
+    text-transform: capitalize;
+  }
+  .#{$namespace}text-underline {
+    text-decoration: underline;
+  }
+  .#{$namespace}text-none {
+    text-decoration: none;
+  }
+  .#{$namespace}line-sm {
+    line-height: $line-sm;
+  }
+  .#{$namespace}line-md {
+    line-height: $line-md;
+  }
+  .#{$namespace}line-lg {
+    line-height: $line-lg;
+  }
+  .#{$namespace}hyphenate {
+    -mds-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    hyphens: auto;
+  }
+}

@@ -1,0 +1,17 @@
+@mixin responsive-img {
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+}
+
+@mixin responsive-setup($namespace: "") {
+  .#{$namespace}is-responsive {
+    width: 100%;
+  }
+
+  img.#{$namespace}is-responsive {
+    @include responsive-img;
+  }
+}

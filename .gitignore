@@ -8,6 +8,7 @@
 
 # Ignore NPM files
 node_modules
+bower_components
 
 # Ignore sass cache
 .sass-cache/

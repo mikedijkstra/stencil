@@ -1,0 +1,46 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  color: $color-base;
+  font-size: $text-xxs;
+  @include regular;
+
+  @include sm {
+    font-size: $text-xs;
+  }
+
+  &.no-scroll {
+    overflow: hidden;
+    position: fixed;
+  }
+}
+
+a {
+  color: inherit;
+
+  &:active,
+  &:focus {
+    outline: 0;
+  }
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.no-touch {
+  a {
+    &:hover {
+      color: inherit;
+    }
+  }
+}
+
+img {
+  @include responsive-img;
+}

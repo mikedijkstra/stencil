@@ -1,0 +1,41 @@
+@mixin from($device-width) {
+  @media screen and (min-width: $device-width) {
+    @content;
+  }
+}
+
+@mixin to($device-width) {
+  @media screen and (max-width: $device-width - 1) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @include to($screen-xs-max) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @include from($screen-sm-min) {
+    @content;
+  }
+}
+
+@mixin md {
+  @include from($screen-md-min) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @include from($screen-lg-min) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @include from($screen-xl-min) {
+    @content;
+  }
+}
