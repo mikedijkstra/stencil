@@ -17,3 +17,20 @@
     @include background-size(($width / 2) ($height / 2));
   }
 }
+
+@mixin background-mask($background-color) {
+  position: relative;
+
+  &:before {
+    @include animated;
+    background-color: $background-color;
+    bottom: 0;
+    content: "";
+    left: 0;
+    right: 0;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    z-index: 0;
+  }
+}
