@@ -1,6 +1,6 @@
 # Stencil
 
-A collection of mixins, modifiers and modules to help you get started building a new web site or web application fast.
+A collection of mixins, utilities and modules to help you get started building a new web site or web application fast.
 
 ## Goals
 + Have a default structure so you know how to start
@@ -15,7 +15,7 @@ A collection of mixins, modifiers and modules to help you get started building a
 	+ [Coding system](#coding-system)
 	+ [Coding style](#coding-style)
 	+ [Naming Conventions](#naming-conventions)
-	+ [Modifiers](#modifiers)
+	+ [Modifiers](#utilities)
 	+ [File structure](#file-structure)
 	+ [Extend vs Mixin](#extend-vs-mixin)
 + [JavaScripts](#javascripts)
@@ -36,6 +36,8 @@ A collection of mixins, modifiers and modules to help you get started building a
 ## Stylesheets
 
 ### Coding system
++ Follow
+  [More Transparent UI Code with Namespaces](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/)
 + Variables are set in `global/_variables.scss`.
 + Setup your font mixins in `global/_fonts`.
 + Create re-usable blocks of code in `modules/`.
@@ -59,96 +61,66 @@ A collection of mixins, modifiers and modules to help you get started building a
 + When writing CSS put spaces before `{` in rule declarations.
 + When writing CSS place closing braces of declaration blocks on a new line.
 
-#### Example
-```scss
-.post,
-.another-post
-  background-color: $color-post-background
-  border: 1px solid $color-post-line
-  color: $color-post-text
-  font-size: 12px
-  line-height: 1.5
-  margin-bottom: 20px // Not margin: 0 0 20px
-```
+### Utilities
 
-### Naming Conventions
+All utilities are available to extend or add direct to HTML as classes and come with prefixes for `sm`, `md`, `lg`, and `xl`. The value for these break-points can be set in `global/_variables`.
 
-#### Object
+#### Text utilities
 
-```scss
-.noun {}	        //examples: .button, .menu, .textbox, .header
-```
-
-#### Module
-
-```scss
-.noun {}            // parent: .post
-.noun-noun {}       // child:  .post-title
-```
-
-#### Modifiers
-
-```scss
-.state {}           // state: .active, .selected, .hidden
-.adjective {}       // examples: .left, .right, .block, .inline
-
-.hidden { display: none !important; }
-.left { float: left !important; }
-```
-
-#### Subclasses
-
-```scss
-.adjective-noun {}  // example: .dropdown-button
-```
-
-### Modifiers
-
-All modifiers are available to extend or add direct to HTML as classes and come with prefixes for `sm`, `md`, `lg`, and `xl`. The value for these break-points can be set in `global/_variables`.
-
-#### Text modifiers
-
-Text modifiers for `size` come with suffixes for `xxs`, `xs`, `sm`, `md`, `lg`, `xl`, `xxl`. The value of each of these can be set in `global/_variables`.
+Text utilities for `size` come with suffixes for `xxs`, `xs`, `sm`, `md`, `lg`, `xl`, `xxl`. The value of each of these can be set in `global/_variables`.
 
 ##### Example for text size
-+ `.text-xxs`
-+ `.text-xs`
-+ `.text-sm`
-+ `.text-md`
-+ `.text-lg`
-+ `.text-xl`
-+ `.text-xxl`
++ `.u-text-xxs`
++ `.u-text-xs`
++ `.u-text-sm`
++ `.u-text-md`
++ `.u-text-lg`
++ `.u-text-xl`
++ `.u-text-xxl`
 
 ##### Example for line height
-+ `.line-sm`
-+ `.line-md`
-+ `.line-lg`
++ `.u-line-sm`
++ `.u-line-md`
++ `.u-line-lg`
 
 ##### Example for letter spacing
-+ `.letter-sm`
-+ `.letter-md`
-+ `.letter-lg`
++ `.u-letter-sm`
++ `.u-letter-md`
++ `.u-letter-lg`
 
 ##### Example for alignment
-+ `.text-center`
-+ `.text-left`
-+ `.text-right`
-+ `.text-top`
-+ `.text-bottom`
-+ `.text-middle`
++ `.u-text-center`
++ `.u-text-left`
++ `.u-text-right`
++ `.u-text-top`
++ `.u-text-bottom`
++ `.u-text-middle`
 
-#### Space modifiers
+##### Responsive example
++ `.u-text-sm-xxs`
++ `.u-text-sm-xs`
++ `.u-text-sm-sm`
++ `.u-text-sm-md`
++ `.u-text-sm-lg`
++ `.u-text-sm-xl`
++ `.u-text-sm-xxl`
 
-Space modifiers are configured for `margin` and `padding` and come with suffixes for `n`, `sm`, `md`, `lg`. The value of each of these can be set in `global/_variables`.
+#### Space utilities
+
+Space utilities are configured for `margin` and `padding` and come with suffixes for `n`, `sm`, `md`, `lg`. The value of each of these can be set in `global/_variables`.
 
 Example for small padding:
-+ `.padding-bottom-sm`
-+ `.padding-left-sm`
-+ `.padding-right-sm`
-+ `.padding-top-sm`
-+ `.padding-horizontal-sm`
-+ `.padding-vertical-sm`
-+ `.padding-all-sm`
++ `.u-padding-bottom-sm`
++ `.u-padding-left-sm`
++ `.u-padding-right-sm`
++ `.u-padding-top-sm`
++ `.u-padding-horizontal-sm`
++ `.u-padding-vertical-sm`
++ `.u-padding-all-sm`
+
+##### Responsive example
++ `.u-padding-sm-bottom-sm`
++ `.u-padding-sm-left-sm`
 
 ### File structure
 ```text
@@ -156,17 +128,12 @@ scss
 ├── global
 │   └── _fonts.scss
 │   └── _variables.scss
+├── lib
 ├── mixins
 │   ├── _all.scss
 │   ├── _background.scss
 │   └── _media-queries.scss
 │   └── _style.scss
-├── modifiers
-│   ├── _all.scss
-│   ├── _display.scss
-│   └── _resonsive.scss
-│   └── _space.scss
-│   └── _text.scss
 ├── modules
 │   ├── _all.scss
 │   ├── _footer.scss
@@ -174,6 +141,12 @@ scss
 │   ├── _longform.scss
 │   ├── _nav.scss
 │   ├── _overlay.scss
+├── utilities
+│   ├── _all.scss
+│   ├── _display.scss
+│   └── _resonsive.scss
+│   └── _space.scss
+│   └── _text.scss
 └── _base.scss
 └── _shame.scss
 ├── application.scss

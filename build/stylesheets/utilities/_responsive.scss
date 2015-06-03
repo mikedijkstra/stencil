@@ -7,11 +7,11 @@
 }
 
 @mixin responsive-setup($namespace: "") {
-  .#{$namespace}is-responsive {
+  .u-responsive#{$namespace} {
     width: 100%;
   }
 
-  img.#{$namespace}is-responsive {
+  img.u-responsive#{$namespace} {
     @include responsive-img;
   }
 }

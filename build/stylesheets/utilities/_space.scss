@@ -1,0 +1,166 @@
+@mixin space-setup($namespace: "") {
+  .u-padding#{$namespace}-top-n,
+  .u-padding#{$namespace}-vertical-n,
+  .u-padding#{$namespace}-all-n {
+    padding-top: 0 !important;
+  }
+  .u-padding#{$namespace}-top-sm,
+  .u-padding#{$namespace}-vertical-sm,
+  .u-padding#{$namespace}-all-sm {
+    padding-top: $space-sm !important;
+  }
+  .u-padding#{$namespace}-top-md,
+  .u-padding#{$namespace}-vertical-md,
+  .u-padding#{$namespace}-all-md {
+    padding-top: $space-md !important;
+  }
+  .u-padding#{$namespace}-top-lg,
+  .u-padding#{$namespace}-vertical-lg,
+  .u-padding#{$namespace}-all-lg {
+    padding-top: $space-lg !important;
+  }
+  .u-padding#{$namespace}-bottom-n,
+  .u-padding#{$namespace}-vertical-n,
+  .u-padding#{$namespace}-all-n {
+    padding-bottom: 0 !important;
+  }
+  .u-padding#{$namespace}-bottom-sm,
+  .u-padding#{$namespace}-vertical-sm,
+  .u-padding#{$namespace}-all-sm {
+    padding-bottom: $space-sm !important;
+  }
+  .u-padding#{$namespace}-bottom-md,
+  .u-padding#{$namespace}-vertical-md,
+  .u-padding#{$namespace}-all-md {
+    padding-bottom: $space-md !important;
+  }
+  .u-padding#{$namespace}-bottom-lg,
+  .u-padding#{$namespace}-vertical-lg,
+  .u-padding#{$namespace}-all-lg {
+    padding-bottom: $space-lg !important;
+  }
+  .u-padding#{$namespace}-left-n,
+  .u-padding#{$namespace}-horizontal-n,
+  .u-padding#{$namespace}-all-n {
+    padding-left: 0 !important;
+  }
+  .u-padding#{$namespace}-left-sm,
+  .u-padding#{$namespace}-horizontal-sm,
+  .u-padding#{$namespace}-all-sm {
+    padding-left: $space-sm !important;
+  }
+  .u-padding#{$namespace}-left-md,
+  .u-padding#{$namespace}-horizontal-md,
+  .u-padding#{$namespace}-all-md {
+    padding-left: $space-md !important;
+  }
+  .u-padding#{$namespace}-left-lg,
+  .u-padding#{$namespace}-horizontal-lg,
+  .u-padding#{$namespace}-all-lg {
+    padding-left: $space-lg !important;
+  }
+  .u-padding#{$namespace}-right-n,
+  .u-padding#{$namespace}-horizontal-n,
+  .u-padding#{$namespace}-all-n {
+    padding-right: 0 !important;
+  }
+  .u-padding#{$namespace}-right-sm,
+  .u-padding#{$namespace}-horizontal-sm,
+  .u-padding#{$namespace}-all-sm {
+    padding-right: $space-sm !important;
+  }
+  .u-padding#{$namespace}-right-md,
+  .u-padding#{$namespace}-horizontal-md,
+  .u-padding#{$namespace}-all-md {
+    padding-right: $space-md !important;
+  }
+  .u-padding#{$namespace}-right-lg,
+  .u-padding#{$namespace}-horizontal-lg,
+  .u-padding#{$namespace}-all-lg {
+    padding-right: $space-lg !important;
+  }
+  .u-margin#{$namespace}-top-n,
+  .u-margin#{$namespace}-vertical-n,
+  .u-margin#{$namespace}-all-n {
+    margin-top: 0 !important;
+  }
+  .u-margin#{$namespace}-top-sm,
+  .u-margin#{$namespace}-vertical-sm,
+  .u-margin#{$namespace}-all-sm {
+    margin-top: $space-sm !important;
+  }
+  .u-margin#{$namespace}-top-md,
+  .u-margin#{$namespace}-vertical-md,
+  .u-margin#{$namespace}-all-md {
+    margin-top: $space-md !important;
+  }
+  .u-margin#{$namespace}-top-lg,
+  .u-margin#{$namespace}-vertical-lg,
+  .u-margin#{$namespace}-all-lg {
+    margin-top: $space-lg !important;
+  }
+  .u-margin#{$namespace}-bottom-n,
+  .u-margin#{$namespace}-vertical-n,
+  .u-margin#{$namespace}-all-n {
+    margin-bottom: 0 !important;
+  }
+  .u-margin#{$namespace}-bottom-sm,
+  .u-margin#{$namespace}-vertical-sm,
+  .u-margin#{$namespace}-all-sm {
+    margin-bottom: $space-sm !important;
+  }
+  .u-margin#{$namespace}-bottom-md,
+  .u-margin#{$namespace}-vertical-md,
+  .u-margin#{$namespace}-all-md {
+    margin-bottom: $space-md !important;
+  }
+  .u-margin#{$namespace}-bottom-lg,
+  .u-margin#{$namespace}-vertical-lg,
+  .u-margin#{$namespace}-all-lg {
+    margin-bottom: $space-lg !important;
+  }
+  .u-margin#{$namespace}-left-n,
+  .u-margin#{$namespace}-horizontal-n,
+  .u-margin#{$namespace}-all-n {
+    margin-left: 0 !important;
+  }
+  .u-margin#{$namespace}-left-sm,
+  .u-margin#{$namespace}-horizontal-sm,
+  .u-margin#{$namespace}-all-sm {
+    margin-left: $space-sm !important;
+  }
+  .u-margin#{$namespace}-left-md,
+  .u-margin#{$namespace}-horizontal-md,
+  .u-margin#{$namespace}-all-md {
+    margin-left: $space-md !important;
+  }
+  .u-margin#{$namespace}-left-lg,
+  .u-margin#{$namespace}-horizontal-lg,
+  .u-margin#{$namespace}-all-lg {
+    margin-left: $space-lg !important;
+  }
+  .u-margin#{$namespace}-right-n,
+  .u-margin#{$namespace}-horizontal-n,
+  .u-margin#{$namespace}-all-n {
+    margin-right: 0 !important;
+  }
+  .u-margin#{$namespace}-right-sm,
+  .u-margin#{$namespace}-horizontal-sm,
+  .u-margin#{$namespace}-all-sm {
+    margin-right: $space-sm !important;
+  }
+  .u-margin#{$namespace}-right-md,
+  .u-margin#{$namespace}-horizontal-md,
+  .u-margin#{$namespace}-all-md {
+    margin-right: $space-md !important;
+  }
+  .u-margin#{$namespace}-right-lg,
+  .u-margin#{$namespace}-horizontal-lg,
+  .u-margin#{$namespace}-all-lg {
+    margin-right: $space-lg !important;
+  }
+  .u-margin#{$namespace}-horizontal-auto {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}

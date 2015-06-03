@@ -17,14 +17,19 @@
 
 @import "global/fonts";
 @import "mixins/all";
-@import "modifiers/all";
+@import "utilities/all";
 
 @import "lib/bootstrap/mixins";
 @import "lib/bootstrap/scaffolding";
 @import "lib/bootstrap/buttons";
 @import "lib/bootstrap/grid";
 @import "lib/bootstrap/forms";
+@import "lib/bootstrap/media";
+@import "lib/bootstrap/modals";
+@import "lib/bootstrap/utilities";
+@import "lib/bootstrap/responsive-utilities";
 @import "lib/bootstrap/tooltip";
+@import "lib/animate";
 
 @import "modules/all";
 
