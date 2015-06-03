@@ -21,6 +21,7 @@
 @mixin display-setup($namespace: "") {
   .#{$namespace}block {
     display: block;
+    width: 100%;
   }
   .#{$namespace}inline {
     display: inline;
@@ -45,5 +46,17 @@
   }
   .#{$namespace}visible {
     @include visible;
+  }
+  .#{$namespace}bottom {
+    bottom: 0;
+  }
+  .#{$namespace}left {
+    left: 0;
+  }
+  .#{$namespace}right {
+    right: 0;
+  }
+  .#{$namespace}top{
+    top: 0;
   }
 }
