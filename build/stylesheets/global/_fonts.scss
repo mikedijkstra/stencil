@@ -29,11 +29,11 @@
   line-height: $line-m;
   @include regular;
 
-  @include tab {
+  @include sm {
     font-size: $xs;
   }
 
-  @include lap {
+  @include md {
     font-size: $s;
   }
 }
