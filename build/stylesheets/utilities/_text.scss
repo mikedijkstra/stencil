@@ -1,33 +1,33 @@
 @mixin text-setup($namespace: "") {
   .u-text#{$namespace}-xxs {
-    font-smize: $text-xxs;
+    font-size: $text-xxs;
   }
   .u-text#{$namespace}-xs {
-    font-smize: $text-xs;
+    font-size: $text-xs;
   }
   .u-text#{$namespace}-sm {
-    font-smize: $text-sm;
+    font-size: $text-sm;
   }
   .u-text#{$namespace}-md {
-    font-smize: $text-md;
+    font-size: $text-md;
   }
   .u-text#{$namespace}-lg {
-    font-smize: $text-lg;
+    font-size: $text-lg;
   }
   .u-text#{$namespace}-xl {
-    font-smize: $text-xl;
+    font-size: $text-xl;
   }
   .u-text#{$namespace}-xxl {
-    font-smize: $text-xxl;
+    font-size: $text-xxl;
   }
   .u-letter#{$namespace}-sm {
-    letter-smpacing: $letter-sm;
+    letter-spacing: $letter-sm;
   }
   .u-letter#{$namespace}-md {
-    letter-smpacing: $letter-md;
+    letter-spacing: $letter-md;
   }
   .u-letter#{$namespace}-lg {
-    letter-smpacing: $letter-lg;
+    letter-spacing: $letter-lg;
   }
   .u-text#{$namespace}-center {
     text-align: center;
