@@ -36,8 +36,6 @@ A collection of mixins, utilities and modules to help you get started building a
 ## Stylesheets
 
 ### Coding system
-+ Follow
-  [More Transparent UI Code with Namespaces](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/)
 + Variables are set in `global/_variables.scss`.
 + Setup your font mixins in `global/_fonts`.
 + Create re-usable blocks of code in `modules/`.
@@ -60,6 +58,10 @@ A collection of mixins, utilities and modules to help you get started building a
 + Limit the use of shorthand declarations to instances where you must explicitly set all the available values.
 + When writing CSS put spaces before `{` in rule declarations.
 + When writing CSS place closing braces of declaration blocks on a new line.
+
+### Grid
+
+The Grid included is the Bootstrap Grid. [See the Bootstrap Grid System docs](http://getbootstrap.com/css/#grid)
 
 ### Utilities
 
@@ -97,13 +99,13 @@ Text utilities for `size` come with suffixes for `xxs`, `xs`, `sm`, `md`, `lg`, 
 + `.u-text-middle`
 
 ##### Responsive example
-+ `.u-text-sm-xxs`
-+ `.u-text-sm-xs`
-+ `.u-text-sm-sm`
-+ `.u-text-sm-md`
-+ `.u-text-sm-lg`
-+ `.u-text-sm-xl`
-+ `.u-text-sm-xxl`
++ `.u-sm-text-xxs`
++ `.u-sm-text-xs`
++ `.u-sm-text-sm`
++ `.u-sm-text-md`
++ `.u-sm-text-lg`
++ `.u-sm-text-xl`
++ `.u-sm-text-xxl`
 
 #### Space utilities
 
@@ -119,8 +121,8 @@ Example for small padding:
 + `.u-padding-all-sm`
 
 ##### Responsive example
-+ `.u-padding-sm-bottom-sm`
-+ `.u-padding-sm-left-sm`
++ `.u-sm-padding-bottom-sm`
++ `.u-sm-padding-left-sm`
 
 ### File structure
 ```text

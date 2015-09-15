@@ -7,38 +7,38 @@
 }
 
 @mixin display-setup($namespace: "") {
-  .u-block#{$namespace}{
+  .u#{$namespace}-block {
     display: block;
     width: 100%;
   }
-  .u-inline#{$namespace} {
+  .u#{$namespace}-inline {
     display: inline;
   }
-  .u-inline-block#{$namespace} {
+  .u#{$namespace}-inline-block {
     display: inline-block;
   }
-  .u-relative#{$namespace} {
+  .u#{$namespace}-relative {
     position: relative;
   }
-  .u-absolute#{$namespace} {
+  .u#{$namespace}-absolute {
     position: absolute;
   }
-  .u-fixed#{$namespace} {
+  .u#{$namespace}-fixed {
     position: fixed;
   }
-  .u-static#{$namespace} {
+  .u#{$namespace}-static {
     position: static;
   }
-  .u-bottom#{$namespace} {
+  .u#{$namespace}-bottom {
     bottom: 0;
   }
-  .u-left#{$namespace} {
+  .u#{$namespace}-left {
     left: 0;
   }
-  .u-right#{$namespace} {
+  .u#{$namespace}-right {
     right: 0;
   }
-  .u-top#{$namespace} {
+  .u#{$namespace}-top {
     top: 0;
   }
 }

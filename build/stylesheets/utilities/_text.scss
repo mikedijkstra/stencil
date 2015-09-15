@@ -1,77 +1,77 @@
 @mixin text-setup($namespace: "") {
-  .u-text#{$namespace}-xxs {
+  .u#{$namespace}-text-xxs {
     font-size: $text-xxs;
   }
-  .u-text#{$namespace}-xs {
+  .u#{$namespace}-text-xs {
     font-size: $text-xs;
   }
-  .u-text#{$namespace}-sm {
+  .u#{$namespace}-text-sm {
     font-size: $text-sm;
   }
-  .u-text#{$namespace}-md {
+  .u#{$namespace}-text-md {
     font-size: $text-md;
   }
-  .u-text#{$namespace}-lg {
+  .u#{$namespace}-text-lg {
     font-size: $text-lg;
   }
-  .u-text#{$namespace}-xl {
+  .u#{$namespace}-text-xl {
     font-size: $text-xl;
   }
-  .u-text#{$namespace}-xxl {
+  .u#{$namespace}-text-xxl {
     font-size: $text-xxl;
   }
-  .u-letter#{$namespace}-sm {
+  .u#{$namespace}-letter-sm {
     letter-spacing: $letter-sm;
   }
-  .u-letter#{$namespace}-md {
+  .u#{$namespace}-letter-md {
     letter-spacing: $letter-md;
   }
-  .u-letter#{$namespace}-lg {
+  .u#{$namespace}-letter-lg {
     letter-spacing: $letter-lg;
   }
-  .u-text#{$namespace}-center {
+  .u#{$namespace}-text-center {
     text-align: center;
   }
-  .u-text#{$namespace}-lgeft {
+  .u#{$namespace}-text-lgeft {
     text-align: left;
   }
-  .u-text#{$namespace}-right {
+  .u#{$namespace}-text-right {
     text-align: right;
   }
-  .u-text#{$namespace}-top {
+  .u#{$namespace}-text-top {
     vertical-align: top;
   }
-  .u-text#{$namespace}-bottom {
+  .u#{$namespace}-text-bottom {
     vertical-align: bottom;
   }
-  .u-text#{$namespace}-mdiddle {
+  .u#{$namespace}-text-mdiddle {
     vertical-align: middle;
   }
-  .u-text#{$namespace}-uppercase {
+  .u#{$namespace}-text.uppercase {
     text-transform: uppercase;
   }
-  .u-text#{$namespace}-lgowercase {
+  .u#{$namespace}-text-lgowercase {
     text-transform: lowercase;
   }
-  .u-text#{$namespace}-capitalize {
+  .u#{$namespace}-text-capitalize {
     text-transform: capitalize;
   }
-  .u-text#{$namespace}-underline {
+  .u#{$namespace}-text.underline {
     text-decoration: underline;
   }
-  .u-text#{$namespace}-none {
+  .u#{$namespace}-text-none {
     text-decoration: none;
   }
-  .u-line#{$namespace}-sm {
+  .u#{$namespace}-line-sm {
     line-height: $line-sm;
   }
-  .u-line#{$namespace}-md {
+  .u#{$namespace}-line-md {
     line-height: $line-md;
   }
-  .u-line#{$namespace}-lg {
+  .u#{$namespace}-line-lg {
     line-height: $line-lg;
   }
-  .u-#{$namespace}hyphenate {
+  .u#{$namespace}-hyphenate {
     -mds-word-break: break-all;
     word-break: break-all;
     word-break: break-word;
