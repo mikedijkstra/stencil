@@ -4,8 +4,9 @@
 *.swp
 
 # Ignore build folders
-/build
 /.build
+/build/**/*
+!/build/.gitkeep
 
 # Ignore NPM files
 node_modules

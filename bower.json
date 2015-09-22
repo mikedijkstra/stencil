@@ -16,5 +16,8 @@
     "respondJS": "~1.4.2",
     "jquery": "~1.11.2",
     "animate-sass": "0.6.2"
+  },
+  "devDependencies": {
+    "bootstrap-sass": "~3.3.5"
   }
 }

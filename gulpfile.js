@@ -9,8 +9,6 @@ var _ = require('lodash'),
     install = require("gulp-install");
 
 gulp.task('build', function() {
-  gulp.src(['./bower.json', './package.json']).pipe(install());
-
   var assets = {
     javascripts: [
       './bower_components/jquery/dist/jquery.js',
@@ -19,8 +17,7 @@ gulp.task('build', function() {
       './bower_components/bootstrap-sass/assets/javascripts/**/*',
     ],
     stylesheets: [
-      './bower_components/bootstrap-sass/assets/stylesheets/**/*',
-      './bower_components/animate-sass/**/*',
+      './bower_components/bootstrap-sass/assets/stylesheets/**/*'
     ]
   };
 

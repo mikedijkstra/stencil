@@ -73,7 +73,6 @@ The following libraries are included:
 + [Respond.js](https://github.com/scottjehl/Respond)
 + [Normalize.css](https://necolas.github.io/normalize.css/)
 + A selection of [Bootstrap](http://getbootstrap.com/) components
-+ [Animate.css](https://daneden.github.io/animate.css/)
 
 ### Grid
 
