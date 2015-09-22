@@ -1,0 +1,146 @@
+.reading-text {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li {
+    line-height: $line-md;
+    @include regular;
+  }
+
+  a {
+    color: $color-reading-link;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  section {
+    margin-bottom: $space-lg;
+    margin-top: $space-lg;
+
+    @include sm {
+      margin-bottom: $space-lg * 2;
+      margin-top: $space-lg * 2;
+    }
+  }
+
+  hr {
+    color: $color-reading-line;
+    background: $color-reading-line;
+    border: none;
+    display: block;
+    height: 3px;
+    margin-bottom: $space-lg;
+    margin-top: $space-lg;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @include bold;
+  }
+
+  h1 {
+    font-size: $text-xl;
+    margin-bottom: $space-md;
+
+    @include sm {
+      margin-bottom: $space-lg;
+    }
+
+    @include md {
+      font-size: $text-xxl;
+      margin-bottom: $space-lg;
+    }
+  }
+
+  h2 {
+    font-size: $text-lg;
+    margin-bottom: $space-md;
+
+    @include sm {
+      margin-bottom: $space-lg;
+    }
+
+    @include md {
+      font-size: $text-xl;
+    }
+
+    &:not(:first-child) {
+      margin-top: $space-md;
+
+      @include md {
+        margin-top: $space-lg;
+      }
+    }
+  }
+
+  h3 {
+    font-size: $text-md;
+    margin-bottom: $space-sm;
+
+    @include md {
+      font-size: $text-lg;
+      margin-bottom: $space-md;
+    }
+
+    &:not(:first-child) {
+      margin-top: $space-sm;
+
+      @include md {
+        margin-top: $space-md;
+      }
+    }
+  }
+
+  blockquote {
+    border-lgeft: 3px solid $color-reading-line;
+    font-size: $text-md;
+    line-height: $line-md;
+    padding-lgeft: $space-md;
+  }
+
+  ol,
+  ul {
+    list-smtyle-position: outside;
+  }
+
+  ol {
+    list-smtyle-type: decimal;
+  }
+
+  ul {
+    list-smtyle-type: disc;
+  }
+
+  li,
+  p {
+    font-size: $text-xs;
+    line-height: $line-md;
+    margin-bottom: $space-sm;
+
+    @include md {
+      font-size: $text-sm;
+      margin-bottom: $space-md;
+    }
+  }
+
+  .lead {
+    line-height: $line-lg;
+    font-size: $text-sm;
+    margin-bottom: $space-md;
+
+    @include md {
+      font-size: $text-md;
+      margin-bottom: $space-lg;
+    }
+  }
+}

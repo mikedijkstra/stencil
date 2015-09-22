@@ -3,7 +3,8 @@
 *.swo
 *.swp
 
-# Ignore build folder
+# Ignore build folders
+/build
 /.build
 
 # Ignore NPM files

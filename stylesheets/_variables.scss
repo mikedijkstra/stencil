@@ -1,0 +1,72 @@
+// Device Sizes
+$device-xs:                              480px;
+$device-sm:                              768px;
+$device-md:                              1024px;
+$device-lg:                              1224px;
+$device-xl:                              1824px;
+
+$screen-xs-min:                          $device-xs;
+$screen-sm-min:                          $device-sm;
+$screen-md-min:                          $device-md;
+$screen-lg-min:                          $device-lg;
+
+$screen-xl-min:                          $device-xl;
+
+// Text sizes
+$text-xxs:                               12px;
+$text-xs:                                14px;
+$text-sm:                                18px;
+$text-md:                                24px;
+$text-lg:                                30px;
+$text-xl:                                42px;
+$text-xxl:                               60px;
+
+// Letter spacing
+$letter-sm:                              0.05em;
+$letter-md:                              1px;
+$letter-lg:                              3px;
+
+// Line height
+$line-sm:                                1.2;
+$line-md:                                1.4;
+$line-lg:                                1.6;
+
+// Margin and Padding
+$space-sm:                               15px;
+$space-md:                               30px;
+$space-lg:                               60px;
+
+// Layout
+$nav-height:                             60px;
+$footer-height:                          40px;
+
+// Descriptive colors
+$color-black:                            #000000;
+$color-white:                            #ffffff;
+$color-mine-shaft:                       #333;
+$color-boston-blue:                      #4183c4;
+
+// Functional colors
+$color-base:                             $color-black;
+$color-muted:                            $color-mine-shaft;
+$color-brand:                            $color-black;
+
+$color-reading-link:                     $color-boston-blue;
+$color-reading-line:                     $color-mine-shaft;
+
+// Forms
+$input-color:                            $color-base;
+$input-border:                           $color-muted;
+$input-border-radius:                    0;
+$input-border-radius-large:              0;
+$input-border-radius-small:              0;
+$input-border-focus:                     $color-muted;
+$input-color-placeholder:                $color-muted;
+
+// Buttons
+$btn-default-color:                      $color-base;
+$btn-default-bg:                         $color-white;
+$btn-default-border:                     $color-muted;
+$btn-primary-color:                      $color-white;
+$btn-primary-bg:                         $color-brand;
+$btn-primary-border:                     darken($color-brand, 5%);

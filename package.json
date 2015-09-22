@@ -4,6 +4,7 @@
   "devDependencies": {
     "bower": "^1.4.1",
     "gulp": "^3.8.11",
+    "gulp-concat": "^2.6.0",
     "lodash": "^3.7.0"
   }
 }

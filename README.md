@@ -15,33 +15,38 @@ A collection of mixins, utilities and modules to help you get started building a
 	+ [Coding system](#coding-system)
 	+ [Coding style](#coding-style)
 	+ [Naming Conventions](#naming-conventions)
-	+ [Modifiers](#utilities)
-	+ [File structure](#file-structure)
-	+ [Extend vs Mixin](#extend-vs-mixin)
-+ [JavaScripts](#javascripts)
+	+ [Utilities](#utilities)
+	+ [Responsive Mixins](#responsive-mixins)
 	+ [Modules](#modules)
-	+ [File structure](#scripts-file-structure)
+	+ [Extend vs Mixin](#extend-vs-mixin)
+	+ [File structure](#file-structure)
++ [JavaScripts](#javascripts)
+	+ [Modules](#javascript-modules)
++ [HTML](#html)
 
 ## Getting started
 + Install NPM:  
 `$ curl https://www.npmjs.org/install.sh | sh `
 + Install NPM packages:  
 `$ npm install`
-+ Fetch latest versions of lib files with:    
++ Fetch latest versions of lib files with:  
 `$ bower install`
-+ Run Gulp copy lib files to build directory:
++ Run Gulp to build directory with lib and stencil files:  
 `$ gulp build`
++ Test the build worked:  
+Open `test/index.html`
 + Copy build directory to your project.
+
 
 ## Stylesheets
 
 ### Coding system
-+ Variables are set in `global/_variables.scss`.
-+ Setup your font mixins in `global/_fonts`.
-+ Create re-usable blocks of code in `modules/`.
-+ Keep module specific variables in their own file (makes them easier to share between projects).
++ Variables are set in `_variables.scss`.
++ Setup your font mixins in `_fonts`.
 + Add custom CSS to `_base`.
 + Put quick fixes in `_shame` to be refactored later!
++ Create re-usable blocks of code in `modules/`.
++ Keep module specific variables in their own file (makes them easier to share between projects).
 
 ### Coding style
 + Use soft-tabs with a **two space indent**.
@@ -59,17 +64,28 @@ A collection of mixins, utilities and modules to help you get started building a
 + When writing CSS put spaces before `{` in rule declarations.
 + When writing CSS place closing braces of declaration blocks on a new line.
 
+### Libraries
+
+The following libraries are included:
+ 
++ [jQuery](https://jquery.com/)
++ [Modernizr](https://modernizr.com/)
++ [Respond.js](https://github.com/scottjehl/Respond)
++ [Normalize.css](https://necolas.github.io/normalize.css/)
++ A selection of [Bootstrap](http://getbootstrap.com/) components
++ [Animate.css](https://daneden.github.io/animate.css/)
+
 ### Grid
 
 The Grid included is the Bootstrap Grid. [See the Bootstrap Grid System docs](http://getbootstrap.com/css/#grid)
 
 ### Utilities
 
-All utilities are available to extend or add direct to HTML as classes and come with prefixes for `sm`, `md`, `lg`, and `xl`. The value for these break-points can be set in `global/_variables`.
+All utilities are available to extend or add direct to HTML as classes and come with prefixes for `sm`, `md`, `lg`, and `xl`. The value for these break-points can be set in `_variables`.
 
 #### Text utilities
 
-Text utilities for `size` come with suffixes for `xxs`, `xs`, `sm`, `md`, `lg`, `xl`, `xxl`. The value of each of these can be set in `global/_variables`.
+Text utilities for `size` come with suffixes for `xxs`, `xs`, `sm`, `md`, `lg`, `xl`, `xxl`. The value of each of these can be set in `_variables`.
 
 ##### Example for text size
 + `.u-text-xxs`
@@ -109,7 +125,7 @@ Text utilities for `size` come with suffixes for `xxs`, `xs`, `sm`, `md`, `lg`, 
 
 #### Space utilities
 
-Space utilities are configured for `margin` and `padding` and come with suffixes for `n`, `sm`, `md`, `lg`. The value of each of these can be set in `global/_variables`.
+Space utilities are configured for `margin` and `padding` and come with suffixes for `n`, `sm`, `md`, `lg`. The value of each of these can be set in `_variables`.
 
 Example for small padding:
 + `.u-padding-bottom-sm`
@@ -124,12 +140,83 @@ Example for small padding:
 + `.u-sm-padding-bottom-sm`
 + `.u-sm-padding-left-sm`
 
+### Responsive Mixins
+
+A number of responsive media query mixins are included.
+
+#### From
+
+Will create a media query from the passed in value, e.g.:
+
++ `@include from(370px) {}`
++ `@include from($device-sm) {}`
+
+#### Shorthand From
+
+The following are shorthand for the from mixin above and correspond the
+`$device-` variables set in `_variables`.
+
++ `@include sm {}`
++ `@include md {}`
++ `@include lg {}`
++ `@include xl {}`
+
+
+#### To
+
+Will create a media query to the passed in value, e.g.:
+
++ `@include to(370px) {}`
++ `@include to($device-md) {}`
+
+### Modules
+
+You are encouraged to create modules so code can be shared and reused between projects.
+
+#### Loader
+
+Shows a loading gif before the page is fully loaded.
+ 
+Markup:
+```
+<div class="loader" data-loader></div>
+```
+Configure the loading image in `stylesheets/modules/_loader.scss`
+
+#### Nav
+
+A lightweight responsive navigation bar which will collapse at `device-sm`.
+ 
+Markup:
+```
+<div class="nav-overlay collapse" id="nav-overlay" data-toggle="collapse" data-target="#nav-menu, #nav-overlay"></div>
+<div class="nav" id="nav">
+  <div class="nav-brand">
+    <a href="/" itemprop="url" class="nav-logo">
+      <img src="logo.png" alt="CompanyName" itemprop="logo">
+    </a>
+  </div>
+
+  <div class="nav-menu-toggle">
+    <a href="#" class="nav-menu-toggle-control" data-toggle="collapse" data-target="#nav-menu, #nav-overlay">Menu</a>
+  </div>
+
+  <div class="nav-menu collapse" id="nav-menu">
+    <ul class="nav-menu-items">
+      <li class="nav-menu-item"><a href="/page.html">Page</a></li>
+      <li class="nav-menu-item"><a href="#">Link</a></li>
+      <li class="nav-menu-item nav-menu-item-right"><a href="#">Link</a></li>
+    </ul>
+  </div>
+</div>
+```
+
+Modify the styles in `stylesheets/modules/_nav.scss`
+
 ### File structure
+
 ```text
 scss
-├── global
-│   └── _fonts.scss
-│   └── _variables.scss
 ├── lib
 ├── mixins
 │   ├── _all.scss
@@ -150,8 +237,10 @@ scss
 │   └── _space.scss
 │   └── _text.scss
 └── _base.scss
+└── _fonts.scss
+└── _variables.scss
 └── _shame.scss
-├── application.scss
+├── stencil.scss
 ```
 
 ### Extend vs Mixin
@@ -256,9 +345,10 @@ The output of the included CSS changes or you need to repeat the same group of d
 
 ## JavaScripts
 
-### Modules
+### JavaScript Modules
 
-Stencil has a number of built in objects for commonly used patterns.
+Stencil has a number of built in objects for commonly used patterns. These are
+automatically compiled into `javascripts/stencil.js`.
 
 #### Align
 
@@ -329,52 +419,6 @@ Add the loader to your HTML:
 </body>
 ```
 
-#### Scroll
+## HTML
 
-The Scroll object provides a few different functions to either manipulate the page scrolling (useful when showing a modal overlay) or scroll to an element on the page.
-
-##### Example
-
-Initialize the object:
-
-```js
-Stencil.Scroll.init()
-```
-
-**Disable page scroll**
-
-```js
-Stencil.Scroll.disable()
-```
-
-**Enable page scroll**
-
-```js
-Stencil.Scroll.enable()
-```
-
-**Scroll to selector**
-
-```html
-<a href=“#” data-scroll-to=“#section-2” data-scroll-to-offset=“-100”>Scroll to section two</a>
-```
-
-#### Toggle
-
-The Toggle object uses a data attribute to toggle the `visible` and `hidden` classes on a target.
-
-##### Example
-
-Initialize the object:
-
-```js
-Stencil.Toggle.init()
-```
-
-**Toggle the element**
-
-```html
-<div data-toggle=“#section-two”>
-	Click to hide section two
-</div>
-```
+A boilerplate has been included for a your convenience, see `boilerplate.html`

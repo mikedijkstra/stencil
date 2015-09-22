@@ -1,0 +1,37 @@
+@import "display";
+@import "responsive";
+@import "space";
+@import "text";
+
+@include display-setup("");
+@include responsive-setup("");
+@include space-setup("");
+@include text-setup("");
+
+@include sm {
+  @include display-setup("-sm");
+  @include responsive-setup("-sm");
+  @include space-setup("-sm");
+  @include text-setup("-sm");
+}
+
+@include md {
+  @include display-setup("-md");
+  @include responsive-setup("-md");
+  @include space-setup("-md");
+  @include text-setup("-md");
+}
+
+@include lg {
+  @include display-setup("-lg");
+  @include responsive-setup("-lg");
+  @include space-setup("-lg");
+  @include text-setup("-lg");
+}
+
+@include xl {
+  @include display-setup("-xl");
+  @include responsive-setup("-xl");
+  @include space-setup("-xl");
+  @include text-setup("-xl");
+}

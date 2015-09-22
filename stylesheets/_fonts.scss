@@ -1,0 +1,39 @@
+// Fonts
+@mixin bold {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Helmut, Arial, "Lucida Grande", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@mixin light {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Helmut, Arial, "Lucida Grande", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+@mixin regular {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Helmut, Arial, "Lucida Grande", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin heading {
+  letter-spacing: $letter-m;
+  line-height: $line-m;
+  @include regular;
+}
+
+@mixin paragraph {
+  font-size: $xxs;
+  letter-spacing: $letter-s;
+  line-height: $line-m;
+  @include regular;
+
+  @include sm {
+    font-size: $xs;
+  }
+
+  @include md {
+    font-size: $s;
+  }
+}

@@ -1,0 +1,44 @@
+@mixin animated {
+  transition: all 0.3s ease-in-out;
+}
+
+.u-animated {
+  @include animated;
+}
+
+@mixin display-setup($namespace: "") {
+  .u#{$namespace}-block {
+    display: block;
+    width: 100%;
+  }
+  .u#{$namespace}-inline {
+    display: inline;
+  }
+  .u#{$namespace}-inline-block {
+    display: inline-block;
+  }
+  .u#{$namespace}-relative {
+    position: relative;
+  }
+  .u#{$namespace}-absolute {
+    position: absolute;
+  }
+  .u#{$namespace}-fixed {
+    position: fixed;
+  }
+  .u#{$namespace}-static {
+    position: static;
+  }
+  .u#{$namespace}-bottom {
+    bottom: 0;
+  }
+  .u#{$namespace}-left {
+    left: 0;
+  }
+  .u#{$namespace}-right {
+    right: 0;
+  }
+  .u#{$namespace}-top {
+    top: 0;
+  }
+}
