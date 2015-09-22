@@ -5,9 +5,12 @@ var _ = require('lodash'),
     minifycss = require('gulp-minify-css'),
     rename = require('gulp-rename'),
     vfs = require('vinyl-fs'),
-    concat = require('gulp-concat');
+    concat = require('gulp-concat'),
+    install = require("gulp-install");
 
 gulp.task('build', function() {
+  gulp.src(['./bower.json', './package.json']).pipe(install());
+
   var assets = {
     javascripts: [
       './bower_components/jquery/dist/jquery.js',
