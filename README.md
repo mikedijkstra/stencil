@@ -34,7 +34,7 @@ A collection of mixins, utilities and modules to help you get started building a
 + Run Gulp to build directory with lib and stencil files:  
 `$ gulp build`
 + Copy `assets` or use with the [stencil
-  gem](https://github.com/micdijkstra/stencil-gm).
+  gem](https://github.com/micdijkstra/stencil-ruby).
 
 
 ## Stylesheets
@@ -416,7 +416,7 @@ Add the loader to your HTML:
 
 ## Templates
 
-A boilerplate for use with the [stencil gem](https://github.com/micdijkstra/stencil-gm) has been included for a your convenience, see `templates/`
+A boilerplate for use with the [stencil gem](https://github.com/micdijkstra/stencil-ruby) has been included for a your convenience, see `templates/`
 
 This following JavaScript libraries are linked to:
 
