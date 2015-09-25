@@ -11,17 +11,19 @@ A collection of mixins, utilities and modules to help you get started building a
 ## Table of Contents
 
 + [Getting Started](#getting-started)
++ [Template](#template)
 + [Stylesheets](#stylesheets)
-	+ [Coding system](#coding-system)
-	+ [Coding style](#coding-style)
-	+ [Naming Conventions](#naming-conventions)
-	+ [Utilities](#utilities)
-	+ [Responsive Mixins](#responsive-mixins)
-	+ [Modules](#modules)
-	+ [Extend vs Mixin](#extend-vs-mixin)
-	+ [File structure](#file-structure)
+  + [Coding system](#coding-system)
+  + [Coding style](#coding-style)
+  + [Libraries](#libraries)
+  + [Naming Conventions](#naming-conventions)
+  + [Utilities](#utilities)
+  + [Responsive Mixins](#responsive-mixins)
+  + [Modules](#modules)
+  + [Extend vs Mixin](#extend-vs-mixin)
+  + [File structure](#file-structure)
 + [JavaScripts](#javascripts)
-	+ [Modules](#javascript-modules)
+  + [Modules](#javascript-modules)
 + [HTML](#html)
 
 ## Getting started
@@ -65,9 +67,6 @@ A collection of mixins, utilities and modules to help you get started building a
 
 The following libraries are included:
  
-+ [jQuery](https://jquery.com/)
-+ [Modernizr](https://modernizr.com/)
-+ [Respond.js](https://github.com/scottjehl/Respond)
 + [Normalize.css](https://necolas.github.io/normalize.css/)
 + A selection of [Bootstrap](http://getbootstrap.com/) components
 
@@ -415,6 +414,13 @@ Add the loader to your HTML:
 </body>
 ```
 
-## HTML
+## Templates
 
-A boilerplate has been included for a your convenience, see `boilerplate.html`
+A boilerplate for use with the [stencil gem](https://github.com/micdijkstra/stencil-gm) has been included for a your convenience, see `templates/`
+
+This following JavaScript libraries are linked to:
+
++ [jQuery](https://jquery.com/)
++ [Modernizr](https://modernizr.com/)
++ [Respond.js](https://github.com/scottjehl/Respond)
+

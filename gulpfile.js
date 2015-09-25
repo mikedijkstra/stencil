@@ -2,20 +2,16 @@ var gulp = require('gulp');
 
 gulp.task('default', function() {
   var assets = {
-    javascripts: [
-      './node_modules/jquery/dist/jquery.js',
-      './node_modules/modernizr/modernizr.js',
-      './node_modules/respond.js/dest/respond.min.js',
-      './node_modules/bootstrap-sass/assets/javascripts/*',
-      './node_modules/bootstrap-sass/assets/javascripts/*/**',
+    'assets/javascripts/lib': [
+      './node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
     ],
-    stylesheets: [
+    'assets/stylesheets/lib': [
       './node_modules/bootstrap-sass/assets/stylesheets/*',
       './node_modules/bootstrap-sass/assets/stylesheets/*/**',
     ]
   };
 
-  for (var type in assets) {
-    gulp.src(assets[type]).pipe(gulp.dest('assets/' + type + '/lib'));
+  for (var folder in assets) {
+    gulp.src(assets[folder]).pipe(gulp.dest(folder));
   };
 });
