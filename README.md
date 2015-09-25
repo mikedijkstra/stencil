@@ -29,13 +29,10 @@ A collection of mixins, utilities and modules to help you get started building a
 `$ curl https://www.npmjs.org/install.sh | sh `
 + Install NPM packages:  
 `$ npm install`
-+ Fetch latest versions of lib files with:  
-`$ bower install`
 + Run Gulp to build directory with lib and stencil files:  
 `$ gulp build`
-+ Test the build worked:  
-Open `test/index.html`
-+ Copy build directory to your project.
++ Copy `assets` or use with the [stencil
+  gem](https://github.com/micdijkstra/stencil-gm).
 
 
 ## Stylesheets
@@ -239,7 +236,7 @@ scss
 └── _fonts.scss
 └── _variables.scss
 └── _shame.scss
-├── stencil.scss
+├── application.scss
 ```
 
 ### Extend vs Mixin
