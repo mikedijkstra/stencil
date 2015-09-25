@@ -72,7 +72,21 @@ The following libraries are included:
 
 ### Grid
 
-The Grid included is the Bootstrap Grid. [See the Bootstrap Grid System docs](http://getbootstrap.com/css/#grid)
+The Grid included is the Bootstrap Grid. [See the Bootstrap Grid System docs.](http://getbootstrap.com/css/#grid)
+
+The grid can be included in your SCSS:
+```
+.foo {
+	@include make-col-lg(8);
+}
+```
+
+Or as classes in your HTML:
+```
+<div class="col-md-1">
+	.col-md-1
+</div>
+```
 
 ### Utilities
 
