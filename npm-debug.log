@@ -1,0 +1,89 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-fg-save-dev',
+1 verbose cli   'loadash' ]
+2 info using npm@2.12.1
+3 info using node@v0.12.7
+4 verbose node symlink /usr/local/bin/node
+5 verbose install initial load of /Users/micdijkstra/Code/stencil-css/package.json
+6 verbose installManyTop reading scoped package data from /Users/micdijkstra/Code/stencil-css/node_modules/bootstrap-sass/package.json
+7 verbose installManyTop reading scoped package data from /Users/micdijkstra/Code/stencil-css/node_modules/gulp/package.json
+8 verbose installManyTop reading scoped package data from /Users/micdijkstra/Code/stencil-css/node_modules/jquery/package.json
+9 verbose installManyTop reading scoped package data from /Users/micdijkstra/Code/stencil-css/node_modules/modernizr/package.json
+10 verbose installManyTop reading scoped package data from /Users/micdijkstra/Code/stencil-css/node_modules/respond/package.json
+11 info package.json jquery@2.1.4 No license field.
+12 verbose readDependencies loading dependencies from /Users/micdijkstra/Code/stencil-css/package.json
+13 silly cache add args [ 'loadash', null ]
+14 verbose cache add spec loadash
+15 silly cache add parsed spec { raw: 'loadash',
+15 silly cache add   scope: null,
+15 silly cache add   name: 'loadash',
+15 silly cache add   rawSpec: '',
+15 silly cache add   spec: '*',
+15 silly cache add   type: 'range' }
+16 silly addNamed loadash@*
+17 verbose addNamed "*" is a valid semver range for loadash
+18 silly addNameRange { name: 'loadash', range: '*', hasData: false }
+19 silly mapToRegistry name loadash
+20 silly mapToRegistry using default registry
+21 silly mapToRegistry registry https://registry.npmjs.org/
+22 silly mapToRegistry uri https://registry.npmjs.org/loadash
+23 verbose addNameRange registry:https://registry.npmjs.org/loadash not in flight; fetching
+24 verbose request uri https://registry.npmjs.org/loadash
+25 verbose request no auth needed
+26 info attempt registry request try #1 at 15:03:19
+27 verbose request id 119511b610ef063a
+28 http request GET https://registry.npmjs.org/loadash
+29 http 404 https://registry.npmjs.org/loadash
+30 verbose headers { 'content-type': 'application/json',
+30 verbose headers   'cache-control': 'max-age=0',
+30 verbose headers   'content-length': '2',
+30 verbose headers   'accept-ranges': 'bytes',
+30 verbose headers   date: 'Fri, 25 Sep 2015 05:03:20 GMT',
+30 verbose headers   via: '1.1 varnish',
+30 verbose headers   connection: 'keep-alive',
+30 verbose headers   'x-served-by': 'cache-syd1622-SYD',
+30 verbose headers   'x-cache': 'MISS',
+30 verbose headers   'x-cache-hits': '0',
+30 verbose headers   'x-timer': 'S1443157399.760948,VS0,VE751' }
+31 silly get cb [ 404,
+31 silly get   { 'content-type': 'application/json',
+31 silly get     'cache-control': 'max-age=0',
+31 silly get     'content-length': '2',
+31 silly get     'accept-ranges': 'bytes',
+31 silly get     date: 'Fri, 25 Sep 2015 05:03:20 GMT',
+31 silly get     via: '1.1 varnish',
+31 silly get     connection: 'keep-alive',
+31 silly get     'x-served-by': 'cache-syd1622-SYD',
+31 silly get     'x-cache': 'MISS',
+31 silly get     'x-cache-hits': '0',
+31 silly get     'x-timer': 'S1443157399.760948,VS0,VE751' } ]
+32 verbose stack Error: Registry returned 404 for GET on https://registry.npmjs.org/loadash
+32 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:239:14)
+32 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:170:14)
+32 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:197:22)
+32 verbose stack     at Request.emit (events.js:110:17)
+32 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1050:14)
+32 verbose stack     at Request.emit (events.js:129:20)
+32 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:996:12)
+32 verbose stack     at IncomingMessage.emit (events.js:129:20)
+32 verbose stack     at _stream_readable.js:908:16
+32 verbose stack     at process._tickCallback (node.js:355:11)
+33 verbose statusCode 404
+34 verbose pkgid loadash
+35 verbose cwd /Users/micdijkstra/Code/stencil-css
+36 error Darwin 14.5.0
+37 error argv "node" "/usr/local/bin/npm" "install" "-fg-save-dev" "loadash"
+38 error node v0.12.7
+39 error npm  v2.12.1
+40 error code E404
+41 error 404 Registry returned 404 for GET on https://registry.npmjs.org/loadash
+41 error 404
+41 error 404 'loadash' is not in the npm registry.
+41 error 404 You should bug the author to publish it (or use the name yourself!)
+41 error 404
+41 error 404 Note that you can also install from a
+41 error 404 tarball, folder, http url, or git url.
+42 verbose exit [ 1, true ]
