@@ -438,3 +438,7 @@ This following JavaScript libraries are linked to:
 + [Modernizr](https://modernizr.com/)
 + [Respond.js](https://github.com/scottjehl/Respond)
 
+
+## Emails
+
+A boilerplate for use with the [stencil gem](https://github.com/micdijkstra/stencil-ruby) has been included for a your convenience, see `emails/`
