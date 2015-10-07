@@ -4,6 +4,7 @@ body {
 }
 
 body {
+  background-color: $background-color-base;
   color: $color-base;
   font-size: $text-xxs;
   @include base;
