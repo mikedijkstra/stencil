@@ -62,6 +62,9 @@
   .u#{$namespace}-text-none {
     text-decoration: none;
   }
+  .u#{$namespace}-line-xs {
+    line-height: $line-xs;
+  }
   .u#{$namespace}-line-sm {
     line-height: $line-sm;
   }
@@ -70,6 +73,9 @@
   }
   .u#{$namespace}-line-lg {
     line-height: $line-lg;
+  }
+  .u#{$namespace}-line-xl {
+    line-height: $line-xl;
   }
   .u#{$namespace}-hyphenate {
     -mds-word-break: break-all;

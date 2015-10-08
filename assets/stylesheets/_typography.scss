@@ -1,0 +1,277 @@
+// Fonts
+@mixin base {
+  font-family: Helvetica, Helmut, Arial, "Lucida Grande", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+@mixin base-italic {
+  font-family: 'Helvetica-Oblique', Helvetica, Helmut, Arial, "Lucida Grande", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+@mixin base-bold {
+  font-family: 'Helvetica-Bold', Helvetica, Helmut, Arial, "Lucida Grande", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+@mixin base-bold-italic {
+  font-family: 'Helvetica-Oblique', Helvetica, Helmut, Arial, "Lucida Grande", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+@mixin title {
+  font-family: "HelveticaNeue-CondensedBold", Helvetica, Helmut, Arial, "Lucida Grande", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+@mixin title-italic {
+  @include title;
+}
+
+@mixin title-bold {
+  font-family: "HelveticaNeue-CondensedBlack", Helvetica, Helmut, Arial, "Lucida Grande", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+@mixin title-bold-italic {
+  @include title-bold;
+}
+
+@mixin label {
+  font-family: "HelveticaNeue-Light", Helvetica, Helmut, Arial, "Lucida Grande", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+@mixin label-italic {
+  @include label;
+}
+
+@mixin label-bold {
+  font-family: "HelveticaNeue-Regular", Helvetica, Helmut, Arial, "Lucida Grande", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+@mixin label-bold-italic {
+  @include label-bold;
+}
+
+@mixin mono {
+  font-family: "PTMono-Regular", Helvetica, Helmut, Arial, "Lucida Grande", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.t-base {
+  @include base;
+
+  em {
+    @include base-italic;
+  }
+
+  b {
+    @include base-bold;
+
+    em {
+      @include base-bold-italic;
+    }
+  }
+}
+
+.t-title {
+  @include title;
+
+  em {
+    @include title-italic;
+  }
+
+  b {
+    @include title-bold;
+
+    em {
+      @include title-bold-italic;
+    }
+  }
+}
+
+.t-label {
+  @include label;
+
+  em {
+    @include label-italic;
+  }
+
+  b {
+    @include label-bold;
+
+    em {
+      @include label-bold-italic;
+    }
+  }
+}
+
+.t-mono {
+  @include mono;
+}
+
+.t-scale {
+  h1 {
+    font-size: $text-xl;
+
+    @include md {
+      font-size: $text-xxl;
+    }
+  }
+
+  h2 {
+    font-size: $text-lg;
+
+    @include md {
+      font-size: $text-xl;
+    }
+  }
+
+  h3 {
+    font-size: $text-md;
+
+    @include md {
+      font-size: $text-lg;
+    }
+  }
+
+  h4 {
+    font-size: $text-sm;
+
+    @include md {
+      font-size: $text-md;
+    }
+  }
+
+  h5 {
+    font-size: $text-xs;
+
+    @include md {
+      font-size: $text-sm;
+    }
+  }
+
+  h6 {
+    font-size: $text-xxs;
+
+    @include md {
+      font-size: $text-xs;
+    }
+  }
+
+  p, li {
+    font-size: $text-xs;
+
+    @include md {
+      font-size: $text-sm;
+    }
+  }
+}
+
+.t-reading {
+  h1 {
+    margin-bottom: $space-md;
+
+    @include md {
+      margin-bottom: $space-lg;
+    }
+  }
+
+  h2 {
+    margin-bottom: $space-md;
+
+    @include md {
+      margin-bottom: $space-lg;
+    }
+  }
+
+  h3 {
+    margin-bottom: $space-sm;
+
+    @include md {
+      margin-bottom: $space-md;
+    }
+  }
+
+  h4 {
+    margin-bottom: $space-sm;
+
+    @include md {
+      margin-bottom: $space-md;
+    }
+  }
+
+  h5 {
+    margin-bottom: $space-sm;
+
+    @include md {
+      margin-bottom: $space-md;
+    }
+  }
+
+  h6 {
+    margin-bottom: $space-sm;
+
+    @include md {
+      margin-bottom: $space-md;
+    }
+  }
+
+  p, li {
+    margin-bottom: $space-sm;
+
+    @include md {
+      margin-bottom: $space-md;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  ol,
+  ul {
+    margin-bottom: $space-md;
+
+    @include md {
+      margin-bottom: $space-lg;
+    }
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  ul {
+    list-style: disc;
+  }
+}
