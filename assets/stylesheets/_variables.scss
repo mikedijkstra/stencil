@@ -13,13 +13,13 @@ $screen-lg-min:                          $device-lg;
 $screen-xl-min:                          $device-xl;
 
 // Text sizes
-$text-xxs:                               12px;
-$text-xs:                                14px;
+$text-xxs:                               11px;
+$text-xs:                                13px;
 $text-sm:                                18px;
-$text-md:                                24px;
-$text-lg:                                30px;
-$text-xl:                                42px;
-$text-xxl:                               60px;
+$text-md:                                25px;
+$text-lg:                                40px;
+$text-xl:                                60px;
+$text-xxl:                               100px;
 
 // Letter spacing
 $letter-sm:                              0.05em;
@@ -27,14 +27,18 @@ $letter-md:                              1px;
 $letter-lg:                              3px;
 
 // Line height
-$line-sm:                                1.2;
-$line-md:                                1.4;
-$line-lg:                                1.6;
+$line-xs:                                1.0;
+$line-sm:                                1.25;
+$line-md:                                1.5;
+$line-lg:                                1.75;
+$line-xl:                                2.0;
 
 // Margin and Padding
+$space-xs:                               10px;
 $space-sm:                               15px;
 $space-md:                               30px;
 $space-lg:                               60px;
+$space-xl:                               100px;
 
 // Layout
 $nav-height:                             60px;
