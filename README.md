@@ -428,6 +428,10 @@ Add the loader to your HTML:
 </body>
 ```
 
+## Emails
+For responsive emails, use the [Zurb Ink layout and classes](http://zurb.com/ink/docs.php).
+
+
 ## Templates
 
 A boilerplate for use with the [stencil gem](https://github.com/micdijkstra/stencil-ruby) has been included for a your convenience, see `templates/`
