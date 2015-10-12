@@ -6,7 +6,7 @@ body {
 body {
   color: $color-base;
   font-size: $text-xxs;
-  @include regular;
+  @include base;
 
   @include sm {
     font-size: $text-xs;
@@ -15,12 +15,19 @@ body {
 
 a {
   color: inherit;
+  text-decoration: none;
 
   &:active,
   &:focus,
   &:visited,
   &:hover {
     outline: 0;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &:visited,
+  &:hover {
     color: inherit;
     text-decoration: none;
   }
