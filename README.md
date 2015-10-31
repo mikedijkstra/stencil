@@ -77,7 +77,7 @@ The Grid included is the Bootstrap Grid. [See the Bootstrap Grid System docs.](h
 The grid can be included in your SCSS:
 ```
 .foo {
-	@include make-col-lg(8);
+	@extend .col-xs-3;
 }
 ```
 
