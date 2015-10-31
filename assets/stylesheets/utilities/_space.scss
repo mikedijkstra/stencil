@@ -1,12 +1,14 @@
 @mixin space-setup($namespace: "") {
   .u#{$namespace}-padding-top-n,
   .u#{$namespace}-padding-vertical-n,
-  .u#{$namespace}-padding-all-n {
+  .u#{$namespace}-padding-all-n,
+  .ptn, .pvn, .pan {
     padding-top: 0 !important;
   }
   .u#{$namespace}-padding-top-xs,
   .u#{$namespace}-padding-vertical-xs,
-  .u#{$namespace}-padding-all-xs {
+  .u#{$namespace}-padding-all-xs,
+  .ptxs, .pvxs, .paxs {
     padding-top: $space-xs !important;
   }
   .u#{$namespace}-padding-top-sm,
