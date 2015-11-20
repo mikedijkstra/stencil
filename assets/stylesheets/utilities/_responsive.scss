@@ -11,6 +11,7 @@
     width: 100%;
   }
 
+  .u#{$namespace}-responsive-image,
   img.u#{$namespace}-responsive {
     @include responsive-image;
   }
