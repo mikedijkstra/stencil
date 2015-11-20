@@ -41,4 +41,7 @@
   .u#{$namespace}-top {
     top: 0;
   }
+  .u#{$namespace}-circle {
+    border-radius: 99999px;
+  }
 }

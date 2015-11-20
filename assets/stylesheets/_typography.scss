@@ -1,6 +1,6 @@
 // Fonts
 @mixin base {
-  font-family: Helvetica, Helmut, Arial, "Lucida Grande", sans-serif;
+  font-family: 'HelveticaNeue', Helvetica, Helmut, Arial, "Lucida Grande", sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: 0;
@@ -8,7 +8,7 @@
 }
 
 @mixin base-italic {
-  font-family: 'Helvetica-Oblique', Helvetica, Helmut, Arial, "Lucida Grande", sans-serif;
+  font-family: 'HelveticaNeue-Italic', Helvetica, Helmut, Arial, "Lucida Grande", sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: 0;
@@ -16,7 +16,7 @@
 }
 
 @mixin base-bold {
-  font-family: 'Helvetica-Bold', Helvetica, Helmut, Arial, "Lucida Grande", sans-serif;
+  font-family: 'HelveticaNeue-Bold', Helvetica, Helmut, Arial, "Lucida Grande", sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: 0;
@@ -24,7 +24,7 @@
 }
 
 @mixin base-bold-italic {
-  font-family: 'Helvetica-Oblique', Helvetica, Helmut, Arial, "Lucida Grande", sans-serif;
+  font-family: 'HelveticaNeue-BoldItalic', Helvetica, Helmut, Arial, "Lucida Grande", sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: 0;
@@ -68,7 +68,7 @@
 }
 
 @mixin label-bold {
-  font-family: "HelveticaNeue-Regular", Helvetica, Helmut, Arial, "Lucida Grande", sans-serif;
+  font-family: "HelveticaNeue-Medium", Helvetica, Helmut, Arial, "Lucida Grande", sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: 0;
@@ -87,8 +87,22 @@
   text-transform: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   font-weight: normal;
+  letter-spacing: 0;
+  line-height: 1.0;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  line-height: 1.2;
 }
 
 .t-base {
