@@ -1,0 +1,11 @@
+@mixin link($color) {
+  color: $color!important;
+  text-decoration: none !important;
+
+  &:focus,
+  &:visited,
+  &:hover {
+    color: $color!important;
+    text-decoration: none !important;
+  }
+}

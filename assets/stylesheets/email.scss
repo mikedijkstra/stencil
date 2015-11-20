@@ -4,11 +4,21 @@
 
 @import "variables";
 
-@import "mixins/all";
-@import "utilities/all";
+@import "utilities/space_padding";
+@include space-padding-setup("");
+@import "utilities/text";
+@include text-setup("");
 
 @import "fonts";
 
 .preheader {
   display: none;
+}
+
+html {
+  clor: $color-base;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+  margin: 0 !important;
 }

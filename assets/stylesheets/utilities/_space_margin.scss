@@ -1,0 +1,126 @@
+@mixin space-margin-setup($namespace: "") {
+  .u#{$namespace}-margin-top-n,
+  .u#{$namespace}-margin-vertical-n,
+  .u#{$namespace}-margin-all-n {
+    margin-top: 0 !important;
+  }
+  .u#{$namespace}-margin-top-xs,
+  .u#{$namespace}-margin-vertical-xs,
+  .u#{$namespace}-margin-all-xs {
+    margin-top: $space-xs !important;
+  }
+  .u#{$namespace}-margin-top-sm,
+  .u#{$namespace}-margin-vertical-sm,
+  .u#{$namespace}-margin-all-sm {
+    margin-top: $space-sm !important;
+  }
+  .u#{$namespace}-margin-top-md,
+  .u#{$namespace}-margin-vertical-md,
+  .u#{$namespace}-margin-all-md {
+    margin-top: $space-md !important;
+  }
+  .u#{$namespace}-margin-top-lg,
+  .u#{$namespace}-margin-vertical-lg,
+  .u#{$namespace}-margin-all-lg {
+    margin-top: $space-lg !important;
+  }
+  .u#{$namespace}-margin-top-xl,
+  .u#{$namespace}-margin-vertical-xl,
+  .u#{$namespace}-margin-all-xl {
+    margin-top: $space-xl !important;
+  }
+  .u#{$namespace}-margin-bottom-n,
+  .u#{$namespace}-margin-vertical-n,
+  .u#{$namespace}-margin-all-n {
+    margin-bottom: 0 !important;
+  }
+  .u#{$namespace}-margin-bottom-xs,
+  .u#{$namespace}-margin-vertical-xs,
+  .u#{$namespace}-margin-all-xs {
+    margin-bottom: $space-xs !important;
+  }
+  .u#{$namespace}-margin-bottom-sm,
+  .u#{$namespace}-margin-vertical-sm,
+  .u#{$namespace}-margin-all-sm {
+    margin-bottom: $space-sm !important;
+  }
+  .u#{$namespace}-margin-bottom-md,
+  .u#{$namespace}-margin-vertical-md,
+  .u#{$namespace}-margin-all-md {
+    margin-bottom: $space-md !important;
+  }
+  .u#{$namespace}-margin-bottom-lg,
+  .u#{$namespace}-margin-vertical-lg,
+  .u#{$namespace}-margin-all-lg {
+    margin-bottom: $space-lg !important;
+  }
+  .u#{$namespace}-margin-bottom-xl,
+  .u#{$namespace}-margin-vertical-xl,
+  .u#{$namespace}-margin-all-xl {
+    margin-bottom: $space-xl !important;
+  }
+  .u#{$namespace}-margin-left-n,
+  .u#{$namespace}-margin-horizontal-n,
+  .u#{$namespace}-margin-all-n {
+    margin-left: 0 !important;
+  }
+  .u#{$namespace}-margin-left-xs,
+  .u#{$namespace}-margin-horizontal-xs,
+  .u#{$namespace}-margin-all-xs {
+    margin-left: $space-xs !important;
+  }
+  .u#{$namespace}-margin-left-sm,
+  .u#{$namespace}-margin-horizontal-sm,
+  .u#{$namespace}-margin-all-sm {
+    margin-left: $space-sm !important;
+  }
+  .u#{$namespace}-margin-left-md,
+  .u#{$namespace}-margin-horizontal-md,
+  .u#{$namespace}-margin-all-md {
+    margin-left: $space-md !important;
+  }
+  .u#{$namespace}-margin-left-lg,
+  .u#{$namespace}-margin-horizontal-lg,
+  .u#{$namespace}-margin-all-lg {
+    margin-left: $space-lg !important;
+  }
+  .u#{$namespace}-margin-left-xl,
+  .u#{$namespace}-margin-horizontal-xl,
+  .u#{$namespace}-margin-all-xl {
+    margin-left: $space-xl !important;
+  }
+  .u#{$namespace}-margin-right-n,
+  .u#{$namespace}-margin-horizontal-n,
+  .u#{$namespace}-margin-all-n {
+    margin-right: 0 !important;
+  }
+  .u#{$namespace}-margin-right-xs,
+  .u#{$namespace}-margin-horizontal-xs,
+  .u#{$namespace}-margin-all-xs {
+    margin-right: $space-xs !important;
+  }
+  .u#{$namespace}-margin-right-sm,
+  .u#{$namespace}-margin-horizontal-sm,
+  .u#{$namespace}-margin-all-sm {
+    margin-right: $space-sm !important;
+  }
+  .u#{$namespace}-margin-right-md,
+  .u#{$namespace}-margin-horizontal-md,
+  .u#{$namespace}-margin-all-md {
+    margin-right: $space-md !important;
+  }
+  .u#{$namespace}-margin-right-lg,
+  .u#{$namespace}-margin-horizontal-lg,
+  .u#{$namespace}-margin-all-lg {
+    margin-right: $space-lg !important;
+  }
+  .u#{$namespace}-margin-right-xl,
+  .u#{$namespace}-margin-horizontal-xl,
+  .u#{$namespace}-margin-all-xl {
+    margin-right: $space-xl !important;
+  }
+  .u#{$namespace}-margin-horizontal-.u#{$namespace}to {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}

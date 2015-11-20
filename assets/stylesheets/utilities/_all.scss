@@ -1,37 +1,43 @@
 @import "display";
 @import "responsive";
-@import "space";
+@import "space_margin";
+@import "space_padding";
 @import "text";
 
 @include display-setup("");
 @include responsive-setup("");
-@include space-setup("");
+@include space-margin-setup("");
+@include space-padding-setup("");
 @include text-setup("");
 
 @include sm {
   @include display-setup("-sm");
   @include responsive-setup("-sm");
-  @include space-setup("-sm");
+  @include space-margin-setup("-sm");
+  @include space-padding-setup("-sm");
   @include text-setup("-sm");
 }
 
 @include md {
   @include display-setup("-md");
   @include responsive-setup("-md");
-  @include space-setup("-md");
+  @include space-margin-setup("-md");
+  @include space-padding-setup("-md");
   @include text-setup("-md");
 }
 
 @include lg {
   @include display-setup("-lg");
   @include responsive-setup("-lg");
-  @include space-setup("-lg");
+  @include space-margin-setup("-lg");
+  @include space-padding-setup("-lg");
   @include text-setup("-lg");
 }
 
 @include xl {
   @include display-setup("-xl");
   @include responsive-setup("-xl");
-  @include space-setup("-xl");
+  @include space-margin-setup("-xl");
+  @include space-padding-setup("-xl");
   @include text-setup("-xl");
 }

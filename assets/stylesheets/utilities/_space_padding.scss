@@ -1,0 +1,122 @@
+@mixin space-padding-setup($namespace: "") {
+  .u#{$namespace}-padding-top-n,
+  .u#{$namespace}-padding-vertical-n,
+  .u#{$namespace}-padding-all-n {
+    padding-top: 0 !important;
+  }
+  .u#{$namespace}-padding-top-xs,
+  .u#{$namespace}-padding-vertical-xs,
+  .u#{$namespace}-padding-all-xs {
+    padding-top: $space-xs !important;
+  }
+  .u#{$namespace}-padding-top-sm,
+  .u#{$namespace}-padding-vertical-sm,
+  .u#{$namespace}-padding-all-sm {
+    padding-top: $space-sm !important;
+  }
+  .u#{$namespace}-padding-top-md,
+  .u#{$namespace}-padding-vertical-md,
+  .u#{$namespace}-padding-all-md {
+    padding-top: $space-md !important;
+  }
+  .u#{$namespace}-padding-top-lg,
+  .u#{$namespace}-padding-vertical-lg,
+  .u#{$namespace}-padding-all-lg {
+    padding-top: $space-lg !important;
+  }
+  .u#{$namespace}-padding-top-xl,
+  .u#{$namespace}-padding-vertical-xl,
+  .u#{$namespace}-padding-all-xl {
+    padding-top: $space-xl !important;
+  }
+  .u#{$namespace}-padding-bottom-n,
+  .u#{$namespace}-padding-vertical-n,
+  .u#{$namespace}-padding-all-n {
+    padding-bottom: 0 !important;
+  }
+  .u#{$namespace}-padding-bottom-xs,
+  .u#{$namespace}-padding-vertical-xs,
+  .u#{$namespace}-padding-all-xs {
+    padding-bottom: $space-xs !important;
+  }
+  .u#{$namespace}-padding-bottom-sm,
+  .u#{$namespace}-padding-vertical-sm,
+  .u#{$namespace}-padding-all-sm {
+    padding-bottom: $space-sm !important;
+  }
+  .u#{$namespace}-padding-bottom-md,
+  .u#{$namespace}-padding-vertical-md,
+  .u#{$namespace}-padding-all-md {
+    padding-bottom: $space-md !important;
+  }
+  .u#{$namespace}-padding-bottom-lg,
+  .u#{$namespace}-padding-vertical-lg,
+  .u#{$namespace}-padding-all-lg {
+    padding-bottom: $space-lg !important;
+  }
+  .u#{$namespace}-padding-bottom-xl,
+  .u#{$namespace}-padding-vertical-xl,
+  .u#{$namespace}-padding-all-xl {
+    padding-bottom: $space-xl !important;
+  }
+  .u#{$namespace}-padding-left-n,
+  .u#{$namespace}-padding-horizontal-n,
+  .u#{$namespace}-padding-all-n {
+    padding-left: 0 !important;
+  }
+  .u#{$namespace}-padding-left-xs,
+  .u#{$namespace}-padding-horizontal-xs,
+  .u#{$namespace}-padding-all-xs {
+    padding-left: $space-xs !important;
+  }
+  .u#{$namespace}-padding-left-sm,
+  .u#{$namespace}-padding-horizontal-sm,
+  .u#{$namespace}-padding-all-sm {
+    padding-left: $space-sm !important;
+  }
+  .u#{$namespace}-padding-left-md,
+  .u#{$namespace}-padding-horizontal-md,
+  .u#{$namespace}-padding-all-md {
+    padding-left: $space-md !important;
+  }
+  .u#{$namespace}-padding-left-lg,
+  .u#{$namespace}-padding-horizontal-lg,
+  .u#{$namespace}-padding-all-lg {
+    padding-left: $space-lg !important;
+  }
+  .u#{$namespace}-padding-left-xl,
+  .u#{$namespace}-padding-horizontal-xl,
+  .u#{$namespace}-padding-all-xl {
+    padding-left: $space-xl !important;
+  }
+  .u#{$namespace}-padding-right-n,
+  .u#{$namespace}-padding-horizontal-n,
+  .u#{$namespace}-padding-all-n {
+    padding-right: 0 !important;
+  }
+  .u#{$namespace}-padding-right-xs,
+  .u#{$namespace}-padding-horizontal-xs,
+  .u#{$namespace}-padding-all-xs {
+    padding-right: $space-xs !important;
+  }
+  .u#{$namespace}-padding-right-sm,
+  .u#{$namespace}-padding-horizontal-sm,
+  .u#{$namespace}-padding-all-sm {
+    padding-right: $space-sm !important;
+  }
+  .u#{$namespace}-padding-right-md,
+  .u#{$namespace}-padding-horizontal-md,
+  .u#{$namespace}-padding-all-md {
+    padding-right: $space-md !important;
+  }
+  .u#{$namespace}-padding-right-lg,
+  .u#{$namespace}-padding-horizontal-lg,
+  .u#{$namespace}-padding-all-lg {
+    padding-right: $space-lg !important;
+  }
+  .u#{$namespace}-padding-right-xl,
+  .u#{$namespace}-padding-horizontal-xl,
+  .u#{$namespace}-padding-all-xl {
+    padding-right: $space-xl !important;
+  }
+}
