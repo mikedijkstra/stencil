@@ -32,7 +32,7 @@
   .u#{$namespace}-text-center {
     text-align: center;
   }
-  .u#{$namespace}-text-lgeft {
+  .u#{$namespace}-text-left {
     text-align: left;
   }
   .u#{$namespace}-text-right {
@@ -44,13 +44,13 @@
   .u#{$namespace}-text-bottom {
     vertical-align: bottom;
   }
-  .u#{$namespace}-text-mdiddle {
+  .u#{$namespace}-text-middle {
     vertical-align: middle;
   }
   .u#{$namespace}-text.uppercase {
     text-transform: uppercase;
   }
-  .u#{$namespace}-text-lgowercase {
+  .u#{$namespace}-text-lowercase {
     text-transform: lowercase;
   }
   .u#{$namespace}-text-capitalize {
