@@ -7,6 +7,14 @@
 }
 
 @mixin display-setup($namespace: "") {
+  .u#{$namespace}-table {
+    display: table;
+    width: 100%;
+  }
+  .u#{$namespace}-table-cell {
+    display: table-cell;
+    vertical-align: middle;
+  }
   .u#{$namespace}-block {
     display: block;
     width: 100%;
