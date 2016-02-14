@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Utilities &ndash; Stencil</title>
+
+    <!-- Styleguide CSS -->
+    <link rel="stylesheet" href="styles/hgt-syntax.css">
+    <link rel="stylesheet" href="styles/hgt.css">
+
+    <!-- Source CSS -->
+    
+      
+        <link rel="stylesheet" href="dist/stencil.css">
+      
+    
+</head>
+
+  <body class="hgt-body">
+    <div class="hgt-pagehead">
+      <div class="hgt-container">
+        <nav class="hgt-pagehead-nav" role="navigation">
+          <a href="index.html"
+             class="hgt-pagehead-nav-item ">
+            Home
+          </a>
+
+          
+          <a href="mixins.html"
+             class="hgt-pagehead-nav-item ">
+            Mixins
+          </a>
+          
+          <a href="type.html"
+             class="hgt-pagehead-nav-item ">
+            Type
+          </a>
+          
+          <a href="utilities.html"
+             class="hgt-pagehead-nav-item selected">
+            Utilities
+          </a>
+          
+          <a href="variables.html"
+             class="hgt-pagehead-nav-item ">
+            Variables
+          </a>
+          
+          <a href="index.html"
+             class="hgt-pagehead-nav-item ">
+            
+          </a>
+          
+        </nav>
+
+        <h1 class="hgt-pagehead-title">Stencil</h1>
+      </div>
+    </div>
+
+    <div class="hgt-styleguide hgt-container">
+      <div class="hgt-columns">
+        
+          <div class="hgt-column one-fourth">
+            <nav class="hgt-menu">
+              
+                
+                  <a href="#0-utilities-overview" class="hgt-menu-item">Overview</a>
+                
+              
+                
+                  <a href="#animated" class="hgt-menu-item">Animated</a>
+                
+              
+                
+                  <a href="#display" class="hgt-menu-item">Display</a>
+                
+              
+                
+                  <a href="#responsive-images" class="hgt-menu-item">Responsive Images</a>
+                
+              
+                
+                  <a href="#space" class="hgt-menu-item">Spacing</a>
+                
+              
+                
+                  <a href="#vertical-align" class="hgt-menu-item">Vertical Align</a>
+                
+              
+            </nav>
+          </div>
+        
+
+        <div class="hgt-column three-fourths">
+          <div class="hgt-content">
+<h1 id="0-utilities-overview" class="styleguide">Overview</h1>
+<p class="styleguide">Utilities are very specific and targeted, generally with a single property, sometimes with an !important suffix to ensure their property is modified.</p><p class="styleguide">All utilities are prefixed by <code class="styleguide">u-</code> and can be optionally followed by one of the following break point abbreviations:</p><table class="styleguide"> <tr>
+<th>Prefix</th>
+<th>Description</th>
+</tr>
+ <tr>
+<td><code class="styleguide">-sm-</code></td>
+<td>Small screen size and up</td>
+</tr>
+<tr>
+<td><code class="styleguide">-md-</code></td>
+<td>Medium screen size and up</td>
+</tr>
+<tr>
+<td><code class="styleguide">-lg-</code></td>
+<td>Large screen size and up</td>
+</tr>
+<tr>
+<td><code class="styleguide">-xl-</code></td>
+<td>Extra Large screen size and up</td>
+</tr>
+ </table><p class="styleguide">The value for these break-points is set in [variables][screen-sizes].</p><div class="codeExample">
+  <div class="exampleOutput">
+    <div class="u-padding-all-md u-sm-padding-all-lg u-md-padding-all-xl">
+  Content
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-padding-all-md u-sm-padding-all-lg u-md-padding-all-xl"</span><span class="nt">&gt;</span>
+  Content
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="animated" class="styleguide">Animated</h1>
+<p class="styleguide">Add default animation transitions to an element for all properties.</p><div class="codeExample">
+  <div class="exampleOutput">
+    <div class="u-animated">
+  Content
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-animated"</span><span class="nt">&gt;</span>
+  Content
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="display" class="styleguide">Display</h1>
+<table class="styleguide"> <tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+ <tr>
+<td><code class="styleguide">u-table</code></td>
+<td>Display as a table</td>
+</tr>
+<tr>
+<td><code class="styleguide">u-table-cell</code></td>
+<td>Display as a table cell</td>
+</tr>
+<tr>
+<td><code class="styleguide">u-align-top</code></td>
+<td>Vertically align to the top</td>
+</tr>
+<tr>
+<td><code class="styleguide">u-align-bottom</code></td>
+<td>Vertically align to the bottom</td>
+</tr>
+<tr>
+<td><code class="styleguide">u-align-middle</code></td>
+<td>Vertically align to the middle</td>
+</tr>
+<tr>
+<td><code class="styleguide">u-block</code></td>
+<td>Display as a block</td>
+</tr>
+<tr>
+<td><code class="styleguide">u-inline</code></td>
+<td>Display inline</td>
+</tr>
+<tr>
+<td><code class="styleguide">u-inline-block</code></td>
+<td>Display as an inline-block</td>
+</tr>
+<tr>
+<td><code class="styleguide">u-relative</code></td>
+<td>Positon relative</td>
+</tr>
+<tr>
+<td><code class="styleguide">u-absolute</code></td>
+<td>Positon absolute</td>
+</tr>
+<tr>
+<td><code class="styleguide">u-fixed</code></td>
+<td>Position fixed</td>
+</tr>
+<tr>
+<td><code class="styleguide">u-static</code></td>
+<td>Position static</td>
+</tr>
+<tr>
+<td><code class="styleguide">u-bottom</code></td>
+<td>Position bottom 0</td>
+</tr>
+<tr>
+<td><code class="styleguide">u-left</code></td>
+<td>Positon left 0</td>
+</tr>
+<tr>
+<td><code class="styleguide">u-right</code></td>
+<td>Position right 0</td>
+</tr>
+<tr>
+<td><code class="styleguide">u-top</code></td>
+<td>Position top 0</td>
+</tr>
+<tr>
+<td><code class="styleguide">u-circle</code></td>
+<td>Make element a circle</td>
+</tr>
+<tr>
+<td><code class="styleguide">u-half</code></td>
+<td>Set 50% width</td>
+</tr>
+<tr>
+<td><code class="styleguide">u-full</code></td>
+<td>Set 100% width</td>
+</tr>
+ </table><div class="codeExample">
+  <div class="exampleOutput">
+    <div class="u-table u-full">
+  <div class="u-table-cell u-middle">
+    Table cell vertically aligned in the middle of the parent table.
+  </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-table u-full"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-table-cell u-middle"</span><span class="nt">&gt;</span>
+    Table cell vertically aligned in the middle of the parent table.
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="responsive-images" class="styleguide">Responsive Images</h1>
+<p class="styleguide">Make images respond to their containers.</p><p class="styleguide">By default, the image will never be wider than iteself.</p><div class="codeExample">
+  <div class="exampleOutput">
+    <div>
+  <img src="http://placehold.it/500x250&text=500%20x%20250" class="u-responsive">
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://placehold.it/500x250&amp;text=500%20x%20250"</span> <span class="na">class=</span><span class="s">"u-responsive"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<p class="styleguide">Combine with <code class="styleguide">u-full</code> to make it is always fill the container width.</p><div class="codeExample">
+  <div class="exampleOutput">
+    <div>
+  <img src="http://placehold.it/500x250&text=500%20x%20250" class="u-responsive u-full">
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://placehold.it/500x250&amp;text=500%20x%20250"</span> <span class="na">class=</span><span class="s">"u-responsive u-full"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="space" class="styleguide">Spacing</h1>
+<p class="styleguide">Space utilities are configured for <code class="styleguide">margin</code> and <code class="styleguide">padding</code> and come with size suffixes for <code class="styleguide">n</code>, <code class="styleguide">xs</code>, <code class="styleguide">sm</code>, <code class="styleguide">md</code>, <code class="styleguide">lg</code>, <code class="styleguide">xl</code>.</p><p class="styleguide">The value for these break-points is set in <a class="styleguide" href="variables.html#spacing" title="variables.html#spacing">variables</a>.</p><p class="styleguide">If verbosity is not your thing you can use the shorthand version (in brackets).</p><p class="styleguide">Classes are constructed as: <code class="styleguide">u-{{breakpoint}}-{{type}}-{{direction}}-{{size}}</code><br>
+e.g. <code class="styleguide">u-margin-all-lg</code> or <code class="styleguide">u-sm-padding-vertical-sm</code>.</p><p class="styleguide">Shorthand classes are constructed as <code class="styleguide">u-{{breakpoint}}-{{type}}{{direction}}{{size}}</code><br>
+e.g. <code class="styleguide">u-malg</code> or <code class="styleguide">u-sm-pvsm</code>.</p><p class="styleguide"><strong>Breakpoints</strong></p><ul class="styleguide"><li><code class="styleguide">sm-</code></li>
+<li><code class="styleguide">md-</code></li>
+<li><code class="styleguide">-lg</code></li>
+<li><code class="styleguide">-xl</code></li>
+</ul><p class="styleguide"><strong>Type</strong></p><ul class="styleguide"><li><code class="styleguide">padding-</code> or <code class="styleguide">p</code></li>
+<li><code class="styleguide">margin-</code> or <code class="styleguide">m</code></li>
+</ul><p class="styleguide"><strong>Direction</strong></p><ul class="styleguide"><li><code class="styleguide">top-</code> or <code class="styleguide">t</code></li>
+<li><code class="styleguide">bottom-</code> <code class="styleguide">b</code></li>
+<li><code class="styleguide">vertical-</code> <code class="styleguide">v</code></li>
+<li><code class="styleguide">left-</code> <code class="styleguide">l</code></li>
+<li><code class="styleguide">right-</code> <code class="styleguide">r</code></li>
+<li><code class="styleguide">horizontal-</code> <code class="styleguide">h</code></li>
+<li><code class="styleguide">all-</code> <code class="styleguide">a</code></li>
+</ul><p class="styleguide"><strong>Size</strong></p><ul class="styleguide"><li><code class="styleguide">xs</code></li>
+<li><code class="styleguide">sm</code></li>
+<li><code class="styleguide">md</code></li>
+<li><code class="styleguide">lg</code></li>
+<li><code class="styleguide">xl</code></li>
+</ul><div class="codeExample">
+  <div class="exampleOutput">
+    <div class="u-padding-all-md u-sm-padding-all-lg u-md-padding-all-xl">
+  Content
+</div>
+
+<div class="u-margin-all-md u-sm-margin-all-lg u-md-margin-all-xl">
+  Content
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-padding-all-md u-sm-padding-all-lg u-md-padding-all-xl"</span><span class="nt">&gt;</span>
+  Content
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-margin-all-md u-sm-margin-all-lg u-md-margin-all-xl"</span><span class="nt">&gt;</span>
+  Content
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="vertical-align" class="styleguide">Vertical Align</h1>
+<p class="styleguide">Aligns elements vertically.</p><p class="styleguide">Instantiate with <code class="styleguide">Stencil.verticalAlign()</code>.</p><p class="styleguide">Vertical Align works on all elements with the data attribute &#39;data-valign&#39;.</p><p class="styleguide">You can set the following options using data attribute tags:</p><ul class="styleguide"><li><code class="styleguide">data-valign</code>: Selector for the parent to align to. Default is window.</li>
+<li><code class="styleguide">data-valign-to</code>: Break point to vertically align to. Default is window width.</li>
+<li><code class="styleguide">data-valign-from</code>: Break point to vertically align from. Default is 0.</li>
+<li><code class="styleguide">data-valign-property</code>: Property to manipulate to center. Default is margin-top.</li>
+</ul><div class="codeBlock">
+  <div class="highlight">
+    <pre>&lt;div id="my-id"&gt;
+  &lt;div data-valign="#my-id" data-valign-from="768px"&gt;
+    Content
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  $(window).load(function() {
+    Stencil.verticalAlign();
+  });
+
+  $(window).resize(function() {
+    Stencil.verticalAlign();
+  });
+&lt;/script&gt;</pre>
+  </div>
+</div>        </div>
+      </div>
+    </div>
+
+    <footer class="hgt-footer">
+      Built using <a href="https://github.com/trulia/hologram">Hologram</a> and <a href="https://github.com/wearecube/hologram-github-theme">Hologram Github Theme</a>
+    </footer>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="scripts/vendor/jquery.waypoints.min.js"></script>
+  <script src="scripts/vendor/sticky.min.js"></script>
+  <script src="scripts/vendor/infinite.min.js"></script>
+  <script src="scripts/hgt.js"></script>
+
+  
+
+  
+</body>
+</html>

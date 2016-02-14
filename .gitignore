@@ -1,0 +1,11 @@
+# Ignore annoying files
+*.DS_Store
+*.swo
+*.swp
+
+# Ignore NPM files
+node_modules
+npm-debug.log
+
+# Ignore sass cache
+.sass-cache/
