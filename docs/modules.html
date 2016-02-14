@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Modules &ndash; Stencil</title>
+
+    <!-- Styleguide CSS -->
+    <link rel="stylesheet" href="styles/hgt-syntax.css">
+    <link rel="stylesheet" href="styles/hgt.css">
+
+    <!-- Source CSS -->
+    
+      
+        <link rel="stylesheet" href="dist/stencil.css">
+      
+    
+</head>
+
+  <body class="hgt-body">
+    <div class="hgt-pagehead">
+      <div class="hgt-container">
+        <nav class="hgt-pagehead-nav" role="navigation">
+          <a href="index.html"
+             class="hgt-pagehead-nav-item ">
+            Home
+          </a>
+
+          
+          <a href="mixins.html"
+             class="hgt-pagehead-nav-item ">
+            Mixins
+          </a>
+          
+          <a href="type.html"
+             class="hgt-pagehead-nav-item ">
+            Type
+          </a>
+          
+          <a href="utilities.html"
+             class="hgt-pagehead-nav-item ">
+            Utilities
+          </a>
+          
+          <a href="variables.html"
+             class="hgt-pagehead-nav-item ">
+            Variables
+          </a>
+          
+          <a href="modules.html"
+             class="hgt-pagehead-nav-item selected">
+            Modules
+          </a>
+          
+          <a href="index.html"
+             class="hgt-pagehead-nav-item ">
+            
+          </a>
+          
+        </nav>
+
+        <h1 class="hgt-pagehead-title">Stencil</h1>
+      </div>
+    </div>
+
+    <div class="hgt-styleguide hgt-container">
+      <div class="hgt-columns">
+        
+          <div class="hgt-column one-fourth">
+            <nav class="hgt-menu">
+              
+                
+                  <a href="#footer" class="hgt-menu-item">Footer</a>
+                
+              
+                
+                  <a href="#loader" class="hgt-menu-item">Loader</a>
+                
+              
+                
+                  <a href="#nav" class="hgt-menu-item">Nav</a>
+                
+              
+                
+                  <a href="#overlay" class="hgt-menu-item">Overlay</a>
+                
+              
+                
+              
+            </nav>
+          </div>
+        
+
+        <div class="hgt-column three-fourths">
+          <div class="hgt-content">
+<h1 id="footer" class="styleguide">Footer</h1>
+<p class="styleguide">Footer which sticks to the bottom of the page.</p><div class="codeBlock">
+  <div class="highlight">
+    <pre>`@include footer;</pre>
+  </div>
+</div><div class="codeBlock">
+  <div class="highlight">
+    <pre>&lt;body&gt;
+  &lt;div class="wrapper"&gt;
+    Page Content
+  &lt;/div&gt;
+  &lt;div class="footer"&gt;
+    &lt;div class="u-tac"&gt;Footer&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;</pre>
+  </div>
+</div>
+<h1 id="loader" class="styleguide">Loader</h1>
+<p class="styleguide">The <code class="styleguide">preload</code> class shows the loader and prevents animations and transitions from occuring.</p><p class="styleguide">The <code class="styleguide">loader</code> class is a full screen takeover.</p><div class="codeBlock">
+  <div class="highlight">
+    <pre>@include loader;</pre>
+  </div>
+</div><div class="codeExample">
+  <div class="exampleOutput">
+      <div class="loader"></div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"loader"</span><span class="nt">&gt;&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<p class="styleguide">The <code class="styleguide">preload</code> class should be removed when the page loads.</p><div class="codeBlock">
+  <div class="highlight">
+    <pre>&lt;body class="preload"&gt;
+  &lt;div class="loader"&gt;&lt;/div&gt;
+&lt;/body&gt;
+
+&lt;script&gt;
+  $(window).load(function() {
+    $("body").removeClass("preload");
+  });
+&lt;/script&gt;</pre>
+  </div>
+</div>
+<h1 id="nav" class="styleguide">Nav</h1>
+<p class="styleguide">Navigation Menu which is presented as an overlay on mobile and then in the header on small screens and up.</p><div class="codeBlock">
+  <div class="highlight">
+    <pre>@include nav;</pre>
+  </div>
+</div><div class="codeBlock">
+  <div class="highlight">
+    <pre>&lt;div class="nav-overlay collapse" id="nav-overlay" data-toggle="collapse" data-target="#nav-menu, #nav-overlay"&gt;&lt;/div&gt;
+&lt;div class="container-fluid"&gt;
+  &lt;div class="nav row" id="nav"&gt;
+    &lt;div class="nav-brand col-xs-9 col-sm-5"&gt;
+      &lt;a href="/" itemprop="url" class="nav-logo"&gt;
+        &lt;img src="http://placehold.it/500x250&amp;text=Logo" alt="CompanyName" itemprop="logo"&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;div class="nav-menu-toggle col-xs-3 visible-xs"&gt;
+      &lt;a href="#" class="nav-menu-toggle-control" data-toggle="collapse" data-target="#nav-menu, #nav-overlay"&gt;Menu&lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;div class="nav-menu col-sm-7 collapse" id="nav-menu"&gt;
+      &lt;ul class="nav-menu-items"&gt;
+        &lt;li class="nav-menu-item col-xs-12"&gt;&lt;a href="/page.html"&gt;Page&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="nav-menu-item col-xs-12"&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="nav-menu-item nav-menu-item-right col-xs-12"&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+  </div>
+</div>
+<h1 id="overlay" class="styleguide">Overlay</h1>
+
+<ul class="section-nav">
+  <li><a href="#overlay-collapse">Collapsible</a></li>
+</ul>
+<p class="styleguide">The <code class="styleguide">preload</code> class creates a fixed element that takes over the screen.</p><div class="codeExample">
+  <div class="exampleOutput">
+    @include overlay;
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre>@include overlay;</pre>
+    </div>
+  </div>
+</div>
+<div class="codeBlock">
+  <div class="highlight">
+    <pre>&lt;div class="overlay"&gt;&lt;/div&gt;</pre>
+  </div>
+</div>
+<h2 id="overlay-collapse" class="styleguide">Collapsible</h2>
+<p class="styleguide">You can make an overlay compatible with Bootstrap collapse by adding the <code class="styleguide">is-collapsible</code> class.</p><div class="codeBlock">
+  <div class="highlight">
+    <pre>&lt;div id="my-overlay" class="overlay is-collapsible"&gt;&lt;/div&gt;
+&lt;a href="#" data-toggle="collapse" data-target="#my-overlay"&gt;Toggle Overlay&lt;/a&gt;</pre>
+  </div>
+</div>        </div>
+      </div>
+    </div>
+
+    <footer class="hgt-footer">
+      Built using <a href="https://github.com/trulia/hologram">Hologram</a> and <a href="https://github.com/wearecube/hologram-github-theme">Hologram Github Theme</a>
+    </footer>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="scripts/vendor/jquery.waypoints.min.js"></script>
+  <script src="scripts/vendor/sticky.min.js"></script>
+  <script src="scripts/vendor/infinite.min.js"></script>
+  <script src="scripts/hgt.js"></script>
+
+  
+
+  
+</body>
+</html>

@@ -1160,3 +1160,316 @@ The value for these break-points is set in [screen sizes][1-screen-sizes].
 @include xl {
   @include text-setup("-xl");
 }
+
+/*doc
+---
+title: Nav
+name: nav
+category: Modules
+---
+
+Navigation Menu which is presented as an overlay on mobile and then in the header on small screens and up.
+
+```markup_example_template
+@include nav;
+```
+
+```markup_example_template
+<div class="nav-overlay collapse" id="nav-overlay" data-toggle="collapse" data-target="#nav-menu, #nav-overlay"></div>
+<div class="container-fluid">
+  <div class="nav row" id="nav">
+    <div class="nav-brand col-xs-9 col-sm-5">
+      <a href="/" itemprop="url" class="nav-logo">
+        <img src="http://placehold.it/500x250&text=Logo" alt="CompanyName" itemprop="logo">
+      </a>
+    </div>
+
+    <div class="nav-menu-toggle col-xs-3 visible-xs">
+      <a href="#" class="nav-menu-toggle-control" data-toggle="collapse" data-target="#nav-menu, #nav-overlay">Menu</a>
+    </div>
+
+    <div class="nav-menu col-sm-7 collapse" id="nav-menu">
+      <ul class="nav-menu-items">
+        <li class="nav-menu-item col-xs-12"><a href="/page.html">Page</a></li>
+        <li class="nav-menu-item col-xs-12"><a href="#">Link</a></li>
+        <li class="nav-menu-item nav-menu-item-right col-xs-12"><a href="#">Link</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+```
+*/
+
+@mixin nav {
+  .nav {
+    height: $nav-height;
+    z-index: 10;
+    position: relative;
+
+    li > a {
+      color: $color-brand;
+      height: $nav-height;
+      line-height: $nav-height;
+      margin: 0;
+      text-decoration: none;
+      padding: 10px 15px;
+
+      @include sm {
+        &.is-active,
+        &:hover {
+          background: $color-brand;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .nav-brand {
+    line-height: $nav-height;
+    position: relative;
+  }
+
+  .nav-logo {
+    &:hover {
+      background: transparent !important;
+    }
+
+    img {
+      display: inline-block;
+      margin-top: -10px;
+      height: 50px;
+      vertical-align: middle;
+      width: auto;
+    }
+  }
+
+  .nav-with-logo {
+    .nav-name {
+      display: block;
+
+      @include sm {
+        display: none;
+      }
+    }
+  }
+
+  .nav-menu {
+    background: white;
+    left: 0;
+    margin-top: $nav-height;
+    position: absolute !important;
+    transition: 0.3s all ease-in-out;
+    top: 0;
+    width: 100%;
+
+    &.collapse {
+      display: none;
+
+      &.in {
+        display: block;
+      }
+    }
+
+    @include sm {
+      background: transparent;
+      display: block;
+      height: $nav-height !important;
+      margin: 0;
+      position: relative;
+      width: auto;
+
+      li > a {
+        .is-active,
+        &:hover {
+          background: $color-brand;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .nav-menu-items {
+    @include sm {
+      text-align: right;
+    }
+  }
+
+  .nav-menu-item {
+    @include sm {
+      display: inline-block;
+      float: none !important;
+      width: auto !important;
+    }
+  }
+}
+
+/*doc
+---
+title: Footer
+name: footer
+category: Modules
+---
+
+Footer which sticks to the bottom of the page.
+
+```markup_example_template
+`@include footer;
+```
+
+```markup_example_template
+<body>
+  <div class="wrapper">
+    Page Content
+  </div>
+  <div class="footer">
+    <div class="u-tac">Footer</div>
+  </div>
+</body>
+```
+*/
+
+@mixin footer {
+  html,
+  body {
+    height: 100%;
+  }
+
+  .wrapper {
+    min-height: 100%;
+    margin-bottom: -$footer-height;
+  }
+
+  .wrapper:after {
+    content: "";
+    display: block;
+  }
+
+  .footer,
+  .wrapper:after {
+    height: $footer-height;
+    width: 100%;
+  }
+
+  .footer-link {
+    display: block;
+    text-align: center;
+
+    @include sm {
+      display: inline-block;
+      margin-right: $space-sm;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+/*doc
+---
+title: Loader
+name: loader
+category: Modules
+---
+
+The `preload` class shows the loader and prevents animations and transitions from occuring.
+
+The `loader` class is a full screen takeover.
+
+```markup_example_template
+@include loader;
+```
+
+```html_example
+  <div class="loader"></div>
+```
+
+The `preload` class should be removed when the page loads.
+
+```markup_example_template
+<body class="preload">
+  <div class="loader"></div>
+</body>
+
+<script>
+  $(window).load(function() {
+    $("body").removeClass("preload");
+  });
+</script>
+```
+*/
+
+
+@mixin loader {
+  body.preload {
+    * {
+      transition: none !important;
+      animation-name: none !important;
+    }
+
+    .loader {
+      visibility: visible;
+    }
+  }
+
+  .loader {
+    background-color: black;
+    transition: visibility 1s 0s;
+    visibility: hidden;
+    z-index: 9999;
+  }
+}
+
+/*doc
+---
+title: Overlay
+name: overlay
+category: Modules
+---
+
+The `preload` class creates a fixed element that takes over the screen.
+
+```html_example
+@include overlay;
+```
+
+```markup_example_template
+<div class="overlay"></div>
+```
+*/
+
+/*doc
+---
+title: Collapsible
+name: overlay-collapse
+parent: overlay
+---
+
+You can make an overlay compatible with Bootstrap collapse by adding the `is-collapsible` class.
+
+```markup_example_template
+<div id="my-overlay" class="overlay is-collapsible"></div>
+<a href="#" data-toggle="collapse" data-target="#my-overlay">Toggle Overlay</a>
+```
+*/
+
+@mixin overlay {
+  .overlay {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: opacity 0.3s ease-in-out;
+
+    &.is-collapsible {
+      &.collapse {
+        display: none;
+
+        &.in {
+          display: block;
+        }
+      }
+    }
+  }
+}
