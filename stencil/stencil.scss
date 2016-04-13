@@ -1050,89 +1050,89 @@ The value for these break-points is set in [screen sizes][1-screen-sizes].
 
 @mixin text-setup($namespace: "") {
   .t#{$namespace}-xxs {
-    font-size: $text-xxs;
+    font-size: $text-xxs !important;
   }
   .t#{$namespace}-xs {
-    font-size: $text-xs;
+    font-size: $text-xs !important;
   }
   .t#{$namespace}-sm {
-    font-size: $text-sm;
+    font-size: $text-sm !important;
   }
   .t#{$namespace}-md {
-    font-size: $text-md;
+    font-size: $text-md !important;
   }
   .t#{$namespace}-lg {
-    font-size: $text-lg;
+    font-size: $text-lg !important;
   }
   .t#{$namespace}-xl {
-    font-size: $text-xl;
+    font-size: $text-xl !important;
   }
   .t#{$namespace}-xxl {
-    font-size: $text-xxl;
+    font-size: $text-xxl !important;
   }
   .t#{$namespace}-lssm,
   .t#{$namespace}-letter-sm {
-    letter-spacing: $letter-sm;
+    letter-spacing: $letter-sm !important;
   }
   .t#{$namespace}-lsmd,
   .t#{$namespace}-letter-md {
-    letter-spacing: $letter-md;
+    letter-spacing: $letter-md !important;
   }
   .t#{$namespace}-lslg,
   .t#{$namespace}-letter-lg {
-    letter-spacing: $letter-lg;
+    letter-spacing: $letter-lg !important;
   }
   .t#{$namespace}-c,
   .t#{$namespace}-text-center {
-    text-align: center;
+    text-align: center !important;
   }
   .t#{$namespace}-al,
   .t#{$namespace}-text-left {
-    text-align: left;
+    text-align: left !important;
   }
   .t#{$namespace}-ar,
   .t#{$namespace}-right {
-    text-align: right;
+    text-align: right !important;
   }
   .t#{$namespace}-u,
   .t#{$namespace}-uppercase {
-    text-transform: uppercase;
+    text-transform: uppercase !important;
   }
   .t#{$namespace}-l,
   .t#{$namespace}-lowercase {
-    text-transform: lowercase;
+    text-transform: lowercase !important;
   }
   .t#{$namespace}-c,
   .t#{$namespace}-capitalize {
-    text-transform: capitalize;
+    text-transform: capitalize !important;
   }
   .t#{$namespace}-u,
   .t#{$namespace}-underline {
-    text-decoration: underline;
+    text-decoration: underline !important;
   }
   .t#{$namespace}-n,
   .t#{$namespace}-none {
-    text-decoration: none;
+    text-decoration: none !important;
   }
   .t#{$namespace}-lxs,
   .t#{$namespace}-line-xs {
-    line-height: $line-xs;
+    line-height: $line-xs !important;
   }
   .t#{$namespace}-lsm,
   .t#{$namespace}-line-sm {
-    line-height: $line-sm;
+    line-height: $line-sm !important;
   }
   .t#{$namespace}-lmd,
   .t#{$namespace}-line-md {
-    line-height: $line-md;
+    line-height: $line-md !important;
   }
   .t#{$namespace}-llg,
   .t#{$namespace}-line-lg {
-    line-height: $line-lg;
+    line-height: $line-lg !important;
   }
   .t#{$namespace}-lxl,
   .t#{$namespace}-line-xl {
-    line-height: $line-xl;
+    line-height: $line-xl !important;
   }
   .t#{$namespace}-h,
   .t#{$namespace}-hyphenate {
