@@ -706,7 +706,7 @@ e.g. `u-malg` or `u-sm-pvsm`.
   .u#{$namespace}-margin-all-xs {
     margin-right: $space-xs !important;
   }
-  .u#{$namespace}-marsm,
+  .u#{$namespace}-mrsm,
   .u#{$namespace}-margin-right-sm,
   .u#{$namespace}-mhsm,
   .u#{$namespace}-margin-horizontal-sm,
@@ -1184,11 +1184,15 @@ Navigation Menu which is presented as an overlay on mobile and then in the heade
       </a>
     </div>
 
-    <div class="nav-menu-toggle col-xs-3 visible-xs">
-      <a href="#" class="nav-menu-toggle-control" data-toggle="collapse" data-target="#nav-menu, #nav-overlay">Menu</a>
+    <div class="pull-right visible-xs">
+      <ul>
+        <li class="nav-menu-item">
+          <a href="#" data-toggle="collapse" data-target="#nav-menu, #nav-overlay">Menu</a>
+        </li>
+      </ul>
     </div>
 
-    <div class="nav-menu col-sm-7 collapse" id="nav-menu">
+    <div class="nav-menu col-sm-12 collapse" id="nav-menu">
       <ul class="nav-menu-items">
         <li class="nav-menu-item col-xs-12"><a href="/page.html">Page</a></li>
         <li class="nav-menu-item col-xs-12"><a href="#">Link</a></li>
@@ -1245,20 +1249,20 @@ Navigation Menu which is presented as an overlay on mobile and then in the heade
 
   .nav-with-logo {
     .nav-name {
-      display: block;
+      display: none;
 
       @include sm {
-        display: none;
+        display: block;
       }
     }
   }
 
   .nav-menu {
     background: white;
+    transition: 0.3s all ease-in-out;
     left: 0;
     margin-top: $nav-height;
     position: absolute !important;
-    transition: 0.3s all ease-in-out;
     top: 0;
     width: 100%;
 
@@ -1272,10 +1276,10 @@ Navigation Menu which is presented as an overlay on mobile and then in the heade
 
     @include sm {
       background: transparent;
-      display: block;
+      display: block !important;
       height: $nav-height !important;
       margin: 0;
-      position: relative;
+      transition: none;
       width: auto;
 
       li > a {
@@ -1295,8 +1299,9 @@ Navigation Menu which is presented as an overlay on mobile and then in the heade
   }
 
   .nav-menu-item {
+    display: inline-block;
+
     @include sm {
-      display: inline-block;
       float: none !important;
       width: auto !important;
     }
