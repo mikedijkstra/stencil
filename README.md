@@ -2,7 +2,7 @@
 
 A selection of custom mixins and utilities to help you get started building a new website or web application fast.
 
-[View full documentation](http://dijkstra.io/stencil/docs)
+[View full documentation](http://micdijkstra.github.io/stencil/docs)
 
 ## Getting Started
 
