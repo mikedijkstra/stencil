@@ -483,6 +483,9 @@ category: Utilities
   .u#{$namespace}-full {
     width: 100% !important;
   }
+  .u#{$namespace}-tall {
+    height: 100% !important;
+  }
 }
 
 /*doc
@@ -1082,12 +1085,12 @@ The value for these break-points is set in [screen sizes][1-screen-sizes].
   .t#{$namespace}-letter-lg {
     letter-spacing: $letter-lg !important;
   }
-  .t#{$namespace}-c,
-  .t#{$namespace}-text-center {
+  .t#{$namespace}-ac,
+  .t#{$namespace}-center {
     text-align: center !important;
   }
   .t#{$namespace}-al,
-  .t#{$namespace}-text-left {
+  .t#{$namespace}-left {
     text-align: left !important;
   }
   .t#{$namespace}-ar,
