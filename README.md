@@ -1,6 +1,6 @@
 # Stencil
 
-A selection of custom mixins and utilities to help you get started building a new website or web application fast.
+A selection of Sass and JavaScript custom mixins and utilities to help you get started building a new website or web application fast.
 
 [View full documentation](http://micdijkstra.github.io/stencil/docs)
 
