@@ -15,7 +15,7 @@ global_title: Stencil
 
 # The CSS files to be included in the styleguide
 css_include:
-  - 'build/stencil.css'
+  - '../build/stencil.css'
 
 # To output navigation for top level sections, set the value to
 # 'section'. To output navigation for sub-sections, set the value to `all`

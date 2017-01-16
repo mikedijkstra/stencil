@@ -12,7 +12,7 @@
     <!-- Source CSS -->
     
       
-        <link rel="stylesheet" href="build/stencil.css">
+        <link rel="stylesheet" href="../build/stencil.css">
       
     
 </head>
@@ -27,9 +27,9 @@
           </a>
 
           
-          <a href="mixins.html"
+          <a href="media_queries.html"
              class="hgt-pagehead-nav-item ">
-            Mixins
+            Media Queries
           </a>
           
           <a href="type.html"
@@ -37,19 +37,14 @@
             Type
           </a>
           
-          <a href="utilities.html"
-             class="hgt-pagehead-nav-item ">
-            Utilities
-          </a>
-          
           <a href="variables.html"
              class="hgt-pagehead-nav-item selected">
             Variables
           </a>
           
-          <a href="modules.html"
+          <a href="extras.html"
              class="hgt-pagehead-nav-item ">
-            Modules
+            Extras
           </a>
           
           <a href="index.html"
@@ -74,23 +69,19 @@
                 
               
                 
-                  <a href="#1-screen-sizes" class="hgt-menu-item">Screen Sizes</a>
+                  <a href="#1-borders" class="hgt-menu-item">Borders</a>
                 
               
                 
-                  <a href="#letter-spacing" class="hgt-menu-item">Letter Spacing</a>
+                  <a href="#4-text-sizes" class="hgt-menu-item">Text Sizes</a>
                 
               
                 
-                  <a href="#line-heights" class="hgt-menu-item">Line Height</a>
+                  <a href="#5-line-heights" class="hgt-menu-item">Line Height</a>
                 
               
                 
-                  <a href="#spacing" class="hgt-menu-item">Spacing</a>
-                
-              
-                
-                  <a href="#text-sizes" class="hgt-menu-item">Text Sizes</a>
+                  <a href="#7-spacing" class="hgt-menu-item">Spacing</a>
                 
               
             </nav>
@@ -101,59 +92,91 @@
           <div class="hgt-content">
 <h1 id="0-variables-overview" class="styleguide">Overview</h1>
 <p class="styleguide">Variables can be overridden by being set before including the <code class="styleguide">_variables</code> partial.</p>
-<h1 id="1-screen-sizes" class="styleguide">Screen Sizes</h1>
-<p class="styleguide">Set break points which are used in break point mixins, utilities, text and the Bootstrap grid and visibility helpers.</p><table class="styleguide"> <tr>
-<th>Variable</th>
-<th>Default</th>
-</tr>
- <tr>
-<td><code class="styleguide">$screen-xxs-min</code></td>
-<td>375px</td>
-</tr>
-<tr>
-<td><code class="styleguide">$screen-xs-min</code></td>
-<td>480px</td>
-</tr>
-<tr>
-<td><code class="styleguide">$screen-sm-min</code></td>
-<td>768px</td>
-</tr>
-<tr>
-<td><code class="styleguide">$screen-md-min</code></td>
-<td>1024px</td>
-</tr>
-<tr>
-<td><code class="styleguide">$screen-lg-min</code></td>
-<td>1280px</td>
-</tr>
-<tr>
-<td><code class="styleguide">$screen-x-minl</code></td>
-<td>1500px</td>
-</tr>
-<tr>
-<td><code class="styleguide">$screen-xxl-min</code></td>
-<td>1800px</td>
-</tr>
- </table>
-<h1 id="letter-spacing" class="styleguide">Letter Spacing</h1>
+<h1 id="1-borders" class="styleguide">Borders</h1>
 <table class="styleguide"> <tr>
 <th>Variable</th>
 <th>Default</th>
 </tr>
  <tr>
-<td><code class="styleguide">$letter-sm</code></td>
-<td>0.05em</td>
+<td><code class="styleguide">$border-xs</code></td>
+<td>1px</td>
 </tr>
 <tr>
-<td><code class="styleguide">$letter-md</code></td>
-<td>0.1em</td>
+<td><code class="styleguide">$border-sm</code></td>
+<td>3px</td>
 </tr>
 <tr>
-<td><code class="styleguide">$letter-lg</code></td>
-<td>0.3em</td>
+<td><code class="styleguide">$border-md</code></td>
+<td>6px</td>
+</tr>
+<tr>
+<td><code class="styleguide">$border-lg</code></td>
+<td>12px</td>
 </tr>
  </table>
-<h1 id="line-heights" class="styleguide">Line Height</h1>
+<h1 id="4-text-sizes" class="styleguide">Text Sizes</h1>
+<table class="styleguide"> <tr>
+<th>Variable</th>
+<th>Default</th>
+</tr>
+ <tr>
+<td><code class="styleguide">$text-xxs</code></td>
+<td>11px</td>
+</tr>
+<tr>
+<td><code class="styleguide">$text-xs</code></td>
+<td>13px</td>
+</tr>
+<tr>
+<td><code class="styleguide">$text-sm</code></td>
+<td>18px</td>
+</tr>
+<tr>
+<td><code class="styleguide">$text-md</code></td>
+<td>25px</td>
+</tr>
+<tr>
+<td><code class="styleguide">$text-lg</code></td>
+<td>40px</td>
+</tr>
+<tr>
+<td><code class="styleguide">$text-xl</code></td>
+<td>60px</td>
+</tr>
+<tr>
+<td><code class="styleguide">$text-xxl</code></td>
+<td>100px</td>
+</tr>
+<tr>
+<td><code class="styleguide">$sm-text-xxs</code></td>
+<td>11px</td>
+</tr>
+<tr>
+<td><code class="styleguide">$sm-text-xs</code></td>
+<td>13px</td>
+</tr>
+<tr>
+<td><code class="styleguide">$sm-text-sm</code></td>
+<td>18px</td>
+</tr>
+<tr>
+<td><code class="styleguide">$sm-text-md</code></td>
+<td>25px</td>
+</tr>
+<tr>
+<td><code class="styleguide">$sm-text-lg</code></td>
+<td>40px</td>
+</tr>
+<tr>
+<td><code class="styleguide">$sm-text-xl</code></td>
+<td>60px</td>
+</tr>
+<tr>
+<td><code class="styleguide">$sm-text-xxl</code></td>
+<td>100px</td>
+</tr>
+ </table>
+<h1 id="5-line-heights" class="styleguide">Line Height</h1>
 <table class="styleguide"> <tr>
 <th>Variable</th>
 <th>Default</th>
@@ -215,7 +238,7 @@
 <td>1.0</td>
 </tr>
  </table>
-<h1 id="spacing" class="styleguide">Spacing</h1>
+<h1 id="7-spacing" class="styleguide">Spacing</h1>
 <table class="styleguide"> <tr>
 <th>Variable</th>
 <th>Default</th>
@@ -238,68 +261,6 @@
 </tr>
 <tr>
 <td><code class="styleguide">$space-xl</code></td>
-<td>100px</td>
-</tr>
- </table>
-<h1 id="text-sizes" class="styleguide">Text Sizes</h1>
-<table class="styleguide"> <tr>
-<th>Variable</th>
-<th>Default</th>
-</tr>
- <tr>
-<td><code class="styleguide">$text-xxs</code></td>
-<td>11px</td>
-</tr>
-<tr>
-<td><code class="styleguide">$text-xs</code></td>
-<td>13px</td>
-</tr>
-<tr>
-<td><code class="styleguide">$text-sm</code></td>
-<td>18px</td>
-</tr>
-<tr>
-<td><code class="styleguide">$text-md</code></td>
-<td>25px</td>
-</tr>
-<tr>
-<td><code class="styleguide">$text-lg</code></td>
-<td>40px</td>
-</tr>
-<tr>
-<td><code class="styleguide">$text-xl</code></td>
-<td>60px</td>
-</tr>
-<tr>
-<td><code class="styleguide">$text-xxl</code></td>
-<td>100px</td>
-</tr>
-<tr>
-<td><code class="styleguide">$sm-text-xxs</code></td>
-<td>11px</td>
-</tr>
-<tr>
-<td><code class="styleguide">$sm-text-xs</code></td>
-<td>13px</td>
-</tr>
-<tr>
-<td><code class="styleguide">$sm-text-sm</code></td>
-<td>18px</td>
-</tr>
-<tr>
-<td><code class="styleguide">$sm-text-md</code></td>
-<td>25px</td>
-</tr>
-<tr>
-<td><code class="styleguide">$sm-text-lg</code></td>
-<td>40px</td>
-</tr>
-<tr>
-<td><code class="styleguide">$sm-text-xl</code></td>
-<td>60px</td>
-</tr>
-<tr>
-<td><code class="styleguide">$sm-text-xxl</code></td>
 <td>100px</td>
 </tr>
  </table>        </div>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Mixins &ndash; Stencil</title>
+    <title>Media Queries &ndash; Stencil</title>
 
     <!-- Styleguide CSS -->
     <link rel="stylesheet" href="styles/hgt-syntax.css">
@@ -27,19 +27,14 @@
           </a>
 
           
-          <a href="mixins.html"
+          <a href="media_queries.html"
              class="hgt-pagehead-nav-item selected">
-            Mixins
+            Media Queries
           </a>
           
           <a href="type.html"
              class="hgt-pagehead-nav-item ">
             Type
-          </a>
-          
-          <a href="variables.html"
-             class="hgt-pagehead-nav-item ">
-            Variables
           </a>
           
           <a href="extras.html"
@@ -68,10 +63,6 @@
                   <a href="#0-mixins-overview" class="hgt-menu-item">Overview</a>
                 
               
-                
-                  <a href="#1-media-queries" class="hgt-menu-item">Media Queries</a>
-                
-              
             </nav>
           </div>
         
@@ -79,9 +70,39 @@
         <div class="hgt-column three-fourths">
           <div class="hgt-content">
 <h1 id="0-mixins-overview" class="styleguide">Overview</h1>
-<p class="styleguide">Mixins should be used when the output of the included CSS changes or you need to repeat the same group of declarations.</p>
-<h1 id="1-media-queries" class="styleguide">Media Queries</h1>
-<p class="styleguide"><strong>Width</strong></p><p class="styleguide">You should implement a mobile first approach so you use <code class="styleguide">from</code> over <code class="styleguide">to</code>.</p><ul class="styleguide"><li><code class="styleguide">@from($device-width)</code></li>
+<p class="styleguide">Set break points which are used in break point mixins, text and the Bootstrap grid and visibility helpers.</p><table class="styleguide"> <tr>
+<th>Variable</th>
+<th>Default</th>
+</tr>
+ <tr>
+<td><code class="styleguide">$screen-xxs-min</code></td>
+<td>375px</td>
+</tr>
+<tr>
+<td><code class="styleguide">$screen-xs-min</code></td>
+<td>480px</td>
+</tr>
+<tr>
+<td><code class="styleguide">$screen-sm-min</code></td>
+<td>768px</td>
+</tr>
+<tr>
+<td><code class="styleguide">$screen-md-min</code></td>
+<td>1024px</td>
+</tr>
+<tr>
+<td><code class="styleguide">$screen-lg-min</code></td>
+<td>1280px</td>
+</tr>
+<tr>
+<td><code class="styleguide">$screen-x-minl</code></td>
+<td>1500px</td>
+</tr>
+<tr>
+<td><code class="styleguide">$screen-xxl-min</code></td>
+<td>1800px</td>
+</tr>
+ </table><p class="styleguide"><strong>Width</strong></p><p class="styleguide">You should implement a mobile first approach so you use <code class="styleguide">from</code> over <code class="styleguide">to</code> when possible.</p><ul class="styleguide"><li><code class="styleguide">@from($device-width)</code></li>
 <li><code class="styleguide">@to($device-width)</code></li>
 </ul><p class="styleguide">The following shorthand mixins have been created for your convenience.</p><table class="styleguide"> <tr>
 <th>Mixin</th>
@@ -107,7 +128,7 @@
 <td><code class="styleguide">@include xl {}</code></td>
 <td>Extra large screen size and up</td>
 </tr>
- </table><p class="styleguide">The value for these break-points is set in [variables][screen-sizes].</p><p class="styleguide"><strong>Height</strong></p><ul class="styleguide"><li><code class="styleguide">@from-height($device-height)</code></li>
+ </table><p class="styleguide"><strong>Height</strong></p><ul class="styleguide"><li><code class="styleguide">@from-height($device-height)</code></li>
 <li><code class="styleguide">@to-height($device-height)</code></li>
 </ul>        </div>
       </div>

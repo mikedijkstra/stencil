@@ -12,7 +12,7 @@
     <!-- Source CSS -->
     
       
-        <link rel="stylesheet" href="build/stencil.css">
+        <link rel="stylesheet" href="../build/stencil.css">
       
     
 </head>
@@ -27,9 +27,9 @@
           </a>
 
           
-          <a href="mixins.html"
+          <a href="media_queries.html"
              class="hgt-pagehead-nav-item ">
-            Mixins
+            Media Queries
           </a>
           
           <a href="type.html"
@@ -37,19 +37,9 @@
             Type
           </a>
           
-          <a href="utilities.html"
+          <a href="extras.html"
              class="hgt-pagehead-nav-item ">
-            Utilities
-          </a>
-          
-          <a href="variables.html"
-             class="hgt-pagehead-nav-item ">
-            Variables
-          </a>
-          
-          <a href="modules.html"
-             class="hgt-pagehead-nav-item ">
-            Modules
+            Extras
           </a>
           
           <a href="index.html"
@@ -74,7 +64,31 @@
                 
               
                 
-                  <a href="#0-t-sizes" class="hgt-menu-item">Size</a>
+                  <a href="#1-text-sizes" class="hgt-menu-item">Text Sizes</a>
+                
+              
+                
+                  <a href="#2-line-heights" class="hgt-menu-item">Line Height</a>
+                
+              
+                
+                  <a href="#3-spacing" class="hgt-menu-item">Spacing</a>
+                
+              
+                
+                  <a href="#4-t-sizes" class="hgt-menu-item">Size</a>
+                
+              
+                
+                  <a href="#5-body-type" class="hgt-menu-item">Body</a>
+                
+              
+                
+                  <a href="#6-typeset" class="hgt-menu-item">Typeset</a>
+                
+              
+                
+                  <a href="#7-reading" class="hgt-menu-item">Reading</a>
                 
               
             </nav>
@@ -84,114 +98,358 @@
         <div class="hgt-column three-fourths">
           <div class="hgt-content">
 <h1 id="0-t-overview" class="styleguide">Type</h1>
-<p class="styleguide">All type helpers are prefixed by <code class="styleguide">t-</code>.</p><p class="styleguide">Type is responsive and the break-point is <code class="styleguide">sm</code> which is set in <a class="styleguide" href="variables.html#1-screen-sizes" title="variables.html#1-screen-sizes">screen sizes</a>.</p>
-<h1 id="0-t-sizes" class="styleguide">Size</h1>
+<p class="styleguide">All type helpers are prefixed by <code class="styleguide">t-</code>.</p><p class="styleguide">Type is responsive and the break-point is <code class="styleguide">sm</code>.</p>
+<h1 id="1-text-sizes" class="styleguide">Text Sizes</h1>
 <table class="styleguide"> <tr>
-<th>Class</th>
-<th>Size</th>
+<th>Variable</th>
+<th>Default</th>
 </tr>
  <tr>
-<td><code class="styleguide">t-xxs</code></td>
-<td><a class="styleguide" href="variables.html#text-sizes" title="variables.html#text-sizes">$text-xxs</a></td>
+<td><code class="styleguide">$text-xxs</code></td>
+<td>11px</td>
 </tr>
 <tr>
-<td><code class="styleguide">t-xs</code></td>
-<td><a class="styleguide" href="variables.html#text-sizes" title="variables.html#text-sizes">$text-xs</a></td>
+<td><code class="styleguide">$text-xs</code></td>
+<td>13px</td>
 </tr>
 <tr>
-<td><code class="styleguide">t-sm</code></td>
-<td><a class="styleguide" href="variables.html#text-sizes" title="variables.html#text-sizes">$text-sm</a></td>
+<td><code class="styleguide">$text-sm</code></td>
+<td>18px</td>
 </tr>
 <tr>
-<td><code class="styleguide">t-md</code></td>
-<td><a class="styleguide" href="variables.html#text-sizes" title="variables.html#text-sizes">$text-md</a></td>
+<td><code class="styleguide">$text-md</code></td>
+<td>25px</td>
 </tr>
 <tr>
-<td><code class="styleguide">t-lg</code></td>
-<td><a class="styleguide" href="variables.html#text-sizes" title="variables.html#text-sizes">$text-lg</a></td>
+<td><code class="styleguide">$text-lg</code></td>
+<td>40px</td>
 </tr>
 <tr>
-<td><code class="styleguide">t-xl</code></td>
-<td><a class="styleguide" href="variables.html#text-sizes" title="variables.html#text-sizes">$text-xl</a></td>
+<td><code class="styleguide">$text-xl</code></td>
+<td>60px</td>
 </tr>
 <tr>
-<td><code class="styleguide">t-xxl</code></td>
-<td><a class="styleguide" href="variables.html#text-sizes" title="variables.html#text-sizes">$text-xxl</a></td>
+<td><code class="styleguide">$text-xxl</code></td>
+<td>100px</td>
 </tr>
- </table><div class="codeExample">
+ </table><table class="styleguide"> <tr>
+<th>Variable</th>
+<th>Default</th>
+</tr>
+ <tr>
+<td><code class="styleguide">$sm-text-xxs</code></td>
+<td>11px</td>
+</tr>
+<tr>
+<td><code class="styleguide">$sm-text-xs</code></td>
+<td>13px</td>
+</tr>
+<tr>
+<td><code class="styleguide">$sm-text-sm</code></td>
+<td>18px</td>
+</tr>
+<tr>
+<td><code class="styleguide">$sm-text-md</code></td>
+<td>25px</td>
+</tr>
+<tr>
+<td><code class="styleguide">$sm-text-lg</code></td>
+<td>40px</td>
+</tr>
+<tr>
+<td><code class="styleguide">$sm-text-xl</code></td>
+<td>60px</td>
+</tr>
+<tr>
+<td><code class="styleguide">$sm-text-xxl</code></td>
+<td>100px</td>
+</tr>
+ </table>
+<h1 id="2-line-heights" class="styleguide">Line Height</h1>
+<table class="styleguide"> <tr>
+<th>Variable</th>
+<th>Default</th>
+</tr>
+ <tr>
+<td><code class="styleguide">$text-line-xxs</code></td>
+<td>1.9</td>
+</tr>
+<tr>
+<td><code class="styleguide">$text-line-xs</code></td>
+<td>1.9</td>
+</tr>
+<tr>
+<td><code class="styleguide">$text-line-sm</code></td>
+<td>1.5</td>
+</tr>
+<tr>
+<td><code class="styleguide">$text-line-md</code></td>
+<td>1.5</td>
+</tr>
+<tr>
+<td><code class="styleguide">$text-line-lg</code></td>
+<td>1.2</td>
+</tr>
+<tr>
+<td><code class="styleguide">$text-line-xl</code></td>
+<td>1.0</td>
+</tr>
+<tr>
+<td><code class="styleguide">$text-line-xxl</code></td>
+<td>1.0</td>
+</tr>
+ </table><table class="styleguide"> <tr>
+<th>Variable</th>
+<th>Default</th>
+</tr>
+ <tr>
+<td><code class="styleguide">$sm-text-line-xxs</code></td>
+<td>1.9</td>
+</tr>
+<tr>
+<td><code class="styleguide">$sm-text-line-xs</code></td>
+<td>1.9</td>
+</tr>
+<tr>
+<td><code class="styleguide">$sm-text-line-sm</code></td>
+<td>1.5</td>
+</tr>
+<tr>
+<td><code class="styleguide">$sm-text-line-md</code></td>
+<td>1.5</td>
+</tr>
+<tr>
+<td><code class="styleguide">$sm-text-line-lg</code></td>
+<td>1.5</td>
+</tr>
+<tr>
+<td><code class="styleguide">$sm-text-line-xl</code></td>
+<td>1.2</td>
+</tr>
+<tr>
+<td><code class="styleguide">$sm-text-line-xxl</code></td>
+<td>1.0</td>
+</tr>
+ </table>
+<h1 id="3-spacing" class="styleguide">Spacing</h1>
+<table class="styleguide"> <tr>
+<th>Variable</th>
+<th>Default</th>
+</tr>
+ <tr>
+<td><code class="styleguide">$space-xs</code></td>
+<td>10px</td>
+</tr>
+<tr>
+<td><code class="styleguide">$space-sm</code></td>
+<td>15px</td>
+</tr>
+<tr>
+<td><code class="styleguide">$space-md</code></td>
+<td>30px</td>
+</tr>
+<tr>
+<td><code class="styleguide">$space-lg</code></td>
+<td>60px</td>
+</tr>
+<tr>
+<td><code class="styleguide">$space-xl</code></td>
+<td>100px</td>
+</tr>
+ </table>
+<h1 id="4-t-sizes" class="styleguide">Size</h1>
+<p class="styleguide">The type is responsive and a combination of type size and line-height.</p><p class="styleguide">Each mixin relates to the correcsponding size variable.</p><p class="styleguide">e.g. <code class="styleguide">@include t-xxs</code>.</p>
+<h1 id="5-body-type" class="styleguide">Body</h1>
+<div class="codeExample">
   <div class="exampleOutput">
-    <div class="t-xxs">Extra Extra Small</div>
+    <div>
+  Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipiscing <b>elit</b>, sed do eiusmod tempor <em>incididunt</em> ut <i>labore</i> et dolore magna aliqua.<br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id <a href="#">est laborum</a>.
+</div>
 
   </div>
   <div class="codeBlock">
     <div class="highlight">
-      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"t-xxs"</span><span class="nt">&gt;</span>Extra Extra Small<span class="nt">&lt;/div&gt;</span></pre>
+      <pre><span class="nt">&lt;div&gt;</span>
+  Lorem ipsum dolor sit amet, <span class="nt">&lt;strong&gt;</span>consectetur<span class="nt">&lt;/strong&gt;</span> adipiscing <span class="nt">&lt;b&gt;</span>elit<span class="nt">&lt;/b&gt;</span>, sed do eiusmod tempor <span class="nt">&lt;em&gt;</span>incididunt<span class="nt">&lt;/em&gt;</span> ut <span class="nt">&lt;i&gt;</span>labore<span class="nt">&lt;/i&gt;</span> et dolore magna aliqua.<span class="nt">&lt;br&gt;</span>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>est laborum<span class="nt">&lt;/a&gt;</span>.
+<span class="nt">&lt;/div&gt;</span></pre>
     </div>
   </div>
 </div>
-<div class="codeExample">
+
+<h1 id="6-typeset" class="styleguide">Typeset</h1>
+<p class="styleguide">Type that has been set.</p><div class="codeExample">
   <div class="exampleOutput">
-    <div class="t-xs">Extra Small</div>
+    <div class="t-set">
+  <h1>Heading One</h1>
+
+  <p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+  <h2>Heading Two</h2>
+
+  <p>Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+  <h3>Heading Three</h3>
+
+  <p>Lorem ipsum dolor sit amet, <b>consectetur adipiscing elit</b>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+  <h4>Heading Four</h4>
+
+  <p>Lorem ipsum dolor sit amet, <em>consectetur adipiscing elit</em>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+  <h5>Heading Five</h5>
+
+  <p>Lorem ipsum dolor sit amet, <i>consectetur adipiscing elit</i>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+  <h6>Heading Six</h6>
+
+  <p>Lorem ipsum dolor sit amet, ,<small>consectetur adipiscing elit</small>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+  <ul>
+    <li>Lorem ipsum dolor sit amet</li>
+    <li>Consectetur adipiscing elit</li>
+    <li>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
+  </ul>
+
+  <hr>
+
+  <ol>
+    <li>Lorem ipsum dolor sit amet</li>
+    <li>Consectetur adipiscing elit</li>
+    <li>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
+  </ol>
+</div>
 
   </div>
   <div class="codeBlock">
     <div class="highlight">
-      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"t-xs"</span><span class="nt">&gt;</span>Extra Small<span class="nt">&lt;/div&gt;</span></pre>
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"t-set"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h1&gt;</span>Heading One<span class="nt">&lt;/h1&gt;</span>
+
+  <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>consectetur adipiscing elit<span class="nt">&lt;/a&gt;</span>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum<span class="nt">&lt;/p&gt;</span>
+
+  <span class="nt">&lt;h2&gt;</span>Heading Two<span class="nt">&lt;/h2&gt;</span>
+
+  <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, <span class="nt">&lt;strong&gt;</span>consectetur adipiscing elit<span class="nt">&lt;/strong&gt;</span>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum<span class="nt">&lt;/p&gt;</span>
+
+  <span class="nt">&lt;h3&gt;</span>Heading Three<span class="nt">&lt;/h3&gt;</span>
+
+  <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, <span class="nt">&lt;b&gt;</span>consectetur adipiscing elit<span class="nt">&lt;/b&gt;</span>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum<span class="nt">&lt;/p&gt;</span>
+
+  <span class="nt">&lt;h4&gt;</span>Heading Four<span class="nt">&lt;/h4&gt;</span>
+
+  <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, <span class="nt">&lt;em&gt;</span>consectetur adipiscing elit<span class="nt">&lt;/em&gt;</span>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum<span class="nt">&lt;/p&gt;</span>
+
+  <span class="nt">&lt;h5&gt;</span>Heading Five<span class="nt">&lt;/h5&gt;</span>
+
+  <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, <span class="nt">&lt;i&gt;</span>consectetur adipiscing elit<span class="nt">&lt;/i&gt;</span>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum<span class="nt">&lt;/p&gt;</span>
+
+  <span class="nt">&lt;h6&gt;</span>Heading Six<span class="nt">&lt;/h6&gt;</span>
+
+  <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, ,<span class="nt">&lt;small&gt;</span>consectetur adipiscing elit<span class="nt">&lt;/small&gt;</span>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum<span class="nt">&lt;/p&gt;</span>
+
+  <span class="nt">&lt;ul&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Consectetur adipiscing elit<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+
+  <span class="nt">&lt;hr&gt;</span>
+
+  <span class="nt">&lt;ol&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Consectetur adipiscing elit<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ol&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
     </div>
   </div>
 </div>
-<div class="codeExample">
-  <div class="exampleOutput">
-    <div class="t-sm">Small</div>
 
-  </div>
-  <div class="codeBlock">
-    <div class="highlight">
-      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"t-sm"</span><span class="nt">&gt;</span>Small<span class="nt">&lt;/div&gt;</span></pre>
-    </div>
-  </div>
+<h1 id="7-reading" class="styleguide">Reading</h1>
+<p class="styleguide">Type that has been set as reading text (more space).</p><div class="codeExample">
+  <div class="exampleOutput">
+    <div class="t-set t-reading">
+  <h1>Heading One</h1>
+
+  <p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+  <h2>Heading Two</h2>
+
+  <p>Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+  <h3>Heading Three</h3>
+
+  <p>Lorem ipsum dolor sit amet, <b>consectetur adipiscing elit</b>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+  <h4>Heading Four</h4>
+
+  <p>Lorem ipsum dolor sit amet, <em>consectetur adipiscing elit</em>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+  <h5>Heading Five</h5>
+
+  <p>Lorem ipsum dolor sit amet, <i>consectetur adipiscing elit</i>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+  <h6>Heading Six</h6>
+
+  <p>Lorem ipsum dolor sit amet, ,<small>consectetur adipiscing elit</small>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+  <ul>
+    <li>Lorem ipsum dolor sit amet</li>
+    <li>Consectetur adipiscing elit</li>
+    <li>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
+  </ul>
+
+  <hr>
+
+  <ol>
+    <li>Lorem ipsum dolor sit amet</li>
+    <li>Consectetur adipiscing elit</li>
+    <li>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
+  </ol>
 </div>
-<div class="codeExample">
-  <div class="exampleOutput">
-    <div class="t-md">Medium</div>
 
   </div>
   <div class="codeBlock">
     <div class="highlight">
-      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"t-md"</span><span class="nt">&gt;</span>Medium<span class="nt">&lt;/div&gt;</span></pre>
-    </div>
-  </div>
-</div>
-<div class="codeExample">
-  <div class="exampleOutput">
-    <div class="t-lg">Large</div>
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"t-set t-reading"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h1&gt;</span>Heading One<span class="nt">&lt;/h1&gt;</span>
 
-  </div>
-  <div class="codeBlock">
-    <div class="highlight">
-      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"t-lg"</span><span class="nt">&gt;</span>Large<span class="nt">&lt;/div&gt;</span></pre>
-    </div>
-  </div>
-</div>
-<div class="codeExample">
-  <div class="exampleOutput">
-    <div class="t-xl">Extra Large</div>
+  <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>consectetur adipiscing elit<span class="nt">&lt;/a&gt;</span>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum<span class="nt">&lt;/p&gt;</span>
 
-  </div>
-  <div class="codeBlock">
-    <div class="highlight">
-      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"t-xl"</span><span class="nt">&gt;</span>Extra Large<span class="nt">&lt;/div&gt;</span></pre>
-    </div>
-  </div>
-</div>
-<div class="codeExample">
-  <div class="exampleOutput">
-    <div class="t-xxl">Extra Extra Large</div>
+  <span class="nt">&lt;h2&gt;</span>Heading Two<span class="nt">&lt;/h2&gt;</span>
 
-  </div>
-  <div class="codeBlock">
-    <div class="highlight">
-      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"t-xxl"</span><span class="nt">&gt;</span>Extra Extra Large<span class="nt">&lt;/div&gt;</span></pre>
+  <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, <span class="nt">&lt;strong&gt;</span>consectetur adipiscing elit<span class="nt">&lt;/strong&gt;</span>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum<span class="nt">&lt;/p&gt;</span>
+
+  <span class="nt">&lt;h3&gt;</span>Heading Three<span class="nt">&lt;/h3&gt;</span>
+
+  <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, <span class="nt">&lt;b&gt;</span>consectetur adipiscing elit<span class="nt">&lt;/b&gt;</span>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum<span class="nt">&lt;/p&gt;</span>
+
+  <span class="nt">&lt;h4&gt;</span>Heading Four<span class="nt">&lt;/h4&gt;</span>
+
+  <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, <span class="nt">&lt;em&gt;</span>consectetur adipiscing elit<span class="nt">&lt;/em&gt;</span>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum<span class="nt">&lt;/p&gt;</span>
+
+  <span class="nt">&lt;h5&gt;</span>Heading Five<span class="nt">&lt;/h5&gt;</span>
+
+  <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, <span class="nt">&lt;i&gt;</span>consectetur adipiscing elit<span class="nt">&lt;/i&gt;</span>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum<span class="nt">&lt;/p&gt;</span>
+
+  <span class="nt">&lt;h6&gt;</span>Heading Six<span class="nt">&lt;/h6&gt;</span>
+
+  <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, ,<span class="nt">&lt;small&gt;</span>consectetur adipiscing elit<span class="nt">&lt;/small&gt;</span>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum<span class="nt">&lt;/p&gt;</span>
+
+  <span class="nt">&lt;ul&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Consectetur adipiscing elit<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+
+  <span class="nt">&lt;hr&gt;</span>
+
+  <span class="nt">&lt;ol&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Consectetur adipiscing elit<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ol&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
     </div>
   </div>
 </div>
