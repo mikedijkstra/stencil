@@ -43,19 +43,24 @@ name: text-sizes
 category: Variables
 ---
 
-| Variable        | Default
-| ---             | ---
-| `$text-default` | 9px
-| `$text-xxs`     | 11px
-| `$text-xs`      | 13px
-| `$text-sm`      | 18px
-| `$text-md`      | 25px
-| `$text-lg`      | 40px
-| `$text-xl`      | 60px
-| `$text-xxl`     | 100px
+| Variable            | Default
+| ---                 | ---
+| `$text-xxs`         | 11px
+| `$text-xs`          | 13px
+| `$text-sm`          | 18px
+| `$text-md`          | 25px
+| `$text-lg`          | 40px
+| `$text-xl`          | 60px
+| `$text-xxl`         | 100px
+| `$sm-text-xxs`      | 11px
+| `$sm-text-xs`       | 13px
+| `$sm-text-sm`       | 18px
+| `$sm-text-md`       | 25px
+| `$sm-text-lg`       | 40px
+| `$sm-text-xl`       | 60px
+| `$sm-text-xxl`      | 100px
 */
 
-$text-default:                           9px !default;
 $text-xxs:                               11px !default;
 $text-xs:                                13px !default;
 $text-sm:                                18px !default;
@@ -64,7 +69,6 @@ $text-lg:                                40px !default;
 $text-xl:                                60px !default;
 $text-xxl:                               100px !default;
 
-$sm-text-default:                        $text-default !default;
 $sm-text-xxs:                            $text-xxs !default;
 $sm-text-xs:                             $text-xs !default;
 $sm-text-sm:                             $text-sm !default;
@@ -72,6 +76,32 @@ $sm-text-md:                             $text-md !default;
 $sm-text-lg:                             $text-lg !default;
 $sm-text-xl:                             $text-xl !default;
 $sm-text-xxl:                            $text-xxl !default;
+
+/*doc
+---
+title: Line Height
+name: line-heights
+category: Variables
+---
+
+| Variable                 | Default
+| ---                      | ---
+| `$text-line-xxs`         | 1.9
+| `$text-line-xs`          | 1.9
+| `$text-line-sm`          | 1.5
+| `$text-line-md`          | 1.5
+| `$text-line-lg`          | 1.2
+| `$text-line-xl`          | 1.0
+| `$text-line-xxl`         | 1.0
+| `$sm-text-line-xxs`      | 1.9
+| `$sm-text-line-xs`       | 1.9
+| `$sm-text-line-sm`       | 1.5
+| `$sm-text-line-md`       | 1.5
+| `$sm-text-line-lg`       | 1.5
+| `$sm-text-line-xl`       | 1.2
+| `$sm-text-line-xxl`      | 1.0
+*/
+
 
 $text-line-xxs:                          1.8 !default;
 $text-line-xs:                           1.9 !default;
@@ -106,28 +136,6 @@ category: Variables
 $letter-sm:                              0.05em !default;
 $letter-md:                              0.1em !default;
 $letter-lg:                              0.3em !default;
-
-/*doc
----
-title: Line Height
-name: line-height
-category: Variables
----
-
-| Variable   | Default
-| ---        | ---
-| `$line-xs` | 1.0
-| `$line-sm` | 1.25
-| `$line-md` | 1.5
-| `$line-lg` | 1.75
-| `$line-xl` | 2.0
-*/
-
-$line-xs:                                1.0 !default;
-$line-sm:                                1.25 !default;
-$line-md:                                1.5 !default;
-$line-lg:                                1.75 !default;
-$line-xl:                                2.0 !default;
 
 /*doc
 ---
@@ -1074,6 +1082,10 @@ e.g. `u-malg` or `u-sm-pvsm`.
  ---
 
 All type helpers are prefixed by `t-`.
+
+
+Type is responsive and the break-point is `sm` which is set in [screen sizes][1-screen-sizes].
+
 */
 
 /*doc
@@ -1083,16 +1095,15 @@ name: 0-t-sizes
 category: Type
 ---
 
-| Class       | Size
-| ---         | ---
-| `t-default` | [$text-default][text-sizes]
-| `t-xxs`     | [$text-xxs][text-sizes]
-| `t-xs`      | [$text-xs][text-sizes]
-| `t-sm`      | [$text-sm][text-sizes]
-| `t-md`      | [$text-md][text-sizes]
-| `t-lg`      | [$text-lg][text-sizes]
-| `t-xl`      | [$text-xl][text-sizes]
-| `t-xxl`     | [$text-xxl][text-sizes]
+| Class       | Size                      | sm
+| ---         | ---                       | ---
+| `t-xxs`     | [$text-xxs][text-sizes]   | [$sm-text-xxs][text-sizes]
+| `t-xs`      | [$text-xs][text-sizes]    | [$sm-text-xs][text-sizes]
+| `t-sm`      | [$text-sm][text-sizes]    | [$sm-text-sm][text-sizes]
+| `t-md`      | [$text-md][text-sizes]    | [$sm-text-md][text-sizes]
+| `t-lg`      | [$text-lg][text-sizes]    | [$sm-text-lg][text-sizes]
+| `t-xl`      | [$text-xl][text-sizes]    | [$sm-text-xl][text-sizes]
+| `t-xxl`     | [$text-xxl][text-sizes]   | [$sm-text-xxl][text-sizes]
 
 ```html_example
 <div class="t-xxs">Extra Extra Small</div>
@@ -1120,23 +1131,6 @@ category: Type
 
 ```html_example
 <div class="t-xxl">Extra Extra Large</div>
-```
-
-***
-
-Type size helpers can be optionally followed by one of the following break point abbreviations:
-
-| Prefix | Description
-| ---    | ---
-| `-sm-` | Small screen size and up
-| `-md-` | Medium screen size and up
-| `-lg-` | Large screen size and up
-| `-xl-` | Extra Large screen size and up
-
-The value for these break-points is set in [screen sizes][1-screen-sizes].
-
-```html_example
-<div class="t-sm t-sm-md">Text</div>
 ```
 */
 
@@ -1321,26 +1315,6 @@ The value for these break-points is set in [screen sizes][1-screen-sizes].
   .t#{$namespace}-none {
     text-decoration: none !important;
   }
-  .t#{$namespace}-lxs,
-  .t#{$namespace}-line-xs {
-    line-height: $line-xs !important;
-  }
-  .t#{$namespace}-lsm,
-  .t#{$namespace}-line-sm {
-    line-height: $line-sm !important;
-  }
-  .t#{$namespace}-lmd,
-  .t#{$namespace}-line-md {
-    line-height: $line-md !important;
-  }
-  .t#{$namespace}-llg,
-  .t#{$namespace}-line-lg {
-    line-height: $line-lg !important;
-  }
-  .t#{$namespace}-lxl,
-  .t#{$namespace}-line-xl {
-    line-height: $line-xl !important;
-  }
   .t#{$namespace}-h,
   .t#{$namespace}-hyphenate {
     -mds-word-break: break-all;
@@ -1377,211 +1351,11 @@ category: Modules
 
 Navigation Menu which is presented as an overlay on mobile and then in the header on small screens and up.
 
-```markup_example_template
-@include nav;
-```
+[HTML](https://gist.github.com/micdijkstra/64c47e8e0fa6d30a6b1471f811890342)
+[Sass](https://gist.github.com/micdijkstra/c264f64b4abaf36305a1315097eff143)
 
-```markup_example_template
-<div class="nav-overlay collapse" id="nav-overlay" data-toggle="collapse" data-target="#nav-menu, #nav-overlay"></div>
-<div class="container-fluid">
-  <div class="nav row" id="nav">
-    <div class="nav-brand col-xs-9 col-sm-5">
-      <a href="/" itemprop="url" class="nav-logo">
-        <img src="http://placehold.it/500x250&text=Logo" alt="CompanyName" itemprop="logo">
-      </a>
-    </div>
-
-    <div class="pull-right visible-xs">
-      <ul>
-        <li class="nav-menu-item">
-          <a href="#" data-toggle="collapse" data-target="#nav-menu, #nav-overlay">Menu</a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="nav-menu col-sm-12 collapse" id="nav-menu">
-      <ul class="nav-menu-items">
-        <li class="nav-menu-item col-xs-12"><a href="/page.html">Page</a></li>
-        <li class="nav-menu-item col-xs-12"><a href="#">Link</a></li>
-        <li class="nav-menu-item nav-menu-item-right col-xs-12"><a href="#">Link</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
-```
 */
 
-@mixin nav {
-  .nav {
-    height: $nav-height;
-    position: relative;
-    z-index: 10;
-
-    li > a {
-      color: $color-brand;
-      height: $nav-height;
-      line-height: $nav-height;
-      margin: 0;
-      text-decoration: none;
-      padding: 10px 15px;
-
-      @include sm {
-        &.is-active,
-        &:hover {
-          background: $color-brand;
-          color: white;
-        }
-      }
-    }
-  }
-
-  .nav-brand {
-    line-height: $nav-height;
-    position: relative;
-  }
-
-  .nav-logo {
-    &:hover {
-      background: transparent !important;
-    }
-
-    img {
-      display: inline-block;
-      margin-top: -10px;
-      height: 50px;
-      vertical-align: middle;
-      width: auto;
-    }
-  }
-
-  .nav-with-logo {
-    .nav-name {
-      display: none;
-
-      @include sm {
-        display: block;
-      }
-    }
-  }
-
-  .nav-menu {
-    background: white;
-    transition: 0.3s all ease-in-out;
-    left: 0;
-    margin-top: $nav-height;
-    position: absolute !important;
-    top: 0;
-    width: 100%;
-
-    &.collapse {
-      display: none;
-
-      &.in {
-        display: block;
-      }
-    }
-
-    @include sm {
-      background: transparent;
-      display: block !important;
-      height: $nav-height !important;
-      margin: 0;
-      transition: none;
-      width: auto;
-
-      li > a {
-        .is-active,
-        &:hover {
-          background: $color-brand;
-          color: white;
-        }
-      }
-    }
-  }
-
-  .nav-menu-items {
-    @include sm {
-      text-align: right;
-    }
-  }
-
-  .nav-menu-item {
-    display: inline-block;
-
-    @include sm {
-      float: none !important;
-      width: auto !important;
-    }
-  }
-}
-
-/*doc
----
-title: Footer
-name: footer
-category: Modules
----
-
-Footer which sticks to the bottom of the page.
-
-```markup_example_template
-`@include footer;
-```
-
-```markup_example_template
-<body>
-  <div class="wrapper">
-    Page Content
-  </div>
-  <div class="footer">
-    <div class="u-tac">Footer</div>
-  </div>
-</body>
-```
-*/
-
-@mixin footer {
-  html,
-  body {
-    height: 100%;
-  }
-
-  .wrapper {
-    min-height: 100%;
-
-    @include sm {
-      margin-bottom: -$footer-height;
-    }
-  }
-
-  .wrapper:after {
-    content: "";
-    display: block;
-  }
-
-  .footer,
-  .wrapper:after {
-    width: 100%;
-
-    @include sm {
-      height: $footer-height;
-    }
-  }
-
-  .footer-link {
-    display: block;
-    text-align: center;
-
-    @include sm {
-      display: inline-block;
-      margin-right: $space-sm;
-
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-  }
-}
 
 /*doc
 ---
@@ -1594,49 +1368,23 @@ The `preload` class shows the loader and prevents animations and transitions fro
 
 The `loader` class is a full screen takeover.
 
-```markup_example_template
-@include loader;
-```
-
-```html_example
-  <div class="loader"></div>
-```
-
-The `preload` class should be removed when the page loads.
-
-```markup_example_template
-<body class="preload">
-  <div class="loader"></div>
-</body>
-
-<script>
-  $(window).load(function() {
-    $("body").removeClass("preload");
-  });
-</script>
-```
+[HTML](https://gist.github.com/micdijkstra/9b50e29df7aae3a5bb93db276b6579fa)
+[Sass](https://gist.github.com/micdijkstra/dced2b8da7a23cd9780c9fb8f5fb644d)
 */
 
+/*doc
+---
+title: Footer
+name: footer
+category: Modules
+---
 
-@mixin loader {
-  body.preload {
-    * {
-      transition: none !important;
-      animation-name: none !important;
-    }
+Footer which sticks to the bottom of the page.
 
-    .loader {
-      visibility: visible;
-    }
-  }
+[HTML](https://gist.github.com/micdijkstra/01e3bf7b690c982af7dbb14d3856da0d)
+[Sass](https://gist.github.com/micdijkstra/ae47d1fb7e60c806bd661255b73be8d2)
 
-  .loader {
-    background-color: black;
-    transition: visibility 1s 0s;
-    visibility: hidden;
-    z-index: 99999999;
-  }
-}
+*/
 
 /*doc
 ---
@@ -1645,49 +1393,8 @@ name: overlay
 category: Modules
 ---
 
-The `preload` class creates a fixed element that takes over the screen.
+The `overlay` class creates a fixed element that takes over the screen. It uses Bootstrap collapse to hide/show.
 
-```html_example
-@include overlay;
-```
-
-```markup_example_template
-<div class="overlay"></div>
-```
+[HTML](https://gist.github.com/micdijkstra/fee39ba536ce78f4411b8ececca41763)
+[Sass](https://gist.github.com/micdijkstra/c6662a9b82efdca761e705e82564c693)
 */
-
-/*doc
----
-title: Collapsible
-name: overlay-collapse
-parent: overlay
----
-
-You can make an overlay compatible with Bootstrap collapse by adding the `is-collapsible` class.
-
-```markup_example_template
-<div id="my-overlay" class="overlay is-collapsible"></div>
-<a href="#" data-toggle="collapse" data-target="#my-overlay">Toggle Overlay</a>
-```
-*/
-
-@mixin overlay {
-  .overlay {
-    bottom: 0;
-    left: 0;
-    position: fixed;
-    right: 0;
-    top: 0;
-    transition: opacity 0.3s ease-in-out;
-
-    &.is-collapsible {
-      &.collapse {
-        display: none;
-
-        &.in {
-          display: block;
-        }
-      }
-    }
-  }
-}

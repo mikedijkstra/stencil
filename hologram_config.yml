@@ -1,5 +1,5 @@
 # Relative path(s) to your source files
-source: stencil
+source: build
 
 # Relative path where you want the documentation to be built
 destination: docs
@@ -13,13 +13,9 @@ index: docs
 # The global title that is displayed at the top of the pages
 global_title: Stencil
 
-# A list of relative paths to folders containing any dependencies to copy
-dependencies:
-  - 'dist'
-
 # The CSS files to be included in the styleguide
 css_include:
-  - 'dist/stencil.css'
+  - 'build/stencil.css'
 
 # To output navigation for top level sections, set the value to
 # 'section'. To output navigation for sub-sections, set the value to `all`

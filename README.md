@@ -6,7 +6,7 @@ A selection of Sass and JavaScript custom mixins and utilities to help you get s
 
 ## Getting Started
 
-It's as easy as copying `stencil/stencil.scss` and `stencil/stencil.js` into your project.
+It's as easy as copying `stencil.scss` into your project.
 
 To override the default stencil variables, simply `@import` your own variables
 before importing Stencil.

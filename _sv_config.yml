@@ -1,9 +1,0 @@
----
-source: stencil
-destination: dist
-source_stylesheet: stencil.scss
-source_javascript: stencil.js
-destination_stylesheet: stencil.css
-destination_javascript: stencil.js
-compile_sprite: false
-compile_html: false

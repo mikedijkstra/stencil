@@ -12,7 +12,7 @@
     <!-- Source CSS -->
     
       
-        <link rel="stylesheet" href="dist/stencil.css">
+        <link rel="stylesheet" href="build/stencil.css">
       
     
 </head>
@@ -87,10 +87,6 @@
               
                 
                   <a href="#space" class="hgt-menu-item">Spacing</a>
-                
-              
-                
-                  <a href="#vertical-align" class="hgt-menu-item">Vertical Align</a>
                 
               
             </nav>
@@ -330,31 +326,7 @@ e.g. <code class="styleguide">u-malg</code> or <code class="styleguide">u-sm-pvs
     </div>
   </div>
 </div>
-
-<h1 id="vertical-align" class="styleguide">Vertical Align</h1>
-<p class="styleguide">Aligns elements vertically.</p><p class="styleguide">Instantiate with <code class="styleguide">Stencil.verticalAlign()</code>.</p><p class="styleguide">Vertical Align works on all elements with the data attribute &#39;data-valign&#39;.</p><p class="styleguide">You can set the following options using data attribute tags:</p><ul class="styleguide"><li><code class="styleguide">data-valign</code>: Selector for the parent to align to. Default is window.</li>
-<li><code class="styleguide">data-valign-to</code>: Break point to vertically align to. Default is window width.</li>
-<li><code class="styleguide">data-valign-from</code>: Break point to vertically align from. Default is 0.</li>
-<li><code class="styleguide">data-valign-property</code>: Property to manipulate to center. Default is margin-top.</li>
-</ul><div class="codeBlock">
-  <div class="highlight">
-    <pre>&lt;div id="my-id"&gt;
-  &lt;div data-valign="#my-id" data-valign-from="768px"&gt;
-    Content
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-  $(window).load(function() {
-    Stencil.verticalAlign();
-  });
-
-  $(window).resize(function() {
-    Stencil.verticalAlign();
-  });
-&lt;/script&gt;</pre>
-  </div>
-</div>        </div>
+        </div>
       </div>
     </div>
 
