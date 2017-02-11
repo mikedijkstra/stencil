@@ -14,6 +14,9 @@
     "**/.*",
     "node_modules",
     "bower_components",
+    "build",
+    "docs",
+    "hologram_config.yml",
     "test",
     "tests"
   ]
