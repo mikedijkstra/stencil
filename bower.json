@@ -1,0 +1,20 @@
+{
+  "name": "stencil",
+  "homepage": "https://github.com/micdijkstra/stencil",
+  "description": "A collection of mixins and helper classes to help you get started building a new web site or web application fast.",
+  "main": "stencil.scss",
+  "keywords": [
+    "stencil"
+  ],
+  "authors": [
+    "Michael Dijkstra"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
